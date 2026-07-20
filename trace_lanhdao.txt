@@ -1,0 +1,333 @@
+Line 2: depth=1 (+1 -0) | <div className="space-y-8">
+Line 5: depth=2 (+1 -0) | <div className="flex flex-col gap-0 pt-2 md:pt-4">
+Line 7: depth=3 (+1 -0) | <div className="bg-[#a50b12] p-8 rounded-t-3xl flex flex-col
+Line 9: depth=4 (+1 -0) | <div className="flex items-center gap-6 lg:pr-10 lg:border-r
+Line 18: depth=3 (+0 -1) | </div>
+Line 21: depth=4 (+1 -0) | <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 flex-1
+Line 38: depth=3 (+0 -1) | </div>
+Line 40: depth=2 (+0 -1) | </div>
+Line 41: depth=1 (+0 -1) | </div>
+Line 44: depth=2 (+1 -0) | <div className="flex flex-col gap-6 w-full">
+Line 54: depth=3 (+1 -0) | <div className="rounded-b-3xl overflow-hidden shadow-lg flex
+Line 56: depth=4 (+1 -0) | <div className="bg-[#da1016] px-6 py-4 flex justify-between 
+Line 57: depth=5 (+1 -0) | <div className="flex flex-col justify-center">
+Line 62: depth=4 (+0 -1) | </div>
+Line 64: depth=3 (+0 -1) | </div>
+Line 67: depth=4 (+1 -0) | <div className="bg-[#a50b12] relative py-10 px-6 md:px-10 ov
+Line 70: depth=5 (+1 -0) | <div className="absolute inset-0 pointer-events-none select-
+Line 79: depth=6 (+1 -0) | <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -
+Line 86: depth=5 (+0 -1) | </div>
+Line 88: depth=6 (+1 -0) | <div className="absolute inset-0 opacity-5 flex items-center
+Line 89: depth=6 (+1 -1) | <div className="w-[800px] h-[800px] rounded-full border-[40p
+Line 90: depth=6 (+1 -1) | <div className="absolute w-[600px] h-[600px] rounded-full bo
+Line 91: depth=5 (+0 -1) | </div>
+Line 92: depth=4 (+0 -1) | </div>
+Line 95: depth=5 (+1 -0) | <div className="relative z-10 flex flex-col sm:flex-row item
+Line 97: depth=6 (+1 -0) | <div className="absolute inset-0 z-0 pointer-events-none sel
+Line 104: depth=5 (+0 -1) | </div>
+Line 106: depth=6 (+1 -0) | <div className="relative shrink-0 z-10 group-hover/main:scal
+Line 108: depth=7 (+1 -0) | <div className="absolute -inset-4 pointer-events-none z-20 o
+Line 172: depth=6 (+0 -1) | </div>
+Line 174: depth=7 (+1 -0) | <div className="w-40 h-40 rounded-full shadow-xl overflow-hi
+Line 176: depth=8 (+1 -0) | <div className="absolute inset-0 flex items-center justify-c
+Line 178: depth=7 (+0 -1) | </div>
+Line 188: depth=6 (+0 -1) | </div>
+Line 189: depth=5 (+0 -1) | </div>
+Line 190: depth=6 (+1 -0) | <div className="relative z-10 flex flex-col h-full justify-c
+Line 200: depth=5 (+0 -1) | </div>
+Line 201: depth=4 (+0 -1) | </div>
+Line 216: depth=5 (+1 -0) | <div key={i} className="relative overflow-hidden flex flex-c
+Line 218: depth=6 (+1 -0) | <div className="absolute inset-0 z-0 pointer-events-none sel
+Line 225: depth=5 (+0 -1) | </div>
+Line 227: depth=6 (+1 -0) | <div className="relative shrink-0 z-10 group-hover/sub:scale
+Line 229: depth=7 (+1 -0) | <div className="absolute -inset-3.5 pointer-events-none z-20
+Line 293: depth=6 (+0 -1) | </div>
+Line 295: depth=7 (+1 -0) | <div className="w-24 h-24 rounded-full shadow-lg overflow-hi
+Line 297: depth=8 (+1 -0) | <div className="absolute inset-0 flex items-center justify-c
+Line 299: depth=7 (+0 -1) | </div>
+Line 309: depth=6 (+0 -1) | </div>
+Line 310: depth=5 (+0 -1) | </div>
+Line 311: depth=6 (+1 -0) | <div className="relative z-10 flex flex-col flex-1 h-full it
+Line 312: depth=7 (+1 -0) | <div className="flex flex-col items-center w-full overflow-h
+Line 315: depth=6 (+0 -1) | </div>
+Line 322: depth=5 (+0 -1) | </div>
+Line 323: depth=4 (+0 -1) | </div>
+Line 325: depth=3 (+0 -1) | </div>
+Line 326: depth=2 (+0 -1) | </div>
+Line 327: depth=1 (+0 -1) | </div>
+Line 332: depth=2 (+1 -0) | <div className="bg-white rounded-b-3xl border-x border-b bor
+Line 334: depth=3 (+1 -0) | <div className="h-48 lg:h-auto lg:w-[30%] overflow-hidden re
+Line 354: depth=2 (+0 -1) | </div>
+Line 355: depth=1 (+0 -1) | </div>
+Line 357: depth=2 (+1 -0) | <div className="p-6 flex flex-col w-full space-y-4">
+Line 367: depth=3 (+1 -0) | <div className="space-y-3">
+Line 373: depth=4 (+1 -0) | <div key={idx} className="text-lg p-3 bg-slate-50 rounded-xl
+Line 376: depth=3 (+0 -1) | </div>
+Line 378: depth=2 (+0 -1) | </div>
+Line 380: depth=3 (+1 -0) | <div className="pt-2">
+Line 381: depth=4 (+1 -0) | <div className="p-4 bg-slate-100 rounded-2xl border border-s
+Line 383: depth=3 (+0 -1) | </div>
+Line 384: depth=2 (+0 -1) | </div>
+Line 385: depth=1 (+0 -1) | </div>
+Line 386: depth=0 (+0 -1) | </div>
+Line 387: depth=-1 (+0 -1) | </div>
+Line 389: depth=-2 (+0 -1) | </div>
+Line 392: depth=-1 (+1 -0) | <div className="overflow-hidden w-full border-t border-slate
+Line 394: depth=0 (+1 -0) | <div className="flex flex-col md:flex-row justify-between it
+Line 395: depth=1 (+1 -0) | <div>
+Line 397: depth=2 (+1 -0) | <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-re
+Line 399: depth=1 (+0 -1) | </div>
+Line 405: depth=0 (+0 -1) | </div>
+Line 409: depth=-1 (+0 -1) | </div>
+Line 412: depth=0 (+1 -0) | <div className="py-8 space-y-8">
+Line 414: depth=1 (+1 -0) | <div className="rounded-3xl overflow-hidden shadow-lg max-h-
+Line 421: depth=1 (+1 -1) | <div className="absolute inset-0 bg-gradient-to-t from-slate
+Line 422: depth=2 (+1 -0) | <div className="absolute bottom-0 left-0 p-8 md:p-12 w-full"
+Line 426: depth=1 (+0 -1) | </div>
+Line 427: depth=0 (+0 -1) | </div>
+Line 430: depth=1 (+1 -0) | <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+Line 454: depth=2 (+1 -0) | <div key={idx} className="bg-white rounded-2xl border border
+Line 455: depth=3 (+1 -0) | <div className="h-52 overflow-hidden relative">
+Line 462: depth=4 (+1 -0) | <div className="absolute top-4 left-4 flex items-center gap-
+Line 466: depth=3 (+0 -1) | </div>
+Line 467: depth=2 (+0 -1) | </div>
+Line 468: depth=3 (+1 -0) | <div className="p-6 flex-1 flex flex-col">
+Line 478: depth=2 (+0 -1) | </div>
+Line 479: depth=1 (+0 -1) | </div>
+Line 481: depth=0 (+0 -1) | </div>
+Line 482: depth=-1 (+0 -1) | </div>
+Line 483: depth=-2 (+0 -1) | </div>
+Line 486: depth=-1 (+1 -0) | <div className="mt-24 md:mt-32 mb-10 w-screen relative left-
+Line 488: depth=0 (+1 -0) | <div className="absolute inset-0 z-0 pointer-events-none ove
+Line 494: depth=0 (+1 -1) | <div className="absolute inset-0 bg-gradient-to-r from-[#211
+Line 495: depth=0 (+1 -1) | <div className="absolute inset-0 bg-gradient-to-t from-[#211
+Line 496: depth=-1 (+0 -1) | </div>
+Line 498: depth=0 (+1 -0) | <div className="max-w-7xl mx-auto px-4 xl:px-0 relative z-10
+Line 499: depth=1 (+1 -0) | <div className="flex items-center w-full mb-6 pl-4 pr-4 lg:p
+Line 500: depth=2 (+1 -0) | <div className="flex items-center gap-3 relative shrink-0 z-
+Line 501: depth=3 (+1 -0) | <div className="w-10 h-10 rounded-full bg-red-600 flex items
+Line 503: depth=2 (+0 -1) | </div>
+Line 507: depth=1 (+0 -1) | </div>
+Line 510: depth=1 (+1 -1) | <div className="flex-1 h-[1px] bg-white/10 relative z-0"></d
+Line 515: depth=0 (+0 -1) | </div>
+Line 518: depth=1 (+1 -0) | <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:ga
+Line 520: depth=2 (+1 -0) | <div className="lg:col-span-7 flex flex-col group cursor-poi
+Line 521: depth=3 (+1 -0) | <div className="w-full h-full min-h-[300px] md:min-h-[420px]
+Line 523: depth=3 (+1 -1) | <div className="absolute inset-0 bg-gradient-to-t from-[#121
+Line 525: depth=4 (+1 -0) | <div className="absolute bottom-4 left-4 right-4 z-10">
+Line 526: depth=5 (+1 -0) | <div className="inline-block bg-red-600 text-white text-lg f
+Line 528: depth=4 (+0 -1) | </div>
+Line 529: depth=3 (+0 -1) | </div>
+Line 530: depth=2 (+0 -1) | </div>
+Line 536: depth=3 (+1 -0) | <div className="flex items-center gap-4 mt-auto">
+Line 537: depth=4 (+1 -0) | <div className="flex items-center gap-2 text-lg text-gray-30
+Line 540: depth=3 (+0 -1) | </div>
+Line 541: depth=4 (+1 -0) | <div className="flex items-center gap-2 text-lg text-gray-30
+Line 544: depth=3 (+0 -1) | </div>
+Line 545: depth=2 (+0 -1) | </div>
+Line 546: depth=1 (+0 -1) | </div>
+Line 549: depth=2 (+1 -0) | <div className="lg:col-span-5 flex flex-col gap-3 bg-white/1
+Line 590: depth=2 (+1 -1) | <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1
+Line 592: depth=3 (+1 -0) | <div className="w-[120px] h-[80px] lg:w-[140px] lg:h-[90px] 
+Line 594: depth=2 (+0 -1) | </div>
+Line 595: depth=3 (+1 -0) | <div className="flex-1 min-w-0 pr-1">
+Line 601: depth=4 (+1 -0) | <div className="flex items-center justify-between">
+Line 602: depth=5 (+1 -0) | <div className="flex items-center gap-2 text-[18px] text-gra
+Line 605: depth=4 (+0 -1) | </div>
+Line 609: depth=3 (+0 -1) | </div>
+Line 610: depth=2 (+0 -1) | </div>
+Line 611: depth=1 (+0 -1) | </div>
+Line 613: depth=0 (+0 -1) | </div>
+Line 614: depth=-1 (+0 -1) | </div>
+Line 615: depth=-2 (+0 -1) | </div>
+Line 616: depth=-3 (+0 -1) | </div>
+Line 619: depth=-2 (+1 -0) | <div className="mt-20 md:mt-28 mb-10">
+Line 621: depth=-1 (+1 -0) | <div className="flex justify-between items-center mb-6 borde
+Line 622: depth=0 (+1 -0) | <div className="flex flex-col sm:flex-row sm:items-center ga
+Line 623: depth=1 (+1 -0) | <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-re
+Line 625: depth=0 (+0 -1) | </div>
+Line 629: depth=-1 (+0 -1) | </div>
+Line 633: depth=-2 (+0 -1) | </div>
+Line 635: depth=-1 (+1 -0) | <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 lg:ga
+Line 637: depth=0 (+1 -0) | <div className="xl:col-span-7 flex flex-col group cursor-poi
+Line 638: depth=1 (+1 -0) | <div className="w-full h-full relative rounded-2xl overflow-
+Line 644: depth=1 (+1 -1) | <div className="absolute inset-0 bg-gradient-to-t from-[#0f1
+Line 646: depth=2 (+1 -0) | <div className="absolute inset-0 p-6 flex flex-col justify-b
+Line 648: depth=3 (+1 -0) | <div className="flex gap-2">
+Line 655: depth=2 (+0 -1) | </div>
+Line 658: depth=3 (+1 -0) | <div className="mt-auto">
+Line 659: depth=4 (+1 -0) | <div className="flex items-center gap-2 text-[18px] text-red
+Line 662: depth=3 (+0 -1) | </div>
+Line 670: depth=4 (+1 -0) | <div className="flex justify-between items-center border-t b
+Line 677: depth=3 (+0 -1) | </div>
+Line 678: depth=2 (+0 -1) | </div>
+Line 679: depth=1 (+0 -1) | </div>
+Line 680: depth=0 (+0 -1) | </div>
+Line 681: depth=-1 (+0 -1) | </div>
+Line 684: depth=0 (+1 -0) | <div className="xl:col-span-5 flex flex-col gap-4">
+Line 711: depth=1 (+1 -0) | <div key={idx} onClick={() => showNotification("Đã mở tin")}
+Line 712: depth=2 (+1 -0) | <div className="w-[120px] shrink-0 rounded-lg overflow-hidde
+Line 714: depth=1 (+0 -1) | </div>
+Line 715: depth=2 (+1 -0) | <div className="flex-1 flex flex-col justify-center">
+Line 720: depth=3 (+1 -0) | <div className="flex items-center gap-2 text-[18px] text-red
+Line 723: depth=2 (+0 -1) | </div>
+Line 724: depth=1 (+0 -1) | </div>
+Line 725: depth=0 (+0 -1) | </div>
+Line 727: depth=-1 (+0 -1) | </div>
+Line 728: depth=-2 (+0 -1) | </div>
+Line 729: depth=-3 (+0 -1) | </div>
+Line 732: depth=-3 (+1 -1) | <div className="w-full border-t border-slate-200 mt-20 mb-12
+Line 735: depth=-2 (+1 -0) | <div className="mb-10 flex flex-col gap-6" id="van-ban-qppl-
+Line 738: depth=-1 (+1 -0) | <div className="flex flex-col gap-4">
+Line 739: depth=0 (+1 -0) | <div className="flex items-center gap-3">
+Line 740: depth=1 (+1 -0) | <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-re
+Line 742: depth=0 (+0 -1) | </div>
+Line 746: depth=-1 (+0 -1) | </div>
+Line 749: depth=0 (+1 -0) | <div className="flex items-center gap-2 overflow-x-auto pb-1
+Line 770: depth=-1 (+0 -1) | </div>
+Line 771: depth=-2 (+0 -1) | </div>
+Line 774: depth=-1 (+1 -0) | <div className="flex flex-col md:flex-row md:items-center ju
+Line 775: depth=0 (+1 -0) | <div className="flex items-center gap-4">
+Line 776: depth=1 (+1 -0) | <div className="w-14 h-14 bg-white rounded-xl shadow-xs bord
+Line 778: depth=0 (+0 -1) | </div>
+Line 779: depth=1 (+1 -0) | <div>
+Line 782: depth=0 (+0 -1) | </div>
+Line 783: depth=-1 (+0 -1) | </div>
+Line 784: depth=-2 (+0 -1) | </div>
+Line 787: depth=-1 (+1 -0) | <div className="grid grid-cols-1 md:grid-cols-2 gap-4 overfl
+Line 821: depth=0 (+1 -0) | <div key={idx} className="bg-white p-5 rounded-2xl border bo
+Line 822: depth=1 (+1 -0) | <div>
+Line 823: depth=2 (+1 -0) | <div className="flex items-center justify-between gap-3 mb-3
+Line 826: depth=1 (+0 -1) | </div>
+Line 833: depth=0 (+0 -1) | </div>
+Line 834: depth=1 (+1 -0) | <div className="flex items-center justify-between text-[18px
+Line 837: depth=0 (+0 -1) | </div>
+Line 838: depth=-1 (+0 -1) | </div>
+Line 841: depth=-2 (+0 -1) | </div>
+Line 846: depth=-3 (+0 -1) | </div>
+Line 850: depth=-2 (+1 -0) | <div className="mt-24 md:mt-32 mb-10 w-full overflow-hidden"
+Line 852: depth=-3 (+0 -1) | </div>
+Line 854: depth=-2 (+1 -0) | <div className="w-full mt-8 text-left space-y-8">
+Line 857: depth=-1 (+1 -0) | <div className="relative overflow-hidden rounded-[24px] bg-g
+Line 871: depth=0 (+1 -0) | <div className="absolute -right-16 -bottom-16 w-64 h-64 roun
+Line 872: depth=1 (+1 -0) | <div className="absolute left-10 top-10 w-48 h-48 rounded-fu
+Line 875: depth=2 (+1 -0) | <div className="absolute right-8 top-1/2 -translate-y-1/2 op
+Line 877: depth=1 (+0 -1) | </div>
+Line 889: depth=2 (+1 -0) | <div className="inline-flex items-center gap-1.5 bg-yellow-4
+Line 897: depth=1 (+0 -1) | </div>
+Line 920: depth=2 (+1 -0) | <div className="mt-6 border-t border-white/10 pt-4 flex flex
+Line 924: depth=3 (+1 -0) | <div className="flex items-center gap-2.5 bg-black/10 px-3 p
+Line 951: depth=2 (+0 -1) | </div>
+Line 956: depth=1 (+0 -1) | </div>
+Line 957: depth=0 (+0 -1) | </div>
+Line 960: depth=1 (+1 -0) | <div className="border-t border-transparent pt-4" />
+Line 963: depth=2 (+1 -0) | <div className="mt-10 mb-12">
+Line 964: depth=3 (+1 -0) | <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
+Line 965: depth=4 (+1 -0) | <div className="bg-white rounded-[32px] p-6 shadow-sm border
+Line 966: depth=4 (+1 -1) | <div className="absolute top-0 left-0 w-full h-1 bg-gradient
+Line 968: depth=5 (+1 -0) | <div className="relative z-10">
+Line 969: depth=6 (+1 -0) | <div className="flex flex-col md:flex-row md:items-center ju
+Line 970: depth=7 (+1 -0) | <div className="flex items-center gap-3">
+Line 971: depth=8 (+1 -0) | <div className="w-10 h-10 rounded-xl bg-red-50 flex items-ce
+Line 973: depth=7 (+0 -1) | </div>
+Line 978: depth=6 (+0 -1) | </div>
+Line 982: depth=5 (+0 -1) | </div>
+Line 984: depth=6 (+1 -0) | <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 lg:ga
+Line 986: depth=7 (+1 -0) | <div className="xl:col-span-7 flex flex-col gap-6">
+Line 1002: depth=8 (+1 -0) | <div className="absolute inset-0 bg-gradient-to-t from-black
+Line 1005: depth=9 (+1 -0) | <div className="absolute top-4 left-4 flex gap-3 z-10 pointe
+Line 1006: depth=10 (+1 -0) | <div className="bg-red-600 text-white text-[16px] font-black
+Line 1008: depth=9 (+0 -1) | </div>
+Line 1009: depth=10 (+1 -0) | <div className="bg-amber-600 text-white text-[16px] font-bla
+Line 1011: depth=9 (+0 -1) | </div>
+Line 1012: depth=8 (+0 -1) | </div>
+Line 1015: depth=9 (+1 -0) | <div className="relative p-5 md:p-6 text-left space-y-2.5 z-
+Line 1017: depth=10 (+1 -0) | <div className="flex items-center gap-2 text-lg font-bold te
+Line 1020: depth=9 (+0 -1) | </div>
+Line 1054: depth=10 (+1 -0) | <div className="flex justify-between items-center pt-2.5 bor
+Line 1066: depth=9 (+0 -1) | </div>
+Line 1067: depth=8 (+0 -1) | </div>
+Line 1068: depth=7 (+0 -1) | </div>
+Line 1070: depth=8 (+1 -0) | <div className="flex flex-col gap-4">
+Line 1117: depth=9 (+1 -0) | <div className="w-24 h-18 md:w-28 md:h-20 shrink-0 rounded-x
+Line 1124: depth=8 (+0 -1) | </div>
+Line 1127: depth=9 (+1 -0) | <div className="flex-1 min-w-0 flex flex-col justify-between
+Line 1128: depth=10 (+1 -0) | <div className="space-y-1">
+Line 1138: depth=9 (+0 -1) | </div>
+Line 1141: depth=10 (+1 -0) | <div className="flex items-center gap-2 text-lg font-bold te
+Line 1144: depth=9 (+0 -1) | </div>
+Line 1161: depth=8 (+0 -1) | </div>
+Line 1162: depth=7 (+0 -1) | </div>
+Line 1165: depth=6 (+0 -1) | </div>
+Line 1166: depth=5 (+0 -1) | </div>
+Line 1169: depth=6 (+1 -0) | <div className="xl:col-span-5 flex flex-col gap-4">
+Line 1182: depth=6 (+1 -1) | <div className="absolute inset-0 bg-gradient-to-r from-amber
+Line 1183: depth=7 (+1 -0) | <div className="relative h-full px-7 flex items-center justi
+Line 1184: depth=8 (+1 -0) | <div className="flex-1">
+Line 1191: depth=7 (+0 -1) | </div>
+Line 1192: depth=8 (+1 -0) | <div className="w-9 h-9 rounded-full bg-white/20 flex items-
+Line 1194: depth=7 (+0 -1) | </div>
+Line 1195: depth=6 (+0 -1) | </div>
+Line 1210: depth=6 (+1 -1) | <div className="absolute inset-0 bg-gradient-to-r from-indig
+Line 1211: depth=7 (+1 -0) | <div className="relative h-full px-7 flex items-center justi
+Line 1212: depth=8 (+1 -0) | <div className="flex-1">
+Line 1219: depth=7 (+0 -1) | </div>
+Line 1220: depth=8 (+1 -0) | <div className="w-9 h-9 rounded-full bg-white/20 flex items-
+Line 1222: depth=7 (+0 -1) | </div>
+Line 1223: depth=6 (+0 -1) | </div>
+Line 1238: depth=6 (+1 -1) | <div className="absolute inset-0 bg-gradient-to-r from-emera
+Line 1239: depth=7 (+1 -0) | <div className="relative h-full px-7 flex items-center justi
+Line 1240: depth=8 (+1 -0) | <div className="flex-1">
+Line 1247: depth=7 (+0 -1) | </div>
+Line 1248: depth=8 (+1 -0) | <div className="w-9 h-9 rounded-full bg-white/20 flex items-
+Line 1250: depth=7 (+0 -1) | </div>
+Line 1251: depth=6 (+0 -1) | </div>
+Line 1266: depth=6 (+1 -1) | <div className="absolute inset-0 bg-gradient-to-r from-sky-9
+Line 1267: depth=7 (+1 -0) | <div className="relative h-full px-7 flex items-center justi
+Line 1268: depth=8 (+1 -0) | <div className="flex-1">
+Line 1275: depth=7 (+0 -1) | </div>
+Line 1276: depth=8 (+1 -0) | <div className="w-9 h-9 rounded-full bg-white/20 flex items-
+Line 1278: depth=7 (+0 -1) | </div>
+Line 1279: depth=6 (+0 -1) | </div>
+Line 1294: depth=6 (+1 -1) | <div className="absolute inset-0 bg-gradient-to-r from-blue-
+Line 1295: depth=7 (+1 -0) | <div className="relative h-full px-7 flex items-center justi
+Line 1296: depth=8 (+1 -0) | <div className="flex-1">
+Line 1303: depth=7 (+0 -1) | </div>
+Line 1304: depth=8 (+1 -0) | <div className="w-9 h-9 rounded-full bg-white/20 flex items-
+Line 1306: depth=7 (+0 -1) | </div>
+Line 1307: depth=6 (+0 -1) | </div>
+Line 1322: depth=6 (+1 -1) | <div className="absolute inset-0 bg-gradient-to-r from-red-9
+Line 1323: depth=7 (+1 -0) | <div className="relative h-full px-7 flex items-center justi
+Line 1324: depth=8 (+1 -0) | <div className="flex-1">
+Line 1331: depth=7 (+0 -1) | </div>
+Line 1332: depth=8 (+1 -0) | <div className="w-9 h-9 rounded-full bg-white/20 flex items-
+Line 1334: depth=7 (+0 -1) | </div>
+Line 1335: depth=6 (+0 -1) | </div>
+Line 1350: depth=6 (+1 -1) | <div className="absolute inset-0 bg-gradient-to-r from-teal-
+Line 1351: depth=7 (+1 -0) | <div className="relative h-full px-7 flex items-center justi
+Line 1352: depth=8 (+1 -0) | <div className="flex-1">
+Line 1359: depth=7 (+0 -1) | </div>
+Line 1360: depth=8 (+1 -0) | <div className="w-9 h-9 rounded-full bg-white/20 flex items-
+Line 1362: depth=7 (+0 -1) | </div>
+Line 1363: depth=6 (+0 -1) | </div>
+Line 1378: depth=6 (+1 -1) | <div className="absolute inset-0 bg-gradient-to-r from-cyan-
+Line 1379: depth=7 (+1 -0) | <div className="relative h-full px-7 flex items-center justi
+Line 1380: depth=8 (+1 -0) | <div className="flex-1">
+Line 1387: depth=7 (+0 -1) | </div>
+Line 1388: depth=8 (+1 -0) | <div className="w-9 h-9 rounded-full bg-white/20 flex items-
+Line 1390: depth=7 (+0 -1) | </div>
+Line 1391: depth=6 (+0 -1) | </div>
+Line 1408: depth=6 (+1 -1) | <div className="absolute inset-0 bg-gradient-to-r from-blue-
+Line 1409: depth=7 (+1 -0) | <div className="relative h-full px-7 flex items-center justi
+Line 1410: depth=8 (+1 -0) | <div className="flex-1">
+Line 1417: depth=7 (+0 -1) | </div>
+Line 1418: depth=8 (+1 -0) | <div className="w-9 h-9 rounded-full bg-white/20 flex items-
+Line 1420: depth=7 (+0 -1) | </div>
+Line 1421: depth=6 (+0 -1) | </div>
+Line 1424: depth=5 (+0 -1) | </div>
+Line 1425: depth=4 (+0 -1) | </div>
+Line 1426: depth=3 (+0 -1) | </div>
+Line 1427: depth=2 (+0 -1) | </div>
+Line 1428: depth=1 (+0 -1) | </div>
+Line 1429: depth=0 (+0 -1) | </div>
+Final depth: 0

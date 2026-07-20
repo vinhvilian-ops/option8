@@ -1,0 +1,6 @@
+{
+  "name": "Khanh Hoa E-Portal Modern",
+  "description": "A modern, responsive e-portal for Khanh Hoa province with news, leadership activities, and visitor information.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
