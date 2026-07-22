@@ -372,7 +372,7 @@ export default function UtilitiesPortal({ showSidebar = true, theme = "blue" }: 
   };
 
   return (
-    <div className="w-full text-slate-800 relative select-none mt-4 transition-all utilities-portal-root">
+    <div className="w-full text-slate-800 relative select-none transition-all utilities-portal-root bg-white p-6 md:p-10 rounded-3xl border border-gray-200 shadow-sm hover:cursor-default">
       {/* Toast Notification */}
       <AnimatePresence>
         {toastMsg && (
@@ -392,7 +392,7 @@ export default function UtilitiesPortal({ showSidebar = true, theme = "blue" }: 
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 border-b border-slate-100 pb-5">
         <div className="flex items-start gap-3.5 text-left">
           {/* Circle icon representing utilities with dynamic colors */}
-          <div className="w-12 h-12 bg-[#1E3A8A] text-white rounded-full flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+          <div className={`w-12 h-12 ${primaryBg} text-white rounded-full flex items-center justify-center shrink-0 shadow-sm mt-0.5`}>
             <Building size={22} className="stroke-[1.8]" />
           </div>
           <div className="text-left">
@@ -424,8 +424,8 @@ export default function UtilitiesPortal({ showSidebar = true, theme = "blue" }: 
       {/* Tri-Column Information Grid + Interactive Sidebar Column */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
         
-        {/* Left 3 Lists Section (Total spans 9 or 12 columns) - Beautiful Shared Card with Dividers */}
-        <div className={`${showSidebar ? "lg:col-span-9" : "lg:col-span-12"} bg-white rounded-[32px] border border-slate-200/80 p-6 md:p-8 shadow-sm flex flex-col justify-between`}>
+        {/* Left 3 Lists Section (Total spans 9 or 12 columns) - Direct layout without inner card container */}
+        <div className={`${showSidebar ? "lg:col-span-9" : "lg:col-span-12"} flex flex-col justify-between p-2`}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 divide-y md:divide-y-0">
             
             {/* Column 1: THÔNG TIN CÔNG KHAI */}

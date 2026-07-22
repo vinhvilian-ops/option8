@@ -146,7 +146,7 @@ export default function PropagandaPortal({ showUtilitiesSidebar = false }: { sho
   };
 
   return (
-    <div className="w-full text-slate-800 relative select-none">
+    <div className="w-full text-slate-800 relative select-none flex flex-col gap-10">
       {/* Toast Notification */}
       <AnimatePresence>
         {toast && (
@@ -163,7 +163,7 @@ export default function PropagandaPortal({ showUtilitiesSidebar = false }: { sho
       </AnimatePresence>
 
       {/* 4. Propaganda / Propaganda Information Section */}
-      <div className="text-left mt-10 border-t border-slate-100 pt-10">
+      <div className="text-left bg-white rounded-3xl p-6 md:p-10 shadow-sm border border-slate-200">
         <div className="flex items-center gap-3.5 mb-6">
           <div className="w-12 h-12 rounded-full bg-[#1E3A8A] text-white flex items-center justify-center shrink-0 shadow-sm">
             <Megaphone size={22} className="stroke-[1.8]" />
@@ -175,13 +175,13 @@ export default function PropagandaPortal({ showUtilitiesSidebar = false }: { sho
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Card 1: Phổ biến pháp luật */}
-          <div className="bg-white rounded-2xl border border-slate-100 p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div className="bg-white rounded-2xl p-5 transition-all flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-3.5">
                 <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-blue-50 text-blue-700 text-lg font-black rounded-lg uppercase tracking-wider">
                   Phổ biến pháp luật
                 </span>
-                <span className="text-lg text-slate-400 font-bold">Chuyên mục chính</span>
+                
               </div>
               
               {/* Main Banner story */}
@@ -245,12 +245,9 @@ export default function PropagandaPortal({ showUtilitiesSidebar = false }: { sho
                       />
                     </div>
                     <div className="text-left flex flex-col justify-center min-w-0">
-                      <h5 className="text-lg font-black text-slate-800 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors mb-1">
+                      <h5 className="text-lg font-black text-slate-800 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
                         {news.title}
                       </h5>
-                      <p className="text-base text-slate-500 font-bold line-clamp-1">
-                        {news.desc}
-                      </p>
                     </div>
                   </div>
                 ))}
@@ -259,13 +256,13 @@ export default function PropagandaPortal({ showUtilitiesSidebar = false }: { sho
           </div>
 
           {/* Card 2: Cải cách hành chính – Chuyển đổi số */}
-          <div className="bg-white rounded-2xl border border-slate-100 p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div className="bg-white rounded-2xl p-5 transition-all flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-3.5">
                 <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-blue-50 text-blue-700 text-lg font-black rounded-lg uppercase tracking-wider">
                   Cải cách & Số hoá
                 </span>
-                <span className="text-lg text-slate-400 font-bold">Chuyên mục chính</span>
+                
               </div>
               
               {/* Main Banner story */}
@@ -329,12 +326,9 @@ export default function PropagandaPortal({ showUtilitiesSidebar = false }: { sho
                       />
                     </div>
                     <div className="text-left flex flex-col justify-center min-w-0">
-                      <h5 className="text-lg font-black text-slate-800 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors mb-1">
+                      <h5 className="text-lg font-black text-slate-800 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
                         {news.title}
                       </h5>
-                      <p className="text-base text-slate-500 font-bold line-clamp-1">
-                        {news.desc}
-                      </p>
                     </div>
                   </div>
                 ))}
@@ -343,13 +337,13 @@ export default function PropagandaPortal({ showUtilitiesSidebar = false }: { sho
           </div>
 
           {/* Card 3: Thông tin về chính sách thuế */}
-          <div className="bg-white rounded-2xl border border-slate-100 p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div className="bg-white rounded-2xl p-5 transition-all flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-3.5">
                 <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-indigo-50 text-indigo-700 text-lg font-black rounded-lg uppercase tracking-wider">
                   Chính sách thuế
                 </span>
-                <span className="text-lg text-slate-400 font-bold">Chuyên mục chính</span>
+                
               </div>
               
               {/* Main Banner story */}
@@ -413,12 +407,9 @@ export default function PropagandaPortal({ showUtilitiesSidebar = false }: { sho
                       />
                     </div>
                     <div className="text-left flex flex-col justify-center min-w-0">
-                      <h5 className="text-lg font-black text-slate-800 line-clamp-2 leading-tight group-hover:text-indigo-600 transition-colors mb-1">
+                      <h5 className="text-lg font-black text-slate-800 line-clamp-2 leading-tight group-hover:text-indigo-600 transition-colors">
                         {news.title}
                       </h5>
-                      <p className="text-base text-slate-500 font-bold line-clamp-1">
-                        {news.desc}
-                      </p>
                     </div>
                   </div>
                 ))}
@@ -429,12 +420,12 @@ export default function PropagandaPortal({ showUtilitiesSidebar = false }: { sho
       </div>
 
       {/* TIỆN ÍCH DỊCH VỤ & THÔNG TIN CÔNG KHAI */}
-      <div className="mt-14 pt-14 border-t border-slate-200">
+      <div>
         <UtilitiesPortal showSidebar={showUtilitiesSidebar} />
       </div>
 
       {/* Dynamic National Celebration Banner Carousel */}
-      <div className="mt-6 relative overflow-hidden rounded-3xl shadow-md border border-red-700/10 bg-red-900">
+      <div className="mt-6 relative overflow-hidden rounded-3xl shadow-md border border-red-700/10 bg-red-700">
         <AnimatePresence mode="wait">
           {celebratoryBanners.map((cb, idx) => {
             if (idx !== bannerIndex) return null;
@@ -456,8 +447,8 @@ export default function PropagandaPortal({ showUtilitiesSidebar = false }: { sho
                     referrerPolicy="no-referrer"
                   />
                   {/* Red gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-red-950 from-0% via-red-900/50 via-40% to-transparent to-60%" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-red-950/80 from-0% via-transparent via-40% to-transparent mix-blend-multiply" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-900 from-0% via-red-700/50 via-40% to-transparent to-60%" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-900/80 from-0% via-transparent via-40% to-transparent mix-blend-multiply" />
                 </div>
 
                 {/* Text Content */}
@@ -470,7 +461,7 @@ export default function PropagandaPortal({ showUtilitiesSidebar = false }: { sho
 
                   <div className="relative z-10">
                     <div className="text-yellow-400 text-base font-black uppercase tracking-wider px-2.5 py-1 rounded-md mb-4 flex items-center gap-1.5 w-fit select-none leading-none bg-black/20 backdrop-blur-sm border border-yellow-500/20">
-                      <Sparkles size={13} className="fill-yellow-400" />
+                      <Sparkles size={13} className="fill-yellow-400" id="sparkles-propaganda" />
                       {cb.badge}
                     </div>
                     <h3 className="text-2xl md:text-[36px] font-black tracking-tight text-white mb-3 leading-snug drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
@@ -482,7 +473,7 @@ export default function PropagandaPortal({ showUtilitiesSidebar = false }: { sho
                   </div>
                 </div>
 
-                <div className="relative z-20 border-t border-white/20 bg-red-950/90 backdrop-blur-md px-8 py-4 flex flex-col sm:flex-row gap-4 justify-between items-center text-lg font-black tracking-wider text-yellow-200 shadow-inner">
+                <div className="relative z-20 border-t border-white/20 bg-red-800/90 backdrop-blur-md px-8 py-4 flex flex-col sm:flex-row gap-4 justify-between items-center text-lg font-black tracking-wider text-yellow-200 shadow-inner">
                   <span className="uppercase text-yellow-400 hidden md:inline-block tracking-widest text-base">{cb.footerLeft}</span>
                   
                   <div className="flex gap-2.5 items-center my-1 sm:my-0 bg-black/20 px-3 py-1.5 rounded-full backdrop-blur-sm">

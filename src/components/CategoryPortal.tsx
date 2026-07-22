@@ -1535,7 +1535,7 @@ function CitizenPortal({ onMapClick }: { onMapClick?: () => void }) {
       </AnimatePresence>
 
       {/* 1. HOẠT ĐỘNG LÃNH ĐẠO TỈNH - KHUNG TRÀN MÀN HÌNH CHUYÊN NGHIỆP */}
-      <section className="w-full relative overflow-hidden bg-gradient-to-r from-red-950 via-[#450a0a] to-red-950 border-b border-red-500/20 shadow-xl">
+      <section className="w-full relative overflow-hidden bg-slate-900 shadow-xl">
         {/* Active spotlight background image */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <AnimatePresence mode="wait">
@@ -1544,23 +1544,22 @@ function CitizenPortal({ onMapClick }: { onMapClick?: () => void }) {
               src={LEADERS_NEWS[newsIndex].image}
               referrerPolicy="no-referrer"
               initial={{ opacity: 0, scale: 1.05 }}
-              animate={{ opacity: 0.7, scale: 1 }}
+              animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.98 }}
               transition={{ duration: 0.7, ease: "easeInOut" }}
-              className="w-full h-full object-cover object-center filter saturate-[1.12] contrast-[1.05]"
+              className="w-full h-full object-cover object-center"
               alt="Spotlight Background"
             />
           </AnimatePresence>
-          {/* Gradient overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#031124]/95 via-[#032120]/75 to-[#052618]/15 hidden lg:block" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#031124]/95 via-[#032120]/65 to-[#052618]/10 lg:hidden block" />
+          {/* Glass overlays */}
+          <div className="absolute inset-0 bg-black/10 backdrop-blur-md" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-10 md:py-16 relative z-10 text-left">
           {/* Header / Title */}
           <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
             <div className="flex items-center gap-3.5 text-left">
-              <div className="w-12 h-12 bg-red-800 text-white rounded-full flex items-center justify-center shrink-0 shadow-sm border border-red-500/20">
+              <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center shrink-0 shadow-sm border border-blue-500/20">
                 <Megaphone size={22} className="stroke-[1.8]" />
               </div>
               <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight uppercase leading-none text-left">
@@ -1576,9 +1575,9 @@ function CitizenPortal({ onMapClick }: { onMapClick?: () => void }) {
             </a>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch lg:h-[640px] pt-2">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch pt-2">
             {/* Left Column: Big Spotlight News Info */}
-            <div className="lg:col-span-7 xl:col-span-7 pr-0 lg:pr-8 text-left h-full">
+            <div className="lg:col-span-7 xl:col-span-7 pr-0 lg:pr-8 text-left flex flex-col h-full">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={newsIndex}
@@ -1586,32 +1585,31 @@ function CitizenPortal({ onMapClick }: { onMapClick?: () => void }) {
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.98, y: -10 }}
                   transition={{ duration: 0.4 }}
-                  className="h-full"
+                  className="w-full h-full flex flex-col"
                 >
-                  <div className="relative w-full h-full min-h-[400px] overflow-hidden rounded-3xl border border-white/20 shadow-2xl group/spotlight select-none cursor-pointer hover:border-[#facc15]/50 transition-all duration-500">
-                    {/* High Quality Foreground Image */}
-                    <img
-                      src={LEADERS_NEWS[newsIndex].image}
-                      referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover object-center group-hover/spotlight:scale-105 transition-transform duration-700"
-                      alt={LEADERS_NEWS[newsIndex].title}
-                    />
+                  <div className="w-full h-full flex flex-col overflow-hidden rounded-3xl shadow-2xl group/spotlight select-none cursor-pointer transition-all duration-500 bg-[#1E3A8A]">
+                    {/* High Quality Foreground Image with 4:3 aspect ratio */}
+                    <div className="w-full aspect-[4/3] overflow-hidden relative shrink-0">
+                      <img
+                        src={LEADERS_NEWS[newsIndex].image}
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover object-center group-hover/spotlight:scale-105 transition-transform duration-700"
+                        alt={LEADERS_NEWS[newsIndex].title}
+                      />
+                    </div>
 
-                    {/* Dark gradient overlay for extreme readability */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-transparent z-10" />
-
-                    {/* Absolute content at the bottom of the card */}
-                    <div className="absolute inset-0 p-6 sm:p-8 flex flex-col justify-end z-20 text-left">
+                    {/* Content Section below, sitting on a blue background */}
+                    <div className="p-4 sm:p-5 flex flex-col justify-between flex-grow text-left bg-[#1E3A8A]">
                       <div className="flex justify-between items-center mb-3">
-                        <span className="inline-flex items-center gap-1 px-3 py-1 bg-red-600 text-white text-lg font-black rounded-md tracking-wider uppercase shadow-md pointer-events-none self-start">
+                        <span className="inline-flex items-center gap-1 px-3 py-1 bg-blue-500 text-white text-base md:text-lg font-black rounded-md tracking-wider uppercase shadow-md pointer-events-none self-start">
                           Tiêu điểm
                         </span>
-                        <span className="flex items-center gap-1.5 text-white text-lg font-bold drop-shadow bg-black/35 px-3 py-1 rounded-full backdrop-blur-sm border border-white/10">
+                        <span className="flex items-center gap-1.5 text-white text-base md:text-lg font-bold bg-black/25 px-3 py-1 rounded-full border border-white/10">
                           {LEADERS_NEWS[newsIndex].date}
                         </span>
                       </div>
 
-                      <h4 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl line-clamp-3 group-hover/spotlight:text-sky-400 transition-colors">
+                      <h4 className="text-xl md:text-2xl font-black text-white leading-snug tracking-tight group-hover/spotlight:text-yellow-300 transition-colors">
                         {LEADERS_NEWS[newsIndex].title}
                       </h4>
                     </div>
@@ -1620,57 +1618,61 @@ function CitizenPortal({ onMapClick }: { onMapClick?: () => void }) {
               </AnimatePresence>
             </div>
 
-            {/* Right Column: Premium Sidebar List overlay */}
-            <div className="lg:col-span-5 xl:col-span-5 flex flex-col gap-3 h-full overflow-y-auto pr-1 bg-red-950/45 backdrop-blur-lg border border-white/10 p-4 rounded-3xl backdrop-saturate-150 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-white/40 transition-colors">
-              {LEADERS_NEWS.map((item, idx) => {
-                const isActive = newsIndex === idx;
-                return (
-                  <motion.div
-                    key={idx}
-                    onClick={() => setNewsIndex(idx)}
-                    className={`flex shrink-0 gap-4 p-3 rounded-2xl border transition-all duration-300 cursor-pointer text-left group/item relative overflow-hidden ${
-                      isActive
-                        ? "bg-white/10 border-white/25 shadow-md backdrop-blur-md"
-                        : "bg-white/5 border-white/5 hover:bg-white/10 hover:border-white/10"
-                    }`}
-                    whileHover={{ scale: 1.02, y: -1 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <div className="w-20 h-14 md:w-24 md:h-16 shrink-0 rounded-xl overflow-hidden relative shadow-sm bg-red-950">
-                      <img
-                        src={item.image}
-                        referrerPolicy="no-referrer"
-                        className="w-full h-full object-cover group-hover/item:scale-105 transition-transform duration-500"
-                        alt={item.title}
-                      />
-                      {isActive && (
-                        <div className="absolute inset-0 bg-red-500/20 flex items-center justify-center">
-                          <div className="w-1.5 h-1.5 bg-yellow-400 rounded-full animate-ping" />
-                        </div>
-                      )}
-                    </div>
-                    <div className="flex-1 min-w-0 flex flex-col justify-between">
-                      <h5
-                        className={`text-lg md:text-lg font-bold leading-snug line-clamp-2 transition-colors duration-200 ${
-                          isActive ? "text-[#facc15]" : "text-white group-hover/item:text-[#facc15]"
+            {/* Right Column: Premium Sidebar List overlay matching exact left column height */}
+            <div className="lg:col-span-5 xl:col-span-5 relative min-h-[380px] lg:min-h-0">
+              <div className="lg:absolute lg:inset-0 w-full h-full flex flex-col bg-white/60 backdrop-blur-xl rounded-3xl shadow-xl border border-white/40 p-2 sm:p-3 overflow-hidden">
+                <div className="w-full flex-1 overflow-y-auto pr-2 flex flex-col [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-white/10 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-white/50 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-white/80 transition-colors">
+                  {LEADERS_NEWS.map((item, idx) => {
+                    const isActive = newsIndex === idx;
+                    return (
+                      <motion.div
+                        key={idx}
+                        onClick={() => setNewsIndex(idx)}
+                        className={`flex shrink-0 gap-4 py-4 px-3 border-b border-white/30 transition-all duration-300 cursor-pointer text-left group/item relative overflow-hidden last:border-b-0 ${
+                          isActive
+                            ? "bg-transparent"
+                            : "bg-transparent hover:bg-white/10"
                         }`}
+                        whileHover={{ scale: 1.01, y: -1 }}
+                        whileTap={{ scale: 0.99 }}
                       >
-                        {item.title}
-                      </h5>
-                      <div className="flex items-center justify-between text-lg text-white/50 font-semibold mt-1">
-                        <span className="flex items-center gap-1">
-                          <Calendar size={12} /> {item.date}
-                        </span>
-                        {isActive && (
-                          <span className="text-yellow-400 text-lg font-bold">
-                            Đang xem •
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                  </motion.div>
-                );
-              })}
+                        <div className="w-24 h-16 md:w-28 md:h-20 shrink-0 rounded-xl overflow-hidden relative shadow-sm bg-white/20">
+                          <img
+                            src={item.image}
+                            referrerPolicy="no-referrer"
+                            className="w-full h-full object-cover group-hover/item:scale-105 transition-transform duration-500"
+                            alt={item.title}
+                          />
+                          {isActive && (
+                            <div className="absolute inset-0 bg-blue-500/20 flex items-center justify-center">
+                              <div className="w-2 h-2 bg-blue-500 rounded-full animate-ping shadow-[0_0_8px_rgba(59,130,246,0.8)]" />
+                            </div>
+                          )}
+                        </div>
+                        <div className="flex-1 min-w-0 flex flex-col justify-between py-0.5">
+                          <h5
+                            className={`text-base md:text-lg font-bold leading-snug line-clamp-2 transition-colors duration-200 ${
+                              isActive ? "text-blue-900 drop-shadow-sm" : "text-black group-hover/item:text-blue-800"
+                            }`}
+                          >
+                            {item.title}
+                          </h5>
+                          <div className="flex items-center justify-between text-sm text-black/80 font-medium mt-1">
+                            <span className="flex items-center gap-1.5">
+                              <Calendar size={14} /> {item.date}
+                            </span>
+                            {isActive && (
+                              <span className="text-blue-700 font-black tracking-wide drop-shadow-sm">
+                                Đang xem •
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1692,8 +1694,8 @@ function CitizenPortal({ onMapClick }: { onMapClick?: () => void }) {
       </div>
 
       {/* FULL WIDTH BLOCK FOR PROPAGANDA & UTILITIES PORTAL */}
-      <div className="w-full bg-[#f8fafc] py-14 border-y border-slate-200/60 my-10">
-        <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8 xl:px-12 w-full">
+      <div className="w-full py-14 my-10">
+        <div className="mx-auto max-w-7xl px-4 w-full">
           <PropagandaPortal showUtilitiesSidebar={false} />
         </div>
       </div>
@@ -1782,7 +1784,7 @@ function BusinessPortal({ onMapClick }: { onMapClick?: () => void }) {
       </AnimatePresence>
 
       {/* 1. HOẠT ĐỘNG CHÍNH QUYỀN ĐỒNG HÀNH CÙNG DOANH NGHIỆP - KHUNG TRÀN MÀN HÌNH CHUYÊN NGHIỆP */}
-      <section className="w-full relative overflow-hidden bg-gradient-to-r from-red-950 via-[#450a0a] to-black border-b border-red-500/20 shadow-xl mb-10">
+      <section className="w-full relative overflow-hidden bg-slate-900 shadow-xl mb-10">
         {/* Active spotlight background image */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <AnimatePresence mode="wait">
@@ -1791,16 +1793,15 @@ function BusinessPortal({ onMapClick }: { onMapClick?: () => void }) {
               src={LEADERS_NEWS[newsIndex].image}
               referrerPolicy="no-referrer"
               initial={{ opacity: 0, scale: 1.05 }}
-              animate={{ opacity: 0.7, scale: 1 }}
+              animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.98 }}
               transition={{ duration: 0.7, ease: "easeInOut" }}
-              className="w-full h-full object-cover object-center filter saturate-[1.12] contrast-[1.05]"
+              className="w-full h-full object-cover object-center"
               alt="Spotlight Background"
             />
           </AnimatePresence>
-          {/* Gradient overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#031124]/95 via-[#032140]/75 to-[#052618]/15 hidden lg:block" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#031124]/95 via-[#032140]/65 to-[#052618]/10 lg:hidden block" />
+          {/* Glass overlays */}
+          <div className="absolute inset-0 bg-black/10 backdrop-blur-md" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-10 md:py-16 relative z-10 text-left">
@@ -1830,7 +1831,7 @@ function BusinessPortal({ onMapClick }: { onMapClick?: () => void }) {
                   transition={{ duration: 0.4 }}
                   className="h-full"
                 >
-                  <div className="relative w-full h-full min-h-[400px] overflow-hidden rounded-3xl border border-white/20 shadow-2xl group/spotlight select-none cursor-pointer hover:border-[#facc15]/50 transition-all duration-500">
+                  <div className="relative w-full h-full min-h-[400px] overflow-hidden rounded-3xl shadow-2xl group/spotlight select-none cursor-pointer transition-all duration-500">
                     <img
                       src={LEADERS_NEWS[newsIndex].image}
                       referrerPolicy="no-referrer"
@@ -1840,7 +1841,7 @@ function BusinessPortal({ onMapClick }: { onMapClick?: () => void }) {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-transparent z-10" />
                     <div className="absolute inset-0 p-6 sm:p-8 flex flex-col justify-end z-20 text-left">
                       <div className="flex justify-between items-center mb-3">
-                        <span className="inline-flex items-center gap-1 px-3 py-1 bg-red-600 text-white text-lg font-black rounded-md tracking-wider uppercase shadow-md pointer-events-none self-start">
+                        <span className="inline-flex items-center gap-1 px-3 py-1 bg-blue-500 text-white text-lg font-black rounded-md tracking-wider uppercase shadow-md pointer-events-none self-start">
                           Tiêu điểm
                         </span>
                         <span className="flex items-center gap-1.5 text-white text-lg font-bold drop-shadow bg-black/35 px-3 py-1 rounded-full backdrop-blur-sm border border-white/10">
@@ -1857,56 +1858,60 @@ function BusinessPortal({ onMapClick }: { onMapClick?: () => void }) {
             </div>
 
             {/* Right Column: Premium Sidebar List overlay */}
-            <div className="lg:col-span-5 xl:col-span-5 flex flex-col gap-2.5 h-full overflow-y-auto pr-1 bg-red-950/30 backdrop-blur-lg border border-white/10 p-4 rounded-3xl backdrop-saturate-150 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-white/40 transition-colors">
-              {LEADERS_NEWS.map((item, idx) => {
-                const isActive = newsIndex === idx;
-                return (
-                  <motion.div
-                    key={idx}
-                    onClick={() => setNewsIndex(idx)}
-                    className={`flex gap-3 p-2.5 rounded-2xl border transition-all duration-300 cursor-pointer text-left ${
-                      isActive
-                        ? "bg-white/10 border-white/20 shadow-md backdrop-blur-md"
-                        : "bg-white/5 border-white/5 hover:bg-white/10 hover:border-white/10"
-                    }`}
-                    whileHover={{ scale: 1.01 }}
-                    whileTap={{ scale: 0.99 }}
-                  >
-                    <div className="w-16 h-12 shrink-0 rounded-xl overflow-hidden relative shadow-sm bg-red-950">
-                      <img
-                        src={item.image}
-                        referrerPolicy="no-referrer"
-                        className="w-full h-full object-cover"
-                        alt={item.title}
-                      />
-                      {isActive && (
-                        <div className="absolute inset-0 bg-red-500/20 flex items-center justify-center">
-                          <div className="w-1.5 h-1.5 bg-yellow-400 rounded-full animate-ping" />
-                        </div>
-                      )}
-                    </div>
-                    <div className="flex-1 min-w-0 flex flex-col justify-between">
-                      <h5
-                        className={`text-lg font-bold leading-snug line-clamp-2 transition-colors duration-200 ${
-                          isActive ? "text-yellow-400" : "text-white/95 hover:text-[#facc15]"
+            <div className="lg:col-span-5 xl:col-span-5 relative min-h-[380px] lg:min-h-0">
+              <div className="lg:absolute lg:inset-0 w-full h-full flex flex-col bg-white/60 backdrop-blur-xl rounded-3xl shadow-xl border border-white/40 p-2 sm:p-3 overflow-hidden">
+                <div className="w-full flex-1 overflow-y-auto pr-2 flex flex-col [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-white/10 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-white/50 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-white/80 transition-colors">
+                  {LEADERS_NEWS.map((item, idx) => {
+                    const isActive = newsIndex === idx;
+                    return (
+                      <motion.div
+                        key={idx}
+                        onClick={() => setNewsIndex(idx)}
+                        className={`flex shrink-0 gap-4 py-4 px-3 border-b border-white/30 transition-all duration-300 cursor-pointer text-left group/item relative overflow-hidden last:border-b-0 ${
+                          isActive
+                            ? "bg-transparent"
+                            : "bg-transparent hover:bg-white/10"
                         }`}
+                        whileHover={{ scale: 1.01, y: -1 }}
+                        whileTap={{ scale: 0.99 }}
                       >
-                        {item.title}
-                      </h5>
-                      <div className="flex items-center justify-between text-lg text-white/50 font-semibold mt-1">
-                        <span className="flex items-center gap-1">
-                          <Calendar size={10} /> {item.date}
-                        </span>
-                        {isActive && (
-                          <span className="text-yellow-400 text-lg font-bold">
-                            Đang xem •
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                  </motion.div>
-                );
-              })}
+                        <div className="w-24 h-16 md:w-28 md:h-20 shrink-0 rounded-xl overflow-hidden relative shadow-sm bg-white/20">
+                          <img
+                            src={item.image}
+                            referrerPolicy="no-referrer"
+                            className="w-full h-full object-cover group-hover/item:scale-105 transition-transform duration-500"
+                            alt={item.title}
+                          />
+                          {isActive && (
+                            <div className="absolute inset-0 bg-blue-500/20 flex items-center justify-center">
+                              <div className="w-2 h-2 bg-blue-500 rounded-full animate-ping shadow-[0_0_8px_rgba(59,130,246,0.8)]" />
+                            </div>
+                          )}
+                        </div>
+                        <div className="flex-1 min-w-0 flex flex-col justify-between py-0.5">
+                          <h5
+                            className={`text-base md:text-lg font-bold leading-snug line-clamp-2 transition-colors duration-200 ${
+                              isActive ? "text-blue-900 drop-shadow-sm" : "text-black group-hover/item:text-blue-800"
+                            }`}
+                          >
+                            {item.title}
+                          </h5>
+                          <div className="flex items-center justify-between text-sm text-black/80 font-medium mt-1">
+                            <span className="flex items-center gap-1.5">
+                              <Calendar size={14} /> {item.date}
+                            </span>
+                            {isActive && (
+                              <span className="text-blue-700 font-black tracking-wide drop-shadow-sm">
+                                Đang xem •
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1925,8 +1930,8 @@ function BusinessPortal({ onMapClick }: { onMapClick?: () => void }) {
       </div>
 
       {/* FULL WIDTH BLOCK FOR PROPAGANDA & UTILITIES PORTAL */}
-      <div className="w-full bg-[#f8fafc] py-14 border-y border-slate-200/60 my-12">
-        <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8 xl:px-12 w-full">
+      <div className="w-full py-14 my-12">
+        <div className="mx-auto max-w-7xl px-4 w-full">
           <PropagandaPortal showUtilitiesSidebar={false} />
         </div>
       </div>

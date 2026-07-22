@@ -168,7 +168,7 @@ export default function KeyInformationCategories() {
   };
 
   return (
-    <div className="w-full text-slate-800 relative select-none">
+    <div className="w-full text-slate-800 relative select-none bg-white rounded-3xl p-6 md:p-10 shadow-sm border border-slate-200">
       {/* Toast Notification */}
       <AnimatePresence>
         {toast && (
@@ -277,7 +277,7 @@ export default function KeyInformationCategories() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.3 }}
-              className="mt-8 bg-white border border-slate-100 rounded-3xl p-6 md:p-8 shadow-sm overflow-hidden text-left"
+              className="mt-10 pt-8 border-t border-slate-200 overflow-hidden text-left"
             >
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 border-b border-slate-100 pb-4">
                 <div className="text-left">

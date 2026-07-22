@@ -419,7 +419,7 @@ function OverviewSlide() {
                   labelStyle={{ fontWeight: 'bold', color: '#0f172a', fontSize: '16px' }}
                   itemStyle={{ fontSize: '16px' }}
                 />
-                <Area type="monotone" dataKey="pop" stroke="#10b981" strokeWidth={3} fillOpacity={1} fill="url(#colorPop)" name="Dân số" />
+                <Area type="linear" dataKey="pop" stroke="#10b981" strokeWidth={3} fillOpacity={1} fill="url(#colorPop)" name="Dân số" />
               </AreaChart>
             </ResponsiveContainer>
           </div>
@@ -795,7 +795,7 @@ function BudgetAndInvestmentSlide() {
                     contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
                     itemStyle={{ fontSize: '16px' }}
                   />
-                  <Area type="monotone" dataKey="val" stroke="#3b82f6" strokeWidth={3} fillOpacity={1} fill="url(#colorGiaiNgan)" name="Giải ngân" />
+                  <Area type="linear" dataKey="val" stroke="#3b82f6" strokeWidth={3} fillOpacity={1} fill="url(#colorGiaiNgan)" name="Giải ngân" />
                 </AreaChart>
              </ResponsiveContainer>
            </div>
@@ -942,10 +942,10 @@ function AgricultureSlide() {
                 contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)', fontSize: '14px' }}
               />
               <Legend iconType="circle" wrapperStyle={{ fontSize: '12px', paddingTop: '10px' }} />
-              <Area type="monotone" dataKey="rice" name="Lúa" stackId="1" stroke="#f59e0b" fill="#f59e0b" fillOpacity={0.6} />
-              <Area type="monotone" dataKey="vegetable" name="Hoa màu" stackId="1" stroke="#10b981" fill="#10b981" fillOpacity={0.6} />
-              <Area type="monotone" dataKey="fruit" name="Cây ăn quả" stackId="1" stroke="#3b82f6" fill="#3b82f6" fillOpacity={0.6} />
-              <Area type="monotone" dataKey="other" name="Cây khác" stackId="1" stroke="#64748b" fill="#64748b" fillOpacity={0.6} />
+              <Area type="linear" dataKey="rice" name="Lúa" stackId="1" stroke="#f59e0b" fill="#f59e0b" fillOpacity={0.6} />
+              <Area type="linear" dataKey="vegetable" name="Hoa màu" stackId="1" stroke="#10b981" fill="#10b981" fillOpacity={0.6} />
+              <Area type="linear" dataKey="fruit" name="Cây ăn quả" stackId="1" stroke="#3b82f6" fill="#3b82f6" fillOpacity={0.6} />
+              <Area type="linear" dataKey="other" name="Cây khác" stackId="1" stroke="#64748b" fill="#64748b" fillOpacity={0.6} />
             </AreaChart>
           </ResponsiveContainer>
         </div>
@@ -1009,9 +1009,9 @@ function AgricultureSlide() {
                 contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)', fontSize: '14px' }}
               />
               <Legend iconType="circle" wrapperStyle={{ fontSize: '12px', paddingTop: '10px' }} />
-              <Area type="monotone" dataKey="fresh" name="Nước ngọt" stroke="#10b981" fill="#10b981" fillOpacity={0.6} />
-              <Area type="monotone" dataKey="brackish" name="Nước lợ" stroke="#f59e0b" fill="#f59e0b" fillOpacity={0.6} />
-              <Area type="monotone" dataKey="salt" name="Nước mặn" stroke="#0ea5e9" fill="#0ea5e9" fillOpacity={0.6} />
+              <Area type="linear" dataKey="fresh" name="Nước ngọt" stroke="#10b981" fill="#10b981" fillOpacity={0.6} />
+              <Area type="linear" dataKey="brackish" name="Nước lợ" stroke="#f59e0b" fill="#f59e0b" fillOpacity={0.6} />
+              <Area type="linear" dataKey="salt" name="Nước mặn" stroke="#0ea5e9" fill="#0ea5e9" fillOpacity={0.6} />
             </AreaChart>
           </ResponsiveContainer>
         </div>
@@ -1372,7 +1372,7 @@ function CommerceTourismServicesSlide() {
                       />
                       <Bar dataKey="domestic" name="Nội địa" fill="#3b82f6" stackId="a" radius={[0, 0, 4, 4]} barSize={30} />
                       <Bar dataKey="international" name="Quốc tế" fill="#10b981" stackId="a" radius={[4, 4, 0, 0]} barSize={30} />
-                      <Line type="monotone" dataKey="val" name="Tổng" stroke="#f59e0b" strokeWidth={3} dot={{ r: 4, fill: '#f59e0b' }} />
+                      <Line type="linear" dataKey="val" name="Tổng" stroke="#f59e0b" strokeWidth={3} dot={{ r: 4, fill: '#f59e0b' }} />
                    </ComposedChart>
                  </ResponsiveContainer>
                </div>
@@ -1519,7 +1519,7 @@ function EnterprisesSlide() {
                   />
                   <Legend iconType="circle" wrapperStyle={{ fontSize: '12px', paddingTop: '10px' }} />
                   <Bar yAxisId="left" dataKey="count" name="Số Hợp tác xã" fill="#10b981" radius={[4, 4, 0, 0]} barSize={40} />
-                  <Line yAxisId="right" type="monotone" dataKey="workers" name="Số lao động (Người)" stroke="#f59e0b" strokeWidth={3} dot={{ r: 4 }} />
+                  <Line yAxisId="right" type="linear" dataKey="workers" name="Số lao động (Người)" stroke="#f59e0b" strokeWidth={3} dot={{ r: 4 }} />
                 </ComposedChart>
               </ResponsiveContainer>
             </div>
@@ -1539,7 +1539,7 @@ function EnterprisesSlide() {
                   />
                   <Legend iconType="circle" wrapperStyle={{ fontSize: '12px', paddingTop: '10px' }} />
                   <Bar yAxisId="left" dataKey="count" name="Số Hợp tác xã" fill="#10b981" radius={[4, 4, 0, 0]} barSize={25} />
-                  <Line yAxisId="right" type="monotone" dataKey="workers" name="Số lao động (Người)" stroke="#f59e0b" strokeWidth={3} dot={{ r: 4 }} />
+                  <Line yAxisId="right" type="linear" dataKey="workers" name="Số lao động (Người)" stroke="#f59e0b" strokeWidth={3} dot={{ r: 4 }} />
                 </ComposedChart>
               </ResponsiveContainer>
             </div>
@@ -1568,7 +1568,7 @@ function EnterprisesSlide() {
                   />
                   <Legend iconType="circle" wrapperStyle={{ fontSize: '12px', paddingTop: '10px' }} />
                   <Bar yAxisId="left" dataKey="count" name="Số cơ sở" fill="#a855f7" radius={[4, 4, 0, 0]} barSize={40} />
-                  <Line yAxisId="right" type="monotone" dataKey="workers" name="Số lao động (Người)" stroke="#ec4899" strokeWidth={3} dot={{ r: 4 }} />
+                  <Line yAxisId="right" type="linear" dataKey="workers" name="Số lao động (Người)" stroke="#ec4899" strokeWidth={3} dot={{ r: 4 }} />
                 </ComposedChart>
               </ResponsiveContainer>
             </div>
@@ -1588,7 +1588,7 @@ function EnterprisesSlide() {
                   />
                   <Legend iconType="circle" wrapperStyle={{ fontSize: '12px', paddingTop: '10px' }} />
                   <Bar yAxisId="left" dataKey="count" name="Số cơ sở" fill="#a855f7" radius={[4, 4, 0, 0]} barSize={25} />
-                  <Line yAxisId="right" type="monotone" dataKey="workers" name="Số lao động (Người)" stroke="#ec4899" strokeWidth={3} dot={{ r: 4 }} />
+                  <Line yAxisId="right" type="linear" dataKey="workers" name="Số lao động (Người)" stroke="#ec4899" strokeWidth={3} dot={{ r: 4 }} />
                 </ComposedChart>
               </ResponsiveContainer>
             </div>
@@ -1706,7 +1706,7 @@ function EducationAndHealthcareSlide() {
                   />
                   <Legend iconType="circle" wrapperStyle={{ fontSize: '12px', paddingTop: '10px' }} />
                   <Bar yAxisId="left" dataKey="count" name="Số trường" fill="#3b82f6" radius={[4, 4, 0, 0]} barSize={30} />
-                  <Line yAxisId="right" type="monotone" dataKey="students" name="Số sinh viên" stroke="#f59e0b" strokeWidth={3} dot={{ r: 4 }} />
+                  <Line yAxisId="right" type="linear" dataKey="students" name="Số sinh viên" stroke="#f59e0b" strokeWidth={3} dot={{ r: 4 }} />
                 </ComposedChart>
               </ResponsiveContainer>
             </div>
@@ -1737,7 +1737,7 @@ function EducationAndHealthcareSlide() {
                   />
                   <Legend iconType="circle" wrapperStyle={{ fontSize: '12px', paddingTop: '10px' }} />
                   <Bar yAxisId="left" dataKey="count" name="Số trường" fill="#6366f1" radius={[4, 4, 0, 0]} barSize={30} />
-                  <Line yAxisId="right" type="monotone" dataKey="students" name="Số sinh viên" stroke="#ec4899" strokeWidth={3} dot={{ r: 4 }} />
+                  <Line yAxisId="right" type="linear" dataKey="students" name="Số sinh viên" stroke="#ec4899" strokeWidth={3} dot={{ r: 4 }} />
                 </ComposedChart>
               </ResponsiveContainer>
             </div>
@@ -1771,7 +1771,7 @@ function EducationAndHealthcareSlide() {
                   />
                   <Legend iconType="circle" wrapperStyle={{ fontSize: '12px', paddingTop: '10px' }} />
                   <Bar yAxisId="left" dataKey="count" name="Số trường" fill="#14b8a6" radius={[4, 4, 0, 0]} barSize={30} />
-                  <Line yAxisId="right" type="monotone" dataKey="students" name="Số học sinh" stroke="#f59e0b" strokeWidth={3} dot={{ r: 4 }} />
+                  <Line yAxisId="right" type="linear" dataKey="students" name="Số học sinh" stroke="#f59e0b" strokeWidth={3} dot={{ r: 4 }} />
                 </ComposedChart>
               </ResponsiveContainer>
             </div>
@@ -1989,9 +1989,9 @@ function EnvironmentAndTechSlide() {
                     contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)', fontSize: '14px' }}
                   />
                   <Legend iconType="circle" wrapperStyle={{ fontSize: '12px', paddingTop: '10px' }} />
-                  <Line type="monotone" dataKey="river1" name="Sông A" stroke="#0ea5e9" strokeWidth={3} dot={{ r: 4 }} />
-                  <Line type="monotone" dataKey="river2" name="Sông B" stroke="#10b981" strokeWidth={3} dot={{ r: 4 }} />
-                  <Line type="monotone" dataKey="river3" name="Sông C" stroke="#f59e0b" strokeWidth={3} dot={{ r: 4 }} />
+                  <Line type="linear" dataKey="river1" name="Sông A" stroke="#0ea5e9" strokeWidth={3} dot={{ r: 4 }} />
+                  <Line type="linear" dataKey="river2" name="Sông B" stroke="#10b981" strokeWidth={3} dot={{ r: 4 }} />
+                  <Line type="linear" dataKey="river3" name="Sông C" stroke="#f59e0b" strokeWidth={3} dot={{ r: 4 }} />
                 </LineChart>
               </ResponsiveContainer>
             </div>
