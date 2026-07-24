@@ -573,14 +573,14 @@ function IntroPortal() {
       </section>
 
       {/* Flipbook Section */}
-      <section className="w-full py-16 bg-slate-50">
+      <section className="w-full pb-8 pt-16">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
             <Flipbook />
         </div>
       </section>
 
       {/* SECTION HỢP NHẤT: NIÊN GIÁM ĐỊA CHÍ & PHÁT TRIỂN TOÀN DIỆN KHÁNH HÒA */}
-      <section className="w-full py-16 md:py-24 bg-white">
+      <section className="w-full pb-16 md:pb-24 pt-4 md:pt-8">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           
           {/*           {/* CHUNG MỘT KHỐI: MASTER CARD HOUSING CONTAINER */}
