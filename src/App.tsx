@@ -807,7 +807,7 @@ export default function App() {
     } catch (e) {
       // ignore
     }
-    return CATEGORIES.find(c => c.id === "chinh-quyen") || GIOI_THIEU_CAT;
+    return GIOI_THIEU_CAT;
   });
 
   useEffect(() => {

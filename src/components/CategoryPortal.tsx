@@ -485,7 +485,7 @@ function IntroPortal() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -15 }}
                   transition={{ duration: 0.4 }}
-                  className="flex flex-col w-full rounded-3xl overflow-hidden shadow-2xl border border-white/10 group cursor-pointer bg-[#1e3a8a]"
+                  className="flex flex-col w-full rounded-3xl overflow-hidden shadow-2xl group cursor-pointer bg-[#1e3a8a]"
                 >
                   <div className="w-full aspect-[4/3] overflow-hidden relative shrink-0">
                     <img
@@ -596,7 +596,7 @@ function IntroPortal() {
                   <h4 className="text-2xl md:text-3.5xl font-black tracking-tight text-blue-800 uppercase leading-tight">
                     I. Tổng quan & Bản đồ hành chính
                   </h4>
-                  <p className="text-lg sm:text-lg font-bold text-black uppercase tracking-wider mt-1.5">
+                  <p className="text-lg sm:text-lg font-bold text-black tracking-wider mt-1.5">
                     Diện tích tự nhiên & 9 đơn vị cấp huyện trực thuộc
                   </p>
                 </div>
@@ -626,10 +626,10 @@ function IntroPortal() {
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                       {DIVISIONS.map((div) => (
                         <div key={div.id} className="p-4 bg-slate-50/60 hover:bg-blue-50/20 border border-slate-200/80 hover:border-blue-500 rounded-2xl transition-all duration-300 group text-left">
-                          <h5 className="text-lg font-black text-blue-800 group-hover:text-blue-600 transition-colors mb-1.5 font-sans">
+                          <h5 className="text-lg font-black text-blue-800 group-hover:text-blue-600 transition-colors mb-1.5 font-sans uppercase">
                             {div.name}
                           </h5>
-                          <span className="text-lg bg-white border border-slate-200 py-0.5 px-2 rounded-md font-extrabold text-blue-800 uppercase inline-block">
+                          <span className="text-lg bg-white border border-slate-200 py-0.5 px-2 rounded-md font-extrabold text-blue-800 inline-block">
                             {div.type} • {div.area}
                           </span>
                           <p className="text-lg text-black font-normal mt-2.5 line-clamp-3 leading-relaxed">
@@ -709,7 +709,7 @@ function IntroPortal() {
                   <h4 className="text-2xl md:text-3.5xl font-black tracking-tight text-blue-700 uppercase leading-tight">
                     II. Địa chí Tự nhiên, Sử ký, Hải sản, cơ sở Hạ tầng
                   </h4>
-                  <p className="text-lg sm:text-lg font-bold text-black uppercase tracking-wider mt-1.5">
+                  <p className="text-lg sm:text-lg font-bold text-black tracking-wider mt-1.5">
                     Sơn văn thạch học, Yến sào, di sản sử sách ngàn năm, đặc chủng khánh hải & quy hoạch đồng bộ
                   </p>
                 </div>
@@ -915,7 +915,7 @@ function IntroPortal() {
                         <h4 className="text-2xl md:text-3.5xl font-black tracking-tight text-blue-800 uppercase leading-tight">
                           III. Chính sách đặc thù đang được áp dụng
                         </h4>
-                        <p className="text-lg sm:text-lg font-bold text-black uppercase tracking-wider mt-1.5">
+                        <p className="text-lg sm:text-lg font-bold text-black tracking-wider mt-1.5">
                           Nghị quyết số 55/2022/QH15 của Quốc hội về thí điểm một số cơ chế, chính sách đặc thù phát triển tỉnh Khánh Hòa
                         </p>
                       </div>
@@ -1649,7 +1649,7 @@ function CitizenPortal({ onMapClick }: { onMapClick?: () => void }) {
                   transition={{ duration: 0.4 }}
                   className="w-full h-full flex flex-col"
                 >
-                  <div className="flex flex-col w-full rounded-3xl overflow-hidden shadow-2xl border border-white/10 group/spotlight cursor-pointer bg-[#1e3a8a] select-none transition-all duration-500">
+                  <div className="flex flex-col w-full rounded-3xl overflow-hidden shadow-2xl group/spotlight cursor-pointer bg-[#1e3a8a] select-none transition-all duration-500">
                     <div className="w-full aspect-[4/3] overflow-hidden relative shrink-0">
                       <img
                         src={LEADERS_NEWS[newsIndex].image}

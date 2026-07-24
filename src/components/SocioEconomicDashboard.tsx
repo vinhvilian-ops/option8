@@ -164,46 +164,47 @@ export default function SocioEconomicDashboard({}: SocioEconomicDashboardProps) 
 
   return (
     <div className="w-full bg-slate-50/20 text-slate-800 flex flex-col font-sans relative px-4 md:px-6 py-6">
+      <div className="max-w-7xl mx-auto w-full bg-white rounded-[2rem] shadow-sm border border-slate-200 p-4 md:p-8">
       {/* DASHBOARD NAVBAR / HEADER */}
-      <header className="bg-white/95 backdrop-blur-md relative z-10 py-6 mb-8 rounded-3xl shadow-sm border border-slate-100">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 px-8">
-          <div className="flex items-center gap-5 w-full md:w-auto">
+      <header className="relative z-10 py-4 mb-6">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 px-2">
+          <div className="flex flex-col gap-4 w-full">
             <div className="text-left">
-              <span className="text-base md:text-base font-semibold text-emerald-600 tracking-wider uppercase block mb-1">
+              <span className="text-base md:text-base font-bold text-blue-900 tracking-wider uppercase flex items-center gap-2 mb-1">
+                <TrendingUp className="text-blue-900 shrink-0" size={20} />
                 CỔNG THÔNG TIN SỐ LIỆU THỐNG KÊ KHÁNH HÒA
               </span>
-              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight uppercase flex items-center gap-3">
-                <TrendingUp className="text-emerald-500 shrink-0" size={30} />
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight uppercase flex items-center gap-3">
                 NIÊN GIÁM THỐNG KÊ KINH TẾ - XÃ HỘI
               </h1>
             </div>
-          </div>
-
-          <div className="flex items-center gap-4 w-full md:w-auto justify-end">
-            {/* Period Selector */}
-            <div className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-2xl text-base shadow-sm border border-slate-100">
-              <Calendar size={18} className="text-emerald-500" />
-              <select 
-                value={selectedPeriod} 
-                onChange={(e) => setSelectedPeriod(e.target.value)}
-                className="bg-transparent text-slate-900 font-semibold focus:outline-none cursor-pointer text-base uppercase"
-              >
-                <option value="Tháng 05/2026" className="text-slate-800">Tháng 05 / 2026</option>
-                <option value="Tháng 04/2026" className="text-slate-800">Tháng 04 / 2026</option>
-                <option value="Tháng 03/2026" className="text-slate-800">Tháng 03 / 2026</option>
-              </select>
-            </div>
             
-            {/* Legend Badge */}
-            <span className="bg-emerald-50 text-emerald-800 px-4 py-2.5 rounded-2xl text-base font-medium hidden sm:inline-block">
-              Nguồn dữ liệu: Ủy Ban Nhân Dân Tỉnh Khánh Hòa
-            </span>
+            <div className="flex items-center gap-4">
+              {/* Period Selector */}
+              <div className="flex items-center gap-2 bg-slate-50 px-4 py-2.5 rounded-2xl text-base shadow-sm border border-slate-200 w-max">
+                <Calendar size={18} className="text-blue-900" />
+                <select 
+                  value={selectedPeriod} 
+                  onChange={(e) => setSelectedPeriod(e.target.value)}
+                  className="bg-transparent text-slate-900 font-bold focus:outline-none cursor-pointer text-base uppercase"
+                >
+                  <option value="Tháng 05/2026" className="text-slate-800">Tháng 05 / 2026</option>
+                  <option value="Tháng 04/2026" className="text-slate-800">Tháng 04 / 2026</option>
+                  <option value="Tháng 03/2026" className="text-slate-800">Tháng 03 / 2026</option>
+                </select>
+              </div>
+
+              {/* Legend Badge */}
+              <span className="bg-slate-100 text-slate-600 px-4 py-2.5 rounded-2xl text-base font-bold border border-slate-200 hidden sm:inline-block">
+                Nguồn dữ liệu: Ủy Ban Nhân Dân Tỉnh Khánh Hòa
+              </span>
+            </div>
           </div>
         </div>
       </header>
 
       {/* TABS FOR QUICK SWITCHING */}
-      <div className="relative mb-8 flex items-center bg-white/95 backdrop-blur-md rounded-3xl border border-slate-100 shadow-sm p-2 gap-2">
+      <div className="relative mb-8 flex items-center bg-slate-50/50 rounded-3xl border border-slate-100 p-2 gap-2">
         <button
           onClick={() => scrollTabs("left")}
           className="p-3.5 rounded-2xl bg-slate-50 hover:bg-slate-150 text-slate-600 hover:text-slate-900 transition-all border-none cursor-pointer flex items-center justify-center shrink-0 active:scale-95 shadow-sm"
@@ -318,6 +319,7 @@ export default function SocioEconomicDashboard({}: SocioEconomicDashboardProps) 
           </div>
         </div>
       </main>
+      </div>
     </div>
   );
 }
