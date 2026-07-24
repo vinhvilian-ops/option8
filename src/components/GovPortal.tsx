@@ -2661,7 +2661,7 @@ export default function GovPortal({ onLeaderClick }: GovPortalProps) {
               <div className="w-full mt-8 text-left space-y-8">
                 {/* DYNAMIC ANNIVERSARIES RED BANNER ONLY */}
                 {/* DYNAMIC ANNIVERSARIES 3 ITEMS GRID */}
-                <div className="relative overflow-hidden rounded-3xl shadow-md border border-blue-700/10 bg-blue-700">
+                <div className="relative overflow-hidden rounded-3xl shadow-md border border-red-700/10 bg-red-700">
                   {" "}
                   <AnimatePresence mode="wait">
                     {" "}
@@ -2686,9 +2686,9 @@ export default function GovPortal({ onLeaderClick }: GovPortalProps) {
                               className="absolute inset-0 w-full h-full object-cover"
                               referrerPolicy="no-referrer"
                             />{" "}
-                            {/* Blue gradient overlay */}{" "}
-                            <div className="absolute inset-0 bg-gradient-to-r from-blue-900 from-0% via-blue-700/50 via-40% to-transparent to-60%" />{" "}
-                            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 from-0% via-transparent via-40% to-transparent mix-blend-multiply" />{" "}
+                            {/* Red gradient overlay */}{" "}
+                            <div className="absolute inset-0 bg-gradient-to-r from-red-900 from-0% via-red-700/50 via-40% to-transparent to-60%" />{" "}
+                            <div className="absolute inset-0 bg-gradient-to-r from-red-900/80 from-0% via-transparent via-40% to-transparent mix-blend-multiply" />{" "}
                           </div>
                           {/* Text Content */}
                           <div className="relative z-10 p-8 md:p-10 flex flex-col justify-center flex-grow max-w-4xl">
@@ -2719,7 +2719,7 @@ export default function GovPortal({ onLeaderClick }: GovPortalProps) {
                             </div>
                           </div>
                           {/* Footer */}{" "}
-                          <div className="relative z-20 border-t border-white/20 bg-blue-800/90 backdrop-blur-md px-8 py-4 flex gap-4 justify-between items-center text-lg font-black tracking-wider text-yellow-200 shadow-inner">
+                          <div className="relative z-20 border-t border-white/20 bg-red-800/90 backdrop-blur-md px-8 py-4 flex gap-4 justify-between items-center text-lg font-black tracking-wider text-yellow-200 shadow-inner">
                             <span className="uppercase text-yellow-400 hidden md:inline-block tracking-widest text-base">
                               {cb.footerLeft}
                             </span>

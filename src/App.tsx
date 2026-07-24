@@ -3238,7 +3238,7 @@ export default function App() {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-10 -mt-10"></div>
                 <div className="flex items-center gap-4 relative z-10">
                   <div className="bg-white p-1 rounded-2xl ring-4 ring-white/20 shadow-xl w-12 h-12 flex items-center justify-center overflow-hidden">
-                    <img src={logoKH} alt="Logo" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
+                    <img src={logoKH} alt="Logo" className="w-full h-full object-contain" />
                   </div>
                   <div>
                     <h3 className="font-bold text-lg tracking-tight">
@@ -3269,7 +3269,7 @@ export default function App() {
                       {msg.role === "user" ? (
                         <User size={14} />
                       ) : (
-                        <img src={logoKH} alt="Bot" className="w-full h-full object-contain p-1" referrerPolicy="no-referrer" />
+                        <img src={logoKH} alt="Bot" className="w-full h-full object-contain p-1" />
                       )}
                     </div>
                     <div
@@ -3304,7 +3304,7 @@ export default function App() {
                 {isBotLoading && (
                   <div className="flex gap-3">
                     <div className="w-8 h-8 bg-white border border-slate-100 rounded-full flex items-center justify-center shrink-0 shadow-sm animate-bounce overflow-hidden">
-                      <img src={logoKH} alt="Bot" className="w-full h-full object-contain p-1" referrerPolicy="no-referrer" />
+                      <img src={logoKH} alt="Bot" className="w-full h-full object-contain p-1" />
                     </div>
                     <div className="bg-white p-4 rounded-3xl rounded-tl-none shadow-sm text-lg border border-slate-100 italic text-slate-400 text-left">
                       Đang suy nghĩ...
@@ -3392,7 +3392,11 @@ export default function App() {
           {isBotOpen ? (
             <X size={26} className="text-white" />
           ) : (
-            <img src={logoKH} alt="Chatbot" className="w-11 h-11 object-contain relative z-10" referrerPolicy="no-referrer" />
+            <img 
+              src={logoKH} 
+              alt="Trợ lý virtual" 
+              className="w-11 h-11 object-contain relative z-10 p-0.5 rounded-full" 
+            />
           )}
         </motion.button>
       </div>

@@ -49,25 +49,22 @@ const pages: Page[] = [
     category: "LỜI NGỎ BAN BIÊN TẬP",
     title: "THƯ GỬI QUÝ ĐỘC GIẢ",
     subtitle: "Xứ Trầm Hương chuyển mình mạnh mẽ trong kỷ nguyên mới",
-    content: "Xứ Trầm Hương - Yến Sào từ lâu đã ghi dấu ấn sâu đậm trong lòng nhân dân và du khách quốc tế bởi sự kết hòa diệu kỳ giữa thiên nhiên tuyệt mỹ, biển đảo trù phú và bề dày di sản văn hóa lâu đời.\n\nTrong kỷ nguyên số hóa và hội nhập vĩ mô, Khánh Hòa đang đứng trước thời cơ lịch sử vĩ đại để bứt phá mạnh mẽ, hướng tới mục tiêu trở thành thành phố trực thuộc Trung ương vào năm 2030.\n\nẤn phẩm chuyên đề đặc biệt này được tái cấu trúc chặt chẽ theo 6 trục thông tin cốt lõi nhất: Tổng quan phát triển, Điều kiện tự nhiên, Tài nguyên thiên nhiên, Lịch sử hình thành, Cơ sở hạ tầng bứt phá và các Cơ chế chính sách đặc thù đang được áp dụng.",
+    content: "Xứ Trầm Hương - Yến Sào từ lâu đã ghi dấu ấn sâu đậm trong lòng nhân dân và du khách quốc tế bởi sự kết hòa diệu kỳ giữa thiên nhiên, biển đảo trù phú và bề dày di sản văn hóa.\n\nTrong kỷ nguyên số hóa, Khánh Hòa đứng trước thời cơ bứt phá, hướng tới mục tiêu trở thành thành phố trực thuộc Trung ương vào năm 2030.\n\nẤn phẩm chuyên đề này tập trung vào 6 trục thông tin cốt lõi: Tổng quan, Tự nhiên, Tài nguyên, Lịch sử, Hạ tầng và Cơ chế đặc thù.",
     author: "Sở Thông Tin và Truyền Thông Tỉnh Khánh Hòa",
-    quote: "Phát triển Khánh Hòa không chỉ là niềm tự hào của người dân xứ biển, mà còn là mắt xích chiến lược củng cố sức mạnh kinh tế biển toàn quốc.",
+    quote: "Phát triển Khánh Hòa là niềm tự hào xứ biển và mắt xích chiến lược củng cố kinh tế toàn quốc.",
     image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&auto=format&fit=crop",
     sideNotes: [
-      "Trang 2-3: 1. Tổng quan về Khánh Hòa & Tầm nhìn chiến lược",
-      "Trang 4-5: 2. Điều kiện tự nhiên: Địa hình & Vịnh kỳ quan",
-      "Trang 6-7: 3. Tài nguyên thiên nhiên: Trầm hương & Yến sào",
-      "Trang 8-9: 3. Tài nguyên thủy hải sản & Nuôi biển số HDPE",
-      "Trang 10-11: 4. Lịch sử hình thành & Tiến trình ngàn năm",
-      "Trang 12-13: 4. Di sản Tháp Bà Po Nagar & Lễ hội văn hóa",
-      "Trang 14-15: 5. Cơ sở hạ tầng: Siêu cảng biển & Hạ tầng số",
-      "Trang 16-17: 5. Hạ tầng du lịch Cam Ranh, Hòn Tre & Đời sống",
-      "Trang 18-19: 6. Chính sách đặc thù, Vốn FDI & Khát vọng 2030"
+      "T 2-3: Tổng quan & Tầm nhìn",
+      "T 4-5: Địa hình & Vịnh biển",
+      "T 6-9: Tài nguyên thiên nhiên",
+      "T 10-13: Lịch sử & Văn hóa",
+      "T 14-17: Cơ sở hạ tầng",
+      "T 18-19: Chính sách đặc thù"
     ]
   },
   {
     id: 2,
-    category: "1. TỔNG QUAN VỀ KHÁNH HÒA",
+    category: "1. Tổng quan về Khánh Hòa",
     title: "VỊ THẾ ĐỊA CHÍNH TRỊ CHIẾN LƯỢC",
     subtitle: "Tâm điểm kết nối vùng và phát triển kinh tế biển Nam Trung Bộ",
     content: "Khánh Hòa là tỉnh duyên hải Nam Trung Bộ, sở hữu vị trí địa chính trị cực kỳ quan trọng trong chiến lược phát triển kinh tế - xã hội và bảo đảm an ninh quốc phòng của Việt Nam.\n\nNằm trên các trục giao thông huyết mạch của cả nước (Quốc lộ 1A, đường sắt Bắc - Nam, đường hàng không quốc tế), Khánh Hòa là cửa ngõ hướng biển thuận lợi cho vùng Tây Nguyên hùng vĩ. Với tổng diện tích tự nhiên hơn 5.137 km², đây là vùng đất giàu tiềm năng công nghiệp, du lịch dịch vụ chất lượng cao, đóng vai trò hạt nhân tăng trưởng của khu vực duyên hải miền Trung.",
@@ -76,7 +73,7 @@ const pages: Page[] = [
   },
   {
     id: 3,
-    category: "1. TỔNG QUAN VỀ KHÁNH HÒA",
+    category: "1. Tổng quan về Khánh Hòa",
     title: "ĐỒNG BẰNG TRÙ PHÚ VÀ CÁC ĐÔ THỊ HẠT NHÂN",
     subtitle: "Cơ cấu hành chính năng động hướng đến đô thị loại I trực thuộc Trung ương",
     content: "Về mặt hành chính, tỉnh Khánh Hòa bao gồm thành phố Nha Trang (đô thị loại I - trung tâm chính trị, kinh tế, văn hóa), thành phố Cam Ranh, thị xã Ninh Hòa cùng 6 huyện: Vạn Ninh, Diên Khánh, Khánh Vĩnh, Khánh Sơn, Cam Lâm và huyện đảo Trường Sa.\n\nSự phân bổ hài hòa giữa đô thị ven biển năng động và các huyện miền núi trù phú tạo nên một hệ sinh thái kinh tế hoàn chỉnh. Tỉnh đang tập trung quy hoạch đồng bộ nhằm hoàn thành mục tiêu đưa toàn bộ Khánh Hòa trở thành thành phố trực thuộc Trung ương vào năm 2030, trong đó lấy Nha Trang, Cam Ranh và Khu kinh tế Vân Phong làm các cực tăng trưởng động lực chính.",
@@ -85,7 +82,7 @@ const pages: Page[] = [
   },
   {
     id: 4,
-    category: "2. ĐIỀU KIỆN TỰ NHIÊN",
+    category: "2. Điều kiện tự nhiên",
     title: "ĐỊA THẾ SƯỜN NÚI HƯỚNG RA ĐẠI DƯƠNG",
     subtitle: "Sự kết hợp độc đáo giữa địa hình đồi núi dốc và bờ biển kéo dài",
     content: "Địa hình Khánh Hòa tương đối phức tạp, thấp dần từ Tây sang Đông. Phía Tây là dãy Trường Sơn hùng vĩ với nhiều đỉnh núi cao trên 1.500m che chắn vững vàng, tiếp nối là vùng đồi trung du, đồng bằng ven biển nhỏ hẹp và cuối cùng là bờ biển dài hơn 385 km vô cùng uốn lượn.\n\nĐịa thế này đã tạo nên cấu trúc địa hình sườn núi hướng thẳng ra biển sâu, kiến tạo nên ba vịnh biển kín gió tự nhiên tốt nhất nước gồm Nha Trang, Vân Phong, và Cam Ranh. Đây là điều kiện tự nhiên hiếm có giúp bảo vệ các khu dân cư ven biển khỏi sóng lớn và bão dữ, đồng thời cung cấp các bến cảng nước sâu hoạt động an toàn quanh năm.",
@@ -94,7 +91,7 @@ const pages: Page[] = [
   },
   {
     id: 5,
-    category: "2. ĐIỀU KIỆN TỰ NHIÊN",
+    category: "2. Điều kiện tự nhiên",
     title: "KHÍ HẬU ÔN HÒA & HỆ SINH THÁI BIỂN KỲ QUAN",
     subtitle: "Nguồn tài nguyên khí hậu nhiệt đới ôn hòa lý tưởng và đa dạng sinh học",
     content: "Khánh Hòa nằm trong vùng khí hậu nhiệt đới gió mùa nhưng có sự ôn hòa rõ rệt nhờ ảnh hưởng của biển đại dương sâu rộng. Nhiệt độ trung bình năm luôn ổn định quanh mức 26,7°C, số giờ nắng cao lên tới hơn 2.600 giờ/năm, ít chịu ảnh hưởng trực tiếp của bão lớn so với các tỉnh phía Bắc.\n\nNhờ khí hậu ôn hòa tuyệt hảo, các rạn san hô sinh trưởng mạnh mẽ, tiêu biểu là khu bảo tồn Hòn Mun vịnh Nha Trang với hơn 350 loài san hô cứng sinh sống cùng hàng nghìn loài sinh vật biển rực rỡ sắc màu. Đây chính là báu vật tự nhiên kiến tạo nên thiên đường du lịch nghỉ dưỡng thu hút du khách suốt bốn mùa.",
@@ -103,7 +100,7 @@ const pages: Page[] = [
   },
   {
     id: 6,
-    category: "3. TÀI NGUYÊN THIÊN NHIÊN",
+    category: "3. Tài nguyên thiên nhiên",
     title: "LÂM SẢN QUÝ KHÁNH HÒA - LINH KHÍ TRẦM HƯƠNG",
     subtitle: "Sản vật quý hiếm kết tinh linh khí nghìn năm của đất trời rừng sâu",
     content: "‘Khánh Hòa là xứ Trầm Hương...’. Trầm hương và Kỳ Nam Khánh Hòa có chất lượng vượt trội nhất thế giới nhờ thổ nhưỡng núi cao đặc trưng của dãy Trường Sơn phía huyện Vạn Ninh, Khánh Vĩnh.\n\nCây Dó Bầu khi chịu thương tích bởi bão táp hay sâu đục sẽ tự tiết ra lớp nhựa thơm quý giá để bọc bảo vệ vết thương. Trải qua hàng chục năm chắt chiu dưỡng chất và gió núi, lớp gỗ hóa thành Trầm Hương hảo hạng với mùi hương thanh khiết, quý phái. Đây không chỉ là tài nguyên lâm sản có giá trị kinh tế khổng lồ mà còn là biểu tượng tinh thần kiên cường của con người xứ biển.",
@@ -112,7 +109,7 @@ const pages: Page[] = [
   },
   {
     id: 7,
-    category: "3. TÀI NGUYÊN THIÊN NHIÊN",
+    category: "3. Tài nguyên thiên nhiên",
     title: "VÀNG TRẮNG ĐẢO KHƠI - YẾN SÀO THIÊN NHIÊN",
     subtitle: "Báu vật dinh dưỡng quý giá được khai thác thủ công trên vách đá cheo leo",
     content: "Yến sào đảo thiên nhiên Khánh Hòa nổi danh khắp thế giới là loại tổ yến có giá trị dinh dưỡng cao nhất nhờ chứa lượng khoáng chất vi lượng phong phú tích tụ từ gió khơi đại dương sâu.\n\nChim yến hàng tự nhiên làm tổ trên các vách núi đá dựng đứng giữa khơi xa. Nghề khai thác yến sào đã có truyền thống hơn 700 năm, là sự kết hợp giữa lòng can trường tuyệt đỉnh của người thợ và sự bảo tồn tự nhiên nghiêm ngặt. Việc quản lý và khai thác khoa học bền vững đưa thương hiệu Yến sào Khánh Hòa trở thành báu vật xuất khẩu, biểu trưng cho sự trù phú tráng lệ của tài nguyên biển đảo địa phương.",
@@ -121,7 +118,7 @@ const pages: Page[] = [
   },
   {
     id: 8,
-    category: "3. TÀI NGUYÊN THIÊN NHIÊN",
+    category: "3. Tài nguyên thiên nhiên",
     title: "TÀI NGUYÊN THỦY HẢI SẢN & KINH TẾ BIỂN XANH",
     subtitle: "Thủ phủ nuôi trồng biển thông minh và chế biến thủy sản xuất khẩu",
     content: "Vùng biển Khánh Hòa có trữ lượng thủy hải sản khổng lồ với nhiều loài có giá trị xuất khẩu cao như cá ngừ đại dương Nha Trang, tôm hùm Cam Ranh, cá bớp, mực ống tươi ngon.\n\nĐể bảo vệ nguồn tài nguyên biển vô giá này, tỉnh đang đi đầu cả nước áp dụng công nghệ nuôi biển xa bờ bền vững bằng lồng nhựa HDPE tiêu chuẩn Na Uy chịu bão tốt, kết hợp các cảm biến thông minh giám sát dưới nước. Ngành chế biến xuất khẩu thủy hải sản đạt tiêu chuẩn khắt khe quốc tế đã đem về kim ngạch tỷ USD, nâng cao đời sống cho hàng chục vạn ngư dân và gìn giữ môi trường biển Nha Trang - Vân Phong mãi xanh tươi.",
@@ -130,7 +127,7 @@ const pages: Page[] = [
   },
   {
     id: 9,
-    category: "4. LỊCH SỬ HÌNH THÀNH",
+    category: "4. Lịch sử hình thành",
     title: "TIẾN TRÌNH LỊCH SỬ VÀNG SON NGÀN NĂM",
     subtitle: "Hành trình lập xứ, khai hoang và định hình vùng đất danh tiếng",
     content: "Vùng đất Khánh Hòa có bề dày lịch sử hàng ngàn năm, là nơi giao thoa rực rỡ giữa nền văn hóa Sa Huỳnh, văn hóa Chăm Pa cổ xưa và nền văn hóa Việt cổ thuần khiết.\n\nNăm 1653, Chúa Nguyễn Phúc Tần sai Cai cơ Hùng Lộc hầu sang lập dinh Thái Khang với hai huyện Quảng Phước và Tân Định, đánh dấu cột mốc lịch sử chính thức sáp nhập vùng đất này vào bản đồ nước Việt. Qua nhiều thăng trầm lịch sử, đến năm 1831 dưới triều vua Minh Mạng, tỉnh Khánh Hòa chính thức được thành lập. Suốt chiều dài lịch sử, con người nơi đây luôn giữ vững tinh thần hiếu học, can trường đấu tranh bảo vệ tổ quốc, gìn giữ bờ cõi biển đảo thiêng liêng.",
@@ -139,7 +136,7 @@ const pages: Page[] = [
   },
   {
     id: 10,
-    category: "4. LỊCH SỬ HÌNH THÀNH",
+    category: "4. Lịch sử hình thành",
     title: "LINH THIÊNG DI TÍCH QUỐC GIA THÁP BÀ PO NAGAR",
     subtitle: "Quần thể đền tháp Chăm cổ vĩ đại soi bóng bên dòng sông Cái",
     content: "Xây dựng từ thế kỷ VIII đến thế kỷ XIII dưới thời vương quốc cổ Chăm Pa thịnh vượng, Tháp Bà Po Nagar ngự trị uy nghiêm trên đỉnh đồi Cù Lao, soi bóng mát dịu xuống dòng sông Cái Nha Trang.\n\nĐây là quần thể kiến trúc đền tháp gạch nung cổ xưa lớn nhất và được bảo tồn nguyên vẹn nhất miền Trung. Tháp thờ Thiên Y Thánh Mẫu Ana - người mẹ xứ sở dạy dân trồng lúa, dệt vải, chăn nuôi, mang lại cuộc sống ấm no cho nhân dân. Công trình kiến trúc điêu khắc đá tinh xảo kết tụ tinh hoa tôn giáo lâu đời này đã được xếp hạng là Di tích quốc gia đặc biệt, điểm đến tâm linh linh thiêng bậc nhất xứ sở.",
@@ -148,7 +145,7 @@ const pages: Page[] = [
   },
   {
     id: 11,
-    category: "4. LỊCH SỬ HÌNH THÀNH",
+    category: "4. Lịch sử hình thành",
     title: "LỄ HỘI CẦU NGƯ & FESTIVAL BIỂN HIỆN ĐẠI",
     subtitle: "Giao hòa tuyệt diệu giữa bản sắc tâm linh cổ truyền và hơi thở thời đại",
     content: "Di sản lịch sử của Khánh Hòa được lưu giữ sống động qua các lễ hội truyền thống, tiêu biểu là lễ hội Cầu Ngư cầu mong trời yên biển lặng, cá đầy khoang của ngư dân vùng biển dạt dào.\n\nNgày nay, bản sắc ấy được kế thừa và thăng hoa rực rỡ qua Festival Biển Nha Trang - Khánh Hòa tổ chức định kỳ 2 năm một lần. Lễ hội là bữa tiệc văn hóa quốc tế hoành tráng, kết hợp tinh tế giữa di sản bài chòi, múa bóng cổ truyền và các màn trình diễn ánh sáng khổng lồ của hàng ngàn drone công nghệ hiện đại trên bầu trời đêm vịnh Nha Trang, khẳng định khát vọng vươn mình cởi mở với thế giới.",
@@ -157,7 +154,7 @@ const pages: Page[] = [
   },
   {
     id: 12,
-    category: "5. CƠ SỞ HẠ TẦNG",
+    category: "5. Cơ sở hạ tầng",
     title: "ĐỘNG LỰC SIÊU CẢNG BIỂN NƯỚC SÂU VÂN PHONG",
     subtitle: "Vịnh nước sâu tự nhiên tốt bậc nhất Đông Nam Á thúc đẩy logistics quốc tế",
     content: "Khu kinh tế Vân Phong nằm ở phía Bắc tỉnh Khánh Hòa, sở hữu vịnh nước sâu tự nhiên tốt nhất khu vực với độ sâu luồng lạch vượt trên 20m, kín gió tuyệt đối nhờ bán đảo Hòn Gốm án ngữ che chắn phía trước.\n\nĐây là điều kiện lý tưởng bậc nhất để xây dựng siêu cảng trung chuyển container quốc tế đón nhận những con tàu siêu trường siêu trọng trên thế giới. Hạ tầng kết nối giao thông đường bộ cao tốc Vân Phong - Nha Trang và Khánh Hòa - Buôn Ma Thuột đang hoàn thiện thần tốc, đưa Vân Phong thành trung tâm logistics cảng biển dịch vụ lớn, thu hút dòng vốn vĩ mô vươn khơi toàn cầu.",
@@ -166,7 +163,7 @@ const pages: Page[] = [
   },
   {
     id: 13,
-    category: "5. CƠ SỞ HẠ TẦNG",
+    category: "5. Cơ sở hạ tầng",
     title: "HẠ TẦNG DU LỊCH CAO CẤP CAM RANH & HÒN TRE",
     subtitle: "Sân bay quốc tế hiện đại và các quần thể nghỉ dưỡng đẳng cấp 5-6 sao",
     content: "Khánh Hòa sở hữu hạ tầng du lịch quy mô hàng đầu châu Á với điểm nhấn là Cảng hàng không quốc tế Cam Ranh - nhà ga quốc tế hiện đại tiêu chuẩn 4 sao đón hàng triệu lượt khách ngoại quốc.\n\nBán đảo Cam Ranh với Bãi Dài cát trắng mịn lụa đã thu hút hơn 40 dự án siêu resort 5-6 sao đẳng cấp quốc tế. Song song đó, đảo ngọc Hòn Tre vịnh Nha Trang với tuyến cáp treo vượt biển kỷ lục thế giới và quần thể VinWonders sầm uất tạo nên hệ sinh thái du lịch - giải trí khép kín, hiện đại bậc nhất, đưa Nha Trang sánh ngang với những hòn đảo thiên đường du lịch lừng danh thế giới.",
@@ -175,7 +172,7 @@ const pages: Page[] = [
   },
   {
     id: 14,
-    category: "5. CƠ SỞ HẠ TẦNG",
+    category: "5. Cơ sở hạ tầng",
     title: "HẠ TẦNG SỐ & CHÍNH QUYỀN ĐIỆN TỬ",
     subtitle: "Trung tâm Giám sát Điều hành Thông minh (IOC) nâng tầm chất lượng cuộc sống",
     content: "Để tạo đà cho tương lai bứt phá bền vững, Khánh Hòa đang tập trung đầu tư thần tốc vào hạ tầng công nghệ số toàn diện, coi đây là xương sống của chính quyền phục vụ nhân dân.\n\nTrung tâm Giám sát và Điều hành Thông minh (IOC) tỉnh hoạt động liên tục 24/7, tích hợp hệ thống camera AI kiểm soát an ninh trật tự, cảm biến tự động đo đạc chất lượng nước biển và không khí đô thị. Hệ thống cổng dịch vụ công liên thông mức độ 4 giúp số hóa 100% hồ sơ đất đai và thủ tục hành chính, mang đến môi trường sống an toàn, nhanh chóng và cực kỳ minh bạch cho doanh nghiệp và nhân dân.",
@@ -184,7 +181,7 @@ const pages: Page[] = [
   },
   {
     id: 15,
-    category: "5. CƠ SỞ HẠ TẦNG",
+    category: "5. Cơ sở hạ tầng",
     title: "HẠ TẦNG DÂN SINH Y TẾ & GIÁO DỤC CHẤT LƯỢNG CAO",
     subtitle: "Đầu tư xây dựng con người là gốc rễ của phát triển bền vững",
     content: "Hệ thống hạ tầng dân sinh được tỉnh đầu tư đặc biệt đồng bộ. Khánh Hòa sở hữu mạng lưới y tế hiện đại với Bệnh viện đa khoa chuyên sâu chất lượng cao khu vực, kết hợp trung tâm y tế cơ sở chăm sóc sức khỏe tốt cho đồng bào hải đảo Trường Sa và vùng đồng bào dân tộc thiểu số.\n\nHạ tầng giáo dục phát triển rực rỡ với các cơ sở đào tạo uy tín tầm quốc gia như Trường Đại học Nha Trang đi đầu trong nghiên cứu công nghệ sinh học biển sâu, cùng hệ thống trường học thông minh liên thông quốc tế, liên tục cung ứng nguồn lao động tay nghề kỹ thuật cao đáp ứng yêu cầu kỷ nguyên công nghiệp xanh.",
@@ -371,7 +368,7 @@ export default function Flipbook() {
           <div className="absolute inset-y-1 -right-1 w-full bg-white/40 rounded-r-2xl shadow-lg pointer-events-none lg:block hidden"></div>
 
           {/* Core double page display */}
-          <div className="relative bg-white rounded-2xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] border border-slate-200 overflow-hidden min-h-[900px] md:min-h-[1000px] lg:h-[1120px] flex flex-col lg:flex-row transform duration-300 w-full">
+          <div className="relative bg-white rounded-2xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] border border-slate-200 overflow-hidden min-h-[800px] md:min-h-[850px] lg:h-[900px] flex flex-col lg:flex-row transform duration-300 w-full">
             
             {/* 3D Central Spine Shadow Divider (Visible only on desktop dual spread) */}
             <div className="absolute inset-y-0 left-1/2 w-8 -ml-4 bg-gradient-to-r from-black/5 via-black/25 to-black/5 z-20 pointer-events-none hidden lg:block" />
@@ -383,7 +380,7 @@ export default function Flipbook() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className="w-full flex flex-col lg:flex-row min-h-[900px] md:min-h-[1000px] lg:h-full"
+                className="w-full flex flex-col lg:flex-row min-h-[800px] md:min-h-[850px] lg:h-full"
               >
                 {/* LEFT PAGE */}
                 <div className="w-full lg:w-1/2 p-6 md:p-8 flex flex-col justify-between bg-[#FCFAF5] border-r border-slate-100 relative min-h-[800px] lg:h-full shrink-0">
@@ -392,10 +389,10 @@ export default function Flipbook() {
                   
                   {/* Fixed Header */}
                   <div className="flex items-center justify-between border-b border-slate-200/60 pb-3 shrink-0">
-                    <span className="text-emerald-700 text-[20px] font-black tracking-widest uppercase bg-emerald-50 px-2.5 py-1 rounded border border-emerald-200/50">
+                    <span className="text-emerald-700 text-sm md:text-base font-black tracking-widest uppercase bg-emerald-50 px-2.5 py-1 rounded border border-emerald-200/50">
                       {pages[activeSpreadPages.left].category}
                     </span>
-                    <span className="text-[20px] text-slate-400 font-bold uppercase tracking-wider">KỲ SAN KHÁNH HÒA</span>
+                    <span className="text-sm md:text-base text-slate-400 font-bold uppercase tracking-wider">KỲ SAN KHÁNH HÒA</span>
                   </div>
 
                   {/* Scrollable Body Content */}
@@ -404,7 +401,7 @@ export default function Flipbook() {
                       {pages[activeSpreadPages.left].title}
                     </h2>
                     {pages[activeSpreadPages.left].subtitle && (
-                      <p className="text-[20px] font-bold text-slate-500 italic leading-normal">
+                      <p className="text-sm md:text-base font-bold text-slate-500 italic leading-normal">
                         {pages[activeSpreadPages.left].subtitle}
                       </p>
                     )}
@@ -420,24 +417,24 @@ export default function Flipbook() {
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                           {pages[activeSpreadPages.left].imageCaption && (
-                            <span className="absolute bottom-2 left-2 bg-black/60 backdrop-blur-xs text-white text-[20px] px-2.5 py-1 rounded uppercase font-black tracking-wider">
+                            <span className="absolute bottom-2 left-2 bg-black/60 backdrop-blur-xs text-white text-sm md:text-base px-2.5 py-1 rounded uppercase font-black tracking-wider">
                               {pages[activeSpreadPages.left].imageCaption}
                             </span>
                           )}
                         </div>
                       )}
 
-                      <div className="text-slate-700 text-[20px] leading-relaxed font-semibold text-justify whitespace-pre-line first-letter:text-3xl first-letter:font-black first-letter:text-emerald-600 first-letter:mr-2 first-letter:float-left">
+                      <div className="text-slate-700 text-sm md:text-base leading-relaxed font-semibold text-justify whitespace-pre-line first-letter:text-3xl first-letter:font-black first-letter:text-emerald-600 first-letter:mr-2 first-letter:float-left">
                         {pages[activeSpreadPages.left].content}
                       </div>
                     </div>
 
                     {/* Editorial quote inside scrollable body */}
                     {pages[activeSpreadPages.left].quote && (
-                      <div className="border-l-3 border-emerald-500 pl-3 py-1.5 italic text-emerald-950 font-extrabold text-[20px] bg-emerald-500/5 rounded-r-lg">
+                      <div className="border-l-3 border-emerald-500 pl-3 py-1.5 italic text-emerald-950 font-extrabold text-sm md:text-base bg-emerald-500/5 rounded-r-lg">
                         "{pages[activeSpreadPages.left].quote}"
                         {pages[activeSpreadPages.left].quoteAuthor && (
-                          <span className="block text-[20px] font-black text-slate-500 not-italic mt-0.5">
+                          <span className="block text-sm md:text-base font-black text-slate-500 not-italic mt-0.5">
                             — {pages[activeSpreadPages.left].quoteAuthor}
                           </span>
                         )}
@@ -446,7 +443,7 @@ export default function Flipbook() {
                   </div>
 
                   {/* Fixed Footer */}
-                  <div className="pt-3 border-t border-slate-200/60 flex items-center justify-between text-[20px] text-slate-400 font-black uppercase tracking-wider shrink-0">
+                  <div className="pt-3 border-t border-slate-200/60 flex items-center justify-between text-sm md:text-base text-slate-400 font-black uppercase tracking-wider shrink-0">
                     <span>Ấn phẩm 2026</span>
                     <span>Trang {activeSpreadPages.left} / {pages.length - 1}</span>
                   </div>
@@ -459,8 +456,8 @@ export default function Flipbook() {
 
                   {/* Fixed Header */}
                   <div className="flex items-center justify-between border-b border-slate-200/60 pb-3 shrink-0">
-                    <span className="text-[20px] text-slate-400 font-bold uppercase tracking-wider">KỲ SAN KHÁNH HÒA</span>
-                    <span className="text-cyan-700 text-[20px] font-black tracking-widest uppercase bg-cyan-50 px-2.5 py-1 rounded border border-cyan-200/50">
+                    <span className="text-sm md:text-base text-slate-400 font-bold uppercase tracking-wider">KỲ SAN KHÁNH HÒA</span>
+                    <span className="text-cyan-700 text-sm md:text-base font-black tracking-widest uppercase bg-cyan-50 px-2.5 py-1 rounded border border-cyan-200/50">
                       {pages[activeSpreadPages.right].category}
                     </span>
                   </div>
@@ -471,7 +468,7 @@ export default function Flipbook() {
                       {pages[activeSpreadPages.right].title}
                     </h2>
                     {pages[activeSpreadPages.right].subtitle && (
-                      <p className="text-[20px] font-bold text-slate-500 italic leading-normal">
+                      <p className="text-sm md:text-base font-bold text-slate-500 italic leading-normal">
                         {pages[activeSpreadPages.right].subtitle}
                       </p>
                     )}
@@ -480,18 +477,18 @@ export default function Flipbook() {
                     {activeSpreadPages.right === 1 ? (
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-3">
-                          <p className="text-slate-700 text-[20px] leading-relaxed font-semibold text-justify whitespace-pre-line">
+                          <p className="text-slate-700 text-sm md:text-base leading-relaxed font-semibold text-justify whitespace-pre-line">
                             {pages[activeSpreadPages.right].content}
                           </p>
                           {pages[activeSpreadPages.right].author && (
-                            <p className="text-[20px] font-black text-cyan-700 text-right">
+                            <p className="text-sm md:text-base font-black text-cyan-700 text-right">
                               — {pages[activeSpreadPages.right].author}
                             </p>
                           )}
                         </div>
                         
                         <div className="bg-[#E0F2FE]/40 border border-cyan-800/10 rounded-xl p-3 shadow-sm shrink-0">
-                          <h4 className="text-[20px] font-black text-cyan-900 tracking-widest uppercase border-b border-cyan-800/10 pb-1.5 mb-2 flex items-center gap-1">
+                          <h4 className="text-sm md:text-base font-black text-cyan-900 tracking-widest uppercase border-b border-cyan-800/10 pb-1.5 mb-2 flex items-center gap-1">
                             <Bookmark size={12} className="text-cyan-700" />
                             <span>Mục lục nhanh</span>
                           </h4>
@@ -502,7 +499,7 @@ export default function Flipbook() {
                                 <button
                                   key={i}
                                   onClick={() => goToPage(targetIdx)}
-                                  className="w-full text-left text-[20px] font-bold text-slate-700 hover:text-cyan-600 transition-colors py-1 px-1.5 hover:bg-cyan-50 rounded flex items-start gap-1 cursor-pointer leading-tight"
+                                  className="w-full text-left text-sm md:text-base font-bold text-slate-700 hover:text-cyan-600 transition-colors py-1 px-1.5 hover:bg-cyan-50 rounded flex items-start gap-1 cursor-pointer leading-tight"
                                 >
                                   <span className="text-cyan-500 font-extrabold shrink-0">•</span>
                                   <span>{note}</span>
@@ -525,28 +522,28 @@ export default function Flipbook() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                             {pages[activeSpreadPages.right].imageCaption && (
-                              <span className="absolute bottom-2 left-2 bg-black/60 backdrop-blur-xs text-white text-[20px] px-2.5 py-1 rounded uppercase font-black tracking-wider">
+                              <span className="absolute bottom-2 left-2 bg-black/60 backdrop-blur-xs text-white text-sm md:text-base px-2.5 py-1 rounded uppercase font-black tracking-wider">
                                 {pages[activeSpreadPages.right].imageCaption}
                               </span>
                             )}
                           </div>
                         )}
 
-                        <div className="text-slate-700 text-[20px] leading-relaxed font-semibold text-justify whitespace-pre-line first-letter:text-3xl first-letter:font-black first-letter:text-cyan-600 first-letter:mr-2 first-letter:float-left">
+                        <div className="text-slate-700 text-sm md:text-base leading-relaxed font-semibold text-justify whitespace-pre-line first-letter:text-3xl first-letter:font-black first-letter:text-cyan-600 first-letter:mr-2 first-letter:float-left">
                           {pages[activeSpreadPages.right].content}
                         </div>
                       </div>
                     )}
 
                     {pages[activeSpreadPages.right].quote && (
-                      <div className="border-l-3 border-cyan-500 pl-3 py-1.5 italic text-cyan-950 font-extrabold text-[20px] bg-cyan-500/5 rounded-r-lg">
+                      <div className="border-l-3 border-cyan-500 pl-3 py-1.5 italic text-cyan-950 font-extrabold text-sm md:text-base bg-cyan-500/5 rounded-r-lg">
                         "{pages[activeSpreadPages.right].quote}"
                       </div>
                     )}
                   </div>
 
                   {/* Fixed Footer */}
-                  <div className="pt-3 border-t border-slate-200/60 flex items-center justify-between text-[20px] text-slate-400 font-black uppercase tracking-wider shrink-0">
+                  <div className="pt-3 border-t border-slate-200/60 flex items-center justify-between text-sm md:text-base text-slate-400 font-black uppercase tracking-wider shrink-0">
                     <span>Trang {activeSpreadPages.right} / {pages.length - 1}</span>
                     <span>Chuyên Đề Đặc Biệt</span>
                   </div>
@@ -613,53 +610,53 @@ export default function Flipbook() {
       <div className="w-full grid grid-cols-2 sm:grid-cols-5 gap-3 pt-12 pb-2 border-t border-white/10 mt-10">
         {[
           {
-            category: "BÌA & LỜI NGỎ",
+            category: "Bìa & Lời ngỏ",
             pagesLabel: "Bìa — 1",
             title: "Khánh Hòa kỷ nguyên mới & Lời ngỏ"
           },
           {
-            category: "1. TỔNG QUAN VỀ KHÁNH HÒA",
-            pagesLabel: "Trang 2 — 3",
+            category: "1. Tổng quan về Khánh Hòa",
+            pagesLabel: "T 2 — 3",
             title: "Vị thế chiến lược & Đô thị hạt nhân"
           },
           {
-            category: "2. ĐIỀU KIỆN TỰ NHIÊN",
-            pagesLabel: "Trang 4 — 5",
+            category: "2. Điều kiện tự nhiên",
+            pagesLabel: "T 4 — 5",
             title: "Địa thế ôm đại dương & Khí hậu ôn hòa"
           },
           {
-            category: "3. TÀI NGUYÊN THIÊN NHIÊN",
-            pagesLabel: "Trang 6 — 7",
+            category: "3. Tài nguyên thiên nhiên",
+            pagesLabel: "T 6 — 7",
             title: "Lâm sản trầm hương & Yến sào đảo khơi"
           },
           {
-            category: "3. TÀI NGUYÊN & 4. LỊCH SỬ",
-            pagesLabel: "Trang 8 — 9",
+            category: "3. Tài nguyên & 4. Lịch sử",
+            pagesLabel: "T 8 — 9",
             title: "Kinh tế biển xanh & Lịch sử ngàn năm"
           },
           {
-            category: "4. LỊCH SỬ HÌNH THÀNH",
-            pagesLabel: "Trang 10 — 11",
+            category: "4. Lịch sử hình thành",
+            pagesLabel: "T 10 — 11",
             title: "Di tích Tháp Bà & Lễ hội văn hóa"
           },
           {
-            category: "5. CƠ SỞ HẠ TẦNG",
-            pagesLabel: "Trang 12 — 13",
+            category: "5. Cơ sở hạ tầng",
+            pagesLabel: "T 12 — 13",
             title: "Siêu cảng Vân Phong & Resort Cam Ranh"
           },
           {
-            category: "5. CƠ SỞ HẠ TẦNG",
-            pagesLabel: "Trang 14 — 15",
+            category: "5. Cơ sở hạ tầng",
+            pagesLabel: "T 14 — 15",
             title: "Hạ tầng số IOC & Y tế Giáo dục"
           },
           {
-            category: "6. CHÍNH SÁCH ĐẶC THÙ",
-            pagesLabel: "Trang 16 — 17",
+            category: "6. Chính sách đặc thù",
+            pagesLabel: "T 16 — 17",
             title: "Nghị quyết số 55 & Công nghệ cao"
           },
           {
-            category: "NIÊN GIÁM & BÌA SAU",
-            pagesLabel: "Trang 18 — Sau",
+            category: "Niên giám & Bìa sau",
+            pagesLabel: "T 18 — Sau",
             title: "Số liệu bứt phá & Khát vọng vươn xa"
           }
         ].map((s, spreadIdx) => {
@@ -669,21 +666,21 @@ export default function Flipbook() {
             <button
               key={spreadIdx}
               onClick={() => goToPage(spreadIdx * 2)}
-              className={`p-3 rounded-xl border text-left transition-all duration-300 cursor-pointer flex flex-col justify-between h-20 ${
+              className={`p-3 rounded-xl border text-left transition-all duration-300 cursor-pointer flex flex-col justify-between min-h-[5.5rem] ${
                 isActive 
                 ? "bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 border-emerald-500 text-white scale-[1.03] shadow-md shadow-emerald-500/10" 
                 : "bg-white/5 border-white/5 text-slate-300 hover:bg-white/10 hover:border-white/15"
               }`}
             >
               <div className="flex items-center justify-between w-full gap-1">
-                <span className="text-lg font-black uppercase tracking-wider text-slate-400 line-clamp-1">
+                <span className="text-sm md:text-base font-bold tracking-wider text-white line-clamp-1">
                   {s.category}
                 </span>
-                <span className="text-lg font-black text-cyan-400 whitespace-nowrap">
+                <span className="text-sm md:text-base font-bold text-cyan-400 whitespace-nowrap">
                   {s.pagesLabel}
                 </span>
               </div>
-              <h5 className="text-lg font-bold line-clamp-1 text-white/95 leading-snug mt-1">
+              <h5 className="text-xs md:text-sm font-medium line-clamp-2 text-white/80 leading-snug mt-1">
                 {s.title}
               </h5>
             </button>

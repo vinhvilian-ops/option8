@@ -425,7 +425,7 @@ export default function PropagandaPortal({ showUtilitiesSidebar = false }: { sho
       </div>
 
       {/* Dynamic National Celebration Banner Carousel */}
-      <div className="mt-6 relative overflow-hidden rounded-3xl shadow-md border border-red-700/10 bg-red-700">
+      <div className="relative overflow-hidden rounded-3xl shadow-md border border-blue-700/10 bg-blue-700">
         <AnimatePresence mode="wait">
           {celebratoryBanners.map((cb, idx) => {
             if (idx !== bannerIndex) return null;
@@ -446,9 +446,9 @@ export default function PropagandaPortal({ showUtilitiesSidebar = false }: { sho
                     className="absolute inset-0 w-full h-full object-cover" 
                     referrerPolicy="no-referrer"
                   />
-                  {/* Red gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-red-900 from-0% via-red-700/50 via-40% to-transparent to-60%" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-red-900/80 from-0% via-transparent via-40% to-transparent mix-blend-multiply" />
+                  {/* Blue gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-900 from-0% via-blue-700/50 via-40% to-transparent to-60%" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 from-0% via-transparent via-40% to-transparent mix-blend-multiply" />
                 </div>
 
                 {/* Text Content */}
@@ -473,7 +473,7 @@ export default function PropagandaPortal({ showUtilitiesSidebar = false }: { sho
                   </div>
                 </div>
 
-                <div className="relative z-20 border-t border-white/20 bg-red-800/90 backdrop-blur-md px-8 py-4 flex flex-col sm:flex-row gap-4 justify-between items-center text-lg font-black tracking-wider text-yellow-200 shadow-inner">
+                <div className="relative z-20 border-t border-white/20 bg-blue-800/90 backdrop-blur-md px-8 py-4 flex flex-col sm:flex-row gap-4 justify-between items-center text-lg font-black tracking-wider text-yellow-200 shadow-inner">
                   <span className="uppercase text-yellow-400 hidden md:inline-block tracking-widest text-base">{cb.footerLeft}</span>
                   
                   <div className="flex gap-2.5 items-center my-1 sm:my-0 bg-black/20 px-3 py-1.5 rounded-full backdrop-blur-sm">

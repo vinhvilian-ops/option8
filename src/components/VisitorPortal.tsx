@@ -398,7 +398,7 @@ const LANDMARK_SPOTLIGHTS = [
     id: "honmun",
     name: "🐠 Đảo Hòn Mun - Vương quốc san hô",
     desc: "Khu bảo tồn sinh học biển quốc gia sở hữu bờ đá đen kỳ vĩ uốn lượn cùng hơn 350 loài san hô sặc sỡ và muôn loài sinh vật biển rực rỡ kỳ ảo dưới đáy sâu.",
-    image: "/src/assets/images/nha_trang_coral_diving_1780308185424.png",
+    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
     extraImages: [
       "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=400&q=80",
       "https://images.unsplash.com/photo-1520520731457-9283dd14aa66?auto=format&fit=crop&w=400&q=80"
@@ -596,7 +596,7 @@ const SCENIC_SLIDES = [
   },
   {
     id: "sc-3",
-    image: "/src/assets/images/nha_trang_coral_diving_1780308185424.png",
+    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
     title: "Thám Hiểm Rạn San Hô Hòn Mun Tuyệt Mỹ",
     subtitle: "Du hành dưới lòng nước xanh ngọc trong vắt, khám phá đại dương kỳ diệu đầy san hô nguyên thủy và vạn dòng sinh cá rạng rỡ.",
     tag: "DEEP AQUAMARINE DIVING",
@@ -631,7 +631,7 @@ const PANORAMA_GALLERY = [
     category: "bay",
     categoryLabel: "Vịnh biển & Đảo",
     desc: "Môi trường bảo tồn thủy sinh đa dạng hàng đầu, nơi rặng san hô sặc sỡ quyện luồng nắng xiên đại dương say đắm.",
-    img: "/src/assets/images/nha_trang_coral_diving_1780308185424.png",
+    img: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
     author: "Hải Nam (Scuba team)",
     baseLikes: 1680
   },
@@ -1091,24 +1091,23 @@ export default function VisitorPortal() {
   const totalPollVotes = pollVotes.hailong + pollVotes.khonghailong + pollVotes.capnhat;
 
   return (
-    <div className="w-full text-slate-800 relative select-none font-sans text-lg visitor-portal-large">
+    <div className="w-full text-black relative select-none font-sans text-lg visitor-portal-large">
       <style>{`
-        /* Root container default font size */
+        /* Root container default font size: minimum 16px */
         .visitor-portal-large {
-          font-size: 18px !important;
+          font-size: 16px !important;
         }
         
-        /* Ensure input, select, textarea, button default to 18px */
+        /* Ensure input, select, textarea, button default to minimum 16px */
         .visitor-portal-large input,
         .visitor-portal-large select,
         .visitor-portal-large textarea,
         .visitor-portal-large button {
-          font-size: 18px !important;
+          font-size: 16px !important;
         }
 
-        /* Override all smaller font size utilities (standard & arbitrary) to at least 18px */
-        .visitor-portal-large .text-lg,
-        .visitor-portal-large .text-lg,
+        /* Enforce minimum font size of 16px for all text elements */
+        .visitor-portal-large .text-base,
         .visitor-portal-large .text-base,
         .visitor-portal-large .text-\\[8px\\],
         .visitor-portal-large .text-\\[8\\.5px\\],
@@ -1122,88 +1121,13 @@ export default function VisitorPortal() {
         .visitor-portal-large .text-\\[13px\\],
         .visitor-portal-large .text-\\[14px\\],
         .visitor-portal-large .text-\\[15px\\],
-        .visitor-portal-large .text-\\[16px\\],
-        .visitor-portal-large .text-\\[17px\\],
-        /* Responsive versions */
-        .visitor-portal-large .sm\\:text-lg,
-        .visitor-portal-large .sm\\:text-lg,
         .visitor-portal-large .sm\\:text-base,
-        .visitor-portal-large .md\\:text-lg,
-        .visitor-portal-large .md\\:text-lg,
+        .visitor-portal-large .sm\\:text-base,
         .visitor-portal-large .md\\:text-base,
-        .visitor-portal-large .lg\\:text-lg,
-        .visitor-portal-large .lg\\:text-lg,
+        .visitor-portal-large .md\\:text-base,
         .visitor-portal-large .lg\\:text-base,
-        .visitor-portal-large .xl\\:text-lg,
-        .visitor-portal-large .xl\\:text-lg,
-        .visitor-portal-large .xl\\:text-base {
-          font-size: 18px !important;
-        }
-
-        /* Scale up 18px (text-lg) and equivalents to 22px */
-        .visitor-portal-large .text-lg,
-        .visitor-portal-large .text-\\[18px\\],
-        .visitor-portal-large .sm\\:text-lg,
-        .visitor-portal-large .md\\:text-lg,
-        .visitor-portal-large .lg\\:text-lg,
-        .visitor-portal-large .xl\\:text-lg {
-          font-size: 22px !important;
-        }
-
-        /* Scale up 20px (text-xl) and equivalents to 25px */
-        .visitor-portal-large .text-xl,
-        .visitor-portal-large .text-\\[20px\\],
-        .visitor-portal-large .sm\\:text-xl,
-        .visitor-portal-large .md\\:text-xl,
-        .visitor-portal-large .lg\\:text-xl,
-        .visitor-portal-large .xl\\:text-xl {
-          font-size: 25px !important;
-        }
-
-        /* Scale up 24px (text-2xl) and equivalents to 30px */
-        .visitor-portal-large .text-2xl,
-        .visitor-portal-large .text-\\[24px\\],
-        .visitor-portal-large .sm\\:text-2xl,
-        .visitor-portal-large .md\\:text-2xl,
-        .visitor-portal-large .lg\\:text-2xl,
-        .visitor-portal-large .xl\\:text-2xl {
-          font-size: 30px !important;
-        }
-
-        /* Scale up 30px (text-3xl) and equivalents to 36px */
-        .visitor-portal-large .text-3xl,
-        .visitor-portal-large .text-\\[30px\\],
-        .visitor-portal-large .sm\\:text-3xl,
-        .visitor-portal-large .md\\:text-3xl,
-        .visitor-portal-large .lg\\:text-3xl,
-        .visitor-portal-large .xl\\:text-3xl {
-          font-size: 36px !important;
-        }
-
-        /* Scale up 36px (text-4xl) and equivalents to 44px */
-        .visitor-portal-large .text-4xl,
-        .visitor-portal-large .text-\\[36px\\],
-        .visitor-portal-large .sm\\:text-4xl,
-        .visitor-portal-large .md\\:text-4xl,
-        .visitor-portal-large .lg\\:text-4xl,
-        .visitor-portal-large .xl\\:text-4xl {
-          font-size: 44px !important;
-        }
-
-        /* Scale up 48px (text-5xl) and equivalents to 56px */
-        .visitor-portal-large .text-5xl,
-        .visitor-portal-large .text-\\[48px\\],
-        .visitor-portal-large .sm\\:text-5xl,
-        .visitor-portal-large .md\\:text-5xl,
-        .visitor-portal-large .lg\\:text-5xl,
-        .visitor-portal-large .xl\\:text-5xl {
-          font-size: 56px !important;
-        }
-
-        /* Scale up larger display headings to 64px */
-        .visitor-portal-large .text-6xl,
-        .visitor-portal-large .text-7xl {
-          font-size: 64px !important;
+        .visitor-portal-large .lg\\:text-base {
+          font-size: 16px !important;
         }
       `}</style>
       {/* Toast Notification */}
@@ -1272,15 +1196,15 @@ export default function VisitorPortal() {
         <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10 w-full">
           <div className="max-w-5xl text-left">
             {/* Mini Gold Tag */}
-            <div className="inline-flex items-center gap-1.5 text-[#FFFFFF] text-base md:text-lg font-black uppercase tracking-widest mb-5">
-              <span>⚡ VISIT KHANH HOA</span>
+            <div className="inline-flex items-center gap-1.5 text-white text-base md:text-lg font-bold mb-5">
+              <span>⚡ Visit Khanh Hoa</span>
             </div>
 
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
-              Khám phá <span className="text-[#FFFFFF] drop-shadow-sm">Khánh Hòa</span>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
+              Khám phá <span className="text-white drop-shadow-sm">Khánh Hòa</span>
             </h1>
 
-            <p className="text-lg md:text-lg text-slate-100 font-medium italic mt-3 max-w-2xl leading-relaxed drop-shadow-md">
+            <p className="text-lg md:text-lg text-white font-normal italic mt-3 max-w-2xl leading-relaxed drop-shadow-md">
               &quot;Where blue oceans meet timeless culture&quot; — Nơi trùng khơi sóng biếc hòa quyện di sản tâm linh vượt thời gian.
             </p>
 
@@ -1291,15 +1215,15 @@ export default function VisitorPortal() {
                   showToast("Dẫn bạn đến Bản Đồ và Điểm đến danh lam thắng cảnh...");
                   document.getElementById("danh-lam-thang-canh-row")?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="bg-[#FFFFFF] hover:bg-[#FFC72C] text-[#0f172a] font-black text-lg md:text-xl px-6 py-3.5 rounded-full shadow-lg active:scale-95 transition-all flex items-center gap-2 cursor-pointer border-0"
+                className="bg-white hover:bg-amber-300 text-black font-bold text-lg md:text-xl px-6 py-3.5 rounded-full shadow-lg active:scale-95 transition-all flex items-center gap-2 cursor-pointer border-0"
               >
-                <Compass size={16} className="text-[#0f172a]" />
+                <Compass size={16} className="text-black" />
                 <span>Bắt đầu khám phá / Start exploring</span>
               </button>
 
               <button
                 onClick={() => setIsVideoOpen(true)}
-                className="bg-transparent hover:bg-white/10 text-white font-black text-lg md:text-xl px-6 py-3.5 rounded-full border border-white/40 active:scale-95 transition-all flex items-center gap-2 cursor-pointer"
+                className="bg-transparent hover:bg-white/10 text-white font-bold text-lg md:text-xl px-6 py-3.5 rounded-full border border-white/40 active:scale-95 transition-all flex items-center gap-2 cursor-pointer"
               >
                 <Play size={14} className="text-white fill-transparent" />
                 <span>Xem video / Watch</span>
@@ -1320,10 +1244,10 @@ export default function VisitorPortal() {
                 className="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-6 flex flex-col justify-between text-left shadow-sm group hover:bg-white/15 transition-colors min-w-[220px]"
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-lg md:text-2xl font-black text-white tracking-tight">{stat.value}</span>
+                  <span className="text-lg md:text-2xl font-bold text-white tracking-tight">{stat.value}</span>
                   {stat.icon}
                 </div>
-                <span className="text-base md:text-lg text-slate-200 font-bold mt-2 block tracking-wide leading-tight">
+                <span className="text-base md:text-lg text-white font-normal mt-2 block tracking-wide leading-tight">
                   {stat.label}
                 </span>
               </div>
@@ -1354,8 +1278,8 @@ export default function VisitorPortal() {
                 {c.icon}
               </div>
               <div className="mt-3 text-left">
-                <h4 className="text-lg md:text-lg font-black uppercase tracking-wide leading-tight">{c.title}</h4>
-                <p className="text-lg text-white/80 font-medium tracking-wide mt-0.5 leading-none">{c.eng}</p>
+                <h4 className="text-lg md:text-lg font-bold leading-tight">{c.title}</h4>
+                <p className="text-base text-white/90 font-normal tracking-wide mt-0.5 leading-none">{c.eng}</p>
               </div>
             </div>
           ))}
@@ -1371,11 +1295,11 @@ export default function VisitorPortal() {
               <HelpCircle className="text-white w-6 h-6 animate-pulse" />
             </div>
             <div className="text-left">
-              <span className="text-lg font-black text-red-200 tracking-wider block uppercase mb-1 pointer-events-none">HỎI ĐÁP DU LỊCH</span>
-              <h4 className="text-lg md:text-base font-black text-white uppercase leading-none group-hover:text-yellow-300 transition-colors">
-                CÔNG DÂN, DU KHÁCH HỎI
+              <span className="text-base font-bold text-yellow-300 tracking-wider block mb-1 pointer-events-none">Hỏi đáp du lịch</span>
+              <h4 className="text-lg md:text-xl font-bold text-white leading-none group-hover:text-yellow-300 transition-colors">
+                Công dân, du khách hỏi
               </h4>
-              <p className="text-lg text-red-50/80 font-bold mt-1 shadow-sm">
+              <p className="text-base text-white font-normal mt-1 shadow-sm">
                 Q&A with local authorities
               </p>
             </div>
@@ -1393,11 +1317,11 @@ export default function VisitorPortal() {
               <Database className="text-white w-6 h-6" />
             </div>
             <div className="text-left">
-              <span className="text-lg font-black text-sky-200 tracking-wider block uppercase mb-1 pointer-events-none">CƠ SỞ DỮ LIỆU</span>
-              <h4 className="text-lg md:text-base font-black text-white uppercase leading-none group-hover:text-sky-200 transition-colors">
-                TRA CỨU CSDL DU LỊCH KHÁNH HÒA
+              <span className="text-base font-bold text-sky-200 tracking-wider block mb-1 pointer-events-none">Cơ sở dữ liệu</span>
+              <h4 className="text-lg md:text-xl font-bold text-white leading-none group-hover:text-sky-200 transition-colors">
+                Tra cứu CSDL Du lịch Khánh Hòa
               </h4>
-              <p className="text-lg text-blue-50/80 font-bold mt-1 shadow-sm">
+              <p className="text-base text-white font-normal mt-1 shadow-sm">
                 Provincial tourism database
               </p>
             </div>
@@ -1418,11 +1342,11 @@ export default function VisitorPortal() {
                   <PhoneCall size={15} />
                 </div>
                 <div>
-                  <h4 className="text-lg font-black tracking-tight text-white/95">Đường dây nóng cứu hộ</h4>
-                  <p className="text-base text-red-100 font-bold uppercase tracking-wider leading-none mt-0.5">Khẩn cấp 24/7</p>
+                  <h4 className="text-lg font-bold tracking-tight text-white">Đường dây nóng cứu hộ</h4>
+                  <p className="text-base text-yellow-300 font-normal leading-none mt-0.5">Khẩn cấp 24/7</p>
                 </div>
               </div>
-              <span className="text-base font-black tracking-widest text-[#FFE4E6] bg-white/20 backdrop-blur-md px-2 py-1 rounded-md uppercase leading-none">24/7</span>
+              <span className="text-base font-bold text-white bg-white/20 backdrop-blur-md px-2 py-1 rounded-md leading-none">24/7</span>
             </div>
 
             <div className="grid grid-cols-4 gap-2 relative z-10">
@@ -1438,8 +1362,8 @@ export default function VisitorPortal() {
                   className={`p-2 py-3 rounded-xl border text-center cursor-pointer transition-all ${hl.style} flex flex-col justify-center items-center gap-1`}
                 >
                   <PhoneCall size={12} className="text-yellow-400 mb-0.5" />
-                  <span className="text-lg font-black opacity-90 leading-none">{hl.label}</span>
-                  <span className="text-lg font-black tracking-wide block leading-none">{hl.num}</span>
+                  <span className="text-base font-bold opacity-90 leading-none">{hl.label}</span>
+                  <span className="text-lg font-bold tracking-wide block leading-none">{hl.num}</span>
                 </div>
               ))}
             </div>
@@ -1449,10 +1373,10 @@ export default function VisitorPortal() {
               className="bg-white/15 backdrop-blur-md border border-white/10 text-white rounded-xl p-3 px-4 flex items-center justify-between cursor-pointer hover:bg-white/20 transition-all relative z-10"
             >
               <div>
-                <span className="text-lg text-red-100 uppercase font-black tracking-widest block leading-none mb-1">Phản ánh công ích</span>
-                <span className="text-lg font-black text-yellow-400">Tổng đài nóng 1022</span>
+                <span className="text-base text-white font-normal block leading-none mb-1">Phản ánh công ích</span>
+                <span className="text-lg font-bold text-yellow-300">Tổng đài nóng 1022</span>
               </div>
-              <div className="text-yellow-400 font-black text-lg leading-none shrink-0">
+              <div className="text-yellow-300 font-bold text-lg leading-none shrink-0">
                 (0258) 1022
               </div>
             </div>
@@ -1468,19 +1392,19 @@ export default function VisitorPortal() {
                   <CloudSun size={15} className="animate-pulse" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-black tracking-tight text-white/95">Dự báo khí tượng</h4>
-                  <p className="text-base text-[#A5F3FC] font-extrabold uppercase tracking-widest font-mono">Nha Trang • Live</p>
+                  <h4 className="text-lg font-bold tracking-tight text-white">Dự báo khí tượng</h4>
+                  <p className="text-base text-sky-200 font-normal">Nha Trang • Trực tiếp</p>
                 </div>
               </div>
-              <span className="text-base font-black tracking-widest text-[#E0F2FE] bg-white/20 backdrop-blur-md px-1.5 py-0.5 rounded-md uppercase font-mono">Live</span>
+              <span className="text-base font-bold text-sky-100 bg-white/20 backdrop-blur-md px-1.5 py-0.5 rounded-md font-mono">Live</span>
             </div>
 
             <div className="relative z-10 flex items-center justify-between p-2.5 bg-white/10 backdrop-blur-md rounded-xl border border-white/10 shadow-sm">
               <div className="flex items-center gap-3">
-                <span className="text-3xl font-black text-white tracking-tighter drop-shadow">28°C</span>
+                <span className="text-3xl font-bold text-white tracking-tighter drop-shadow">28°C</span>
                 <div>
-                  <span className="text-lg font-black text-white block">Nắng ấm biển xanh</span>
-                  <span className="text-lg text-sky-100/90 [word-spacing:-0.03em] block leading-normal mt-0.5">Không khí mát mẻ, lý tưởng du lịch</span>
+                  <span className="text-lg font-bold text-white block">Nắng ấm biển xanh</span>
+                  <span className="text-base text-white font-normal block leading-normal mt-0.5">Không khí mát mẻ, lý tưởng du lịch</span>
                 </div>
               </div>
               <CloudSun size={26} className="text-red-300 filter drop-shadow animate-bounce" style={{ animationDuration: '4s' }} />
@@ -1497,18 +1421,18 @@ export default function VisitorPortal() {
                   <div key={i} className="bg-white/10 backdrop-blur-sm border border-white/10 p-1.5 py-2 rounded-xl text-center flex flex-col items-center justify-center gap-1">
                     <div className="flex items-center gap-1">
                       <Icon size={12} className={st.color} />
-                      <span className="text-base text-sky-100 uppercase tracking-wider font-extrabold block">{st.label}</span>
+                      <span className="text-base text-white font-normal block">{st.label}</span>
                     </div>
-                    <span className="text-lg font-black text-white tracking-wide">{st.val}</span>
+                    <span className="text-lg font-bold text-white tracking-wide">{st.val}</span>
                   </div>
                 );
               })}
             </div>
 
-            <div className="relative z-10 border-t border-white/10 pt-2 flex justify-between items-center text-base font-black text-sky-100 font-sans">
-              <span className="flex items-center gap-0.5">Mai: <span className="text-red-200 font-extrabold">29°C 🌤️</span></span>
-              <span className="flex items-center gap-0.5">Kia: <span className="text-blue-200 font-extrabold">28°C 🌦️</span></span>
-              <span className="flex items-center gap-0.5 font-extrabold">Sắp tới: <span className="text-red-350">30°C ☀️</span></span>
+            <div className="relative z-10 border-t border-white/10 pt-2 flex justify-between items-center text-base font-bold text-white font-sans">
+              <span className="flex items-center gap-0.5">Mai: <span className="text-yellow-300 font-bold">29°C 🌤️</span></span>
+              <span className="flex items-center gap-0.5">Kia: <span className="text-sky-200 font-bold">28°C 🌦️</span></span>
+              <span className="flex items-center gap-0.5 font-bold">Sắp tới: <span className="text-yellow-300 font-bold">30°C ☀️</span></span>
             </div>
         </div>
       </div>
@@ -1523,21 +1447,21 @@ export default function VisitorPortal() {
       {/* =========================================================================
          ADDITIONAL COMPONENT: 5 TOURISM GUIDES (Requested by user)
          ========================================================================= */}
-      <div className="mb-14 text-left">
+      <div className="mb-14 text-left bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-sm">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-slate-200 pb-4 mb-6 gap-3">
           <div className="text-left">
-            <span className="text-lg font-black tracking-widest text-blue-600 uppercase bg-blue-50 px-2.5 py-1 rounded-md mb-2 inline-block">
-              HÀNH TRÌNH KHÁM PHÁ SỐ HÓA KHÁNH HÒA
+            <span className="text-base font-bold tracking-wide text-blue-800 bg-blue-50 px-2.5 py-1 rounded-md mb-2 inline-block">
+              Hành trình khám phá số hóa Khánh Hòa
             </span>
             <div className="flex items-start gap-3.5 mt-1">
               <div className="w-12 h-12 rounded-full bg-[#1E3A8A] text-white flex items-center justify-center shadow-sm shrink-0">
                 <Compass size={22} className="text-white" />
               </div>
               <div className="flex flex-col gap-1">
-                <h3 className="text-2xl md:text-3xl font-black text-[#1E3A8A] uppercase tracking-tight leading-none text-left">
-                  KHÁM PHÁ DU LỊCH KHÁNH HÒA
+                <h3 className="text-2xl md:text-3xl font-bold text-[#1E3A8A] tracking-tight leading-none text-left">
+                  Khám phá du lịch Khánh Hòa
                 </h3>
-                <p className="text-lg text-slate-500 font-bold">
+                <p className="text-lg text-black font-normal">
                   Trải nghiệm thực tế năm sao, tinh hoa ẩm thực, danh thắng lịch sử và khoảnh khắc nghệ thuật lộng lẫy
                 </p>
               </div>
@@ -1548,89 +1472,87 @@ export default function VisitorPortal() {
         {/* =========================================================================
            CINEMATIC SCENIC BILLBOARD CAROUSEL (Khánh Hòa Dream Slideshow)
            ========================================================================= */}
-        <div className="relative mb-8 rounded-3xl overflow-hidden shadow-lg border border-slate-200/60 bg-slate-900 group/scenery select-none h-[280px] sm:h-[350px]">
+        <div className="relative mb-8 rounded-3xl overflow-hidden shadow-lg border border-slate-200/60 flex flex-col group/scenery select-none">
           {/* Active Image with zoom dynamic effect */}
-          <div className="absolute inset-0">
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={activeSceneryIdx}
-                src={SCENIC_SLIDES[activeSceneryIdx].image}
-                alt={SCENIC_SLIDES[activeSceneryIdx].title}
-                initial={{ opacity: 0, scale: 1.05 }}
-                animate={{ opacity: 1, scale: 1.01 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.8 }}
-                className="w-full h-full object-cover brightness-95 opacity-90 scale-100 hover:scale-102 transition-transform duration-1000"
-                referrerPolicy="no-referrer"
-              />
-            </AnimatePresence>
+          <div className="relative h-[220px] sm:h-[300px]">
+            <div className="absolute inset-0">
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={activeSceneryIdx}
+                  src={SCENIC_SLIDES[activeSceneryIdx].image}
+                  alt={SCENIC_SLIDES[activeSceneryIdx].title}
+                  initial={{ opacity: 0, scale: 1.05 }}
+                  animate={{ opacity: 1, scale: 1.01 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.8 }}
+                  className="w-full h-full object-cover brightness-100 opacity-100 scale-100 hover:scale-102 transition-transform duration-1000"
+                  referrerPolicy="no-referrer"
+                />
+              </AnimatePresence>
+            </div>
+
+            {/* Floating Indicators & Stats */}
+            <div className="absolute top-4 left-4 z-20 flex gap-2">
+              <span className="bg-blue-600/90 text-white text-base sm:text-lg font-bold tracking-wide px-2.5 py-1 rounded-md backdrop-blur-md shadow">
+                🚀 {SCENIC_SLIDES[activeSceneryIdx].tag}
+              </span>
+              <span className="bg-slate-900/60 backdrop-blur-md border border-white/10 text-white text-base sm:text-lg font-bold tracking-wide px-2.5 py-1 rounded-md shadow">
+                {SCENIC_SLIDES[activeSceneryIdx].stat}
+              </span>
+            </div>
+
+            {/* Navigation manual controls */}
+            <div className="absolute right-4 top-1/2 -translate-y-1/2 z-20 flex flex-col gap-2 opacity-0 group-hover/scenery:opacity-100 transition-opacity duration-300">
+              <button
+                onClick={() => {
+                  setActiveSceneryIdx((prev) => (prev - 1 + SCENIC_SLIDES.length) % SCENIC_SLIDES.length);
+                  showToast("Khám phá ảnh trước");
+                }}
+                className="w-8 h-8 rounded-full bg-black/40 hover:bg-blue-600/90 text-white border-0 flex items-center justify-center cursor-pointer transition-all active:scale-95 shadow backdrop-blur-xs"
+              >
+                ←
+              </button>
+              <button
+                onClick={() => {
+                  setActiveSceneryIdx((prev) => (prev + 1) % SCENIC_SLIDES.length);
+                  showToast("Khám phá ảnh sau");
+                }}
+                className="w-8 h-8 rounded-full bg-black/40 hover:bg-blue-600/90 text-white border-0 flex items-center justify-center cursor-pointer transition-all active:scale-95 shadow backdrop-blur-xs"
+              >
+                →
+              </button>
+            </div>
           </div>
 
-          {/* Gradients overlay for legibility */}
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-900/40 to-transparent z-10" />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/50 to-transparent z-10" />
-
-          {/* Floating Indicators & Stats */}
-          <div className="absolute top-4 left-4 z-20 flex gap-2">
-            <span className="bg-blue-600/90 text-white text-base sm:text-lg font-black uppercase tracking-widest px-2.5 py-1 rounded-md backdrop-blur-md shadow">
-              🚀 {SCENIC_SLIDES[activeSceneryIdx].tag}
-            </span>
-            <span className="bg-slate-900/60 backdrop-blur-md border border-white/10 text-white text-base sm:text-lg font-black uppercase tracking-wide px-2.5 py-1 rounded-md shadow">
-              {SCENIC_SLIDES[activeSceneryIdx].stat}
-            </span>
-          </div>
-
-          {/* Slide main content text */}
-          <div className="absolute bottom-5 sm:bottom-8 left-5 sm:left-8 right-5 sm:right-8 z-20 text-left space-y-2 max-w-2xl">
+          {/* Solid Blue Bottom Frame for Text */}
+          <div className="bg-[#1E3A8A] text-white p-5 sm:p-6 text-left flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
             <motion.h4 
               key={`h4-${activeSceneryIdx}`}
-              initial={{ y: 15, opacity: 0 }}
+              initial={{ y: 5, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.15, duration: 0.4 }}
-              className="text-base sm:text-xl md:text-2xl font-black text-white leading-normal uppercase drop-shadow-md tracking-wide"
+              className="text-lg sm:text-xl md:text-2xl font-bold leading-normal tracking-wide flex-1 m-0"
             >
               {SCENIC_SLIDES[activeSceneryIdx].title}
             </motion.h4>
-          </div>
 
-          {/* Navigation manual controls */}
-          <div className="absolute right-4 top-1/2 -translate-y-1/2 z-20 flex flex-col gap-2 opacity-0 group-hover/scenery:opacity-100 transition-opacity duration-300">
-            <button
-              onClick={() => {
-                setActiveSceneryIdx((prev) => (prev - 1 + SCENIC_SLIDES.length) % SCENIC_SLIDES.length);
-                showToast("Khám phá ảnh trước");
-              }}
-              className="w-8 h-8 rounded-full bg-black/40 hover:bg-blue-600/90 text-white border-0 flex items-center justify-center cursor-pointer transition-all active:scale-95 shadow backdrop-blur-xs"
-            >
-              ←
-            </button>
-            <button
-              onClick={() => {
-                setActiveSceneryIdx((prev) => (prev + 1) % SCENIC_SLIDES.length);
-                showToast("Khám phá ảnh sau");
-              }}
-              className="w-8 h-8 rounded-full bg-black/40 hover:bg-blue-600/90 text-white border-0 flex items-center justify-center cursor-pointer transition-all active:scale-95 shadow backdrop-blur-xs"
-            >
-              →
-            </button>
-          </div>
-
-          {/* Slide dots tracking progress row */}
-          <div className="absolute right-6 bottom-6 z-20 flex gap-2.5 items-center bg-black/20 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/5">
-            {SCENIC_SLIDES.map((slide, sIdx) => (
-              <button
-                key={slide.id}
-                onClick={() => {
-                  setActiveSceneryIdx(sIdx);
-                  showToast(`Xem địa danh ${slide.id === "sc-1" ? "Vịnh Nha Trang" : slide.id === "sc-2" ? "Tháp Ponagar" : "Hòn Mun"}`);
-                }}
-                className={`w-2 h-2 rounded-full border-0 p-0 cursor-pointer transition-all ${
-                  activeSceneryIdx === sIdx 
-                    ? "bg-red-400 w-6" 
-                    : "bg-white/40 hover:bg-white/70"
-                }`}
-              />
-            ))}
+            {/* Slide dots tracking progress row */}
+            <div className="flex gap-2.5 items-center shrink-0">
+              {SCENIC_SLIDES.map((slide, sIdx) => (
+                <button
+                  key={slide.id}
+                  onClick={() => {
+                    setActiveSceneryIdx(sIdx);
+                    showToast(`Xem địa danh ${slide.id === "sc-1" ? "Vịnh Nha Trang" : slide.id === "sc-2" ? "Tháp Ponagar" : "Hòn Mun"}`);
+                  }}
+                  className={`w-2 h-2 rounded-full border-0 p-0 cursor-pointer transition-all ${
+                    activeSceneryIdx === sIdx 
+                      ? "bg-red-400 w-6" 
+                      : "bg-white/40 hover:bg-white/70"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
@@ -1650,7 +1572,7 @@ export default function VisitorPortal() {
                 className={`relative group bg-white rounded-2xl border p-4 transition-all duration-300 cursor-pointer flex flex-col justify-between overflow-hidden min-h-[145px] ${
                   isActive 
                     ? "border-blue-600 ring-2 ring-blue-500/10 shadow-lg text-blue-700" 
-                    : "border-slate-200 hover:border-slate-300 shadow-sm text-slate-700"
+                    : "border-slate-200 hover:border-slate-300 shadow-sm text-black"
                 }`}
               >
                 {/* Decorative background accent */}
@@ -1667,12 +1589,12 @@ export default function VisitorPortal() {
                   </div>
 
                   {/* Title and details */}
-                  <h4 className={`text-lg font-black uppercase leading-snug tracking-tight ${
-                    isActive ? "text-blue-800" : "text-slate-800"
+                  <h4 className={`text-lg font-bold leading-snug tracking-tight ${
+                    isActive ? "text-blue-800" : "text-black"
                   }`}>
                     {guide.title}
                   </h4>
-                  <p className="text-[18px] text-black font-bold mt-1">
+                  <p className="text-base text-black font-normal mt-1">
                     {guide.engTitle}
                   </p>
                 </div>
@@ -1709,22 +1631,22 @@ export default function VisitorPortal() {
                         referrerPolicy="no-referrer"
                       />
                     </div>
-                    {/* Shadow overlay gradient: Soft Warm Gray overlay instead of harsh black */}
+                    {/* Shadow overlay gradient */}
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-800/40 to-transparent z-10" />
 
                     <div className="relative z-20 text-left">
                       <div className="flex items-center gap-2 mb-2">
-                        <span className="text-lg font-bold text-yellow-400 tracking-wider block">
+                        <span className="text-base font-bold text-yellow-300 tracking-wider block">
                           {guide.engTitle}
                         </span>
                       </div>
-                      <h3 className="text-base md:text-lg font-black text-white uppercase leading-tight tracking-tight mt-1">
+                      <h3 className="text-xl md:text-2xl font-bold text-white leading-tight tracking-tight mt-1">
                         {guide.title}
                       </h3>
-                      <p className="text-lg text-slate-200 font-bold italic mt-2 opacity-95">
+                      <p className="text-base text-slate-100 font-normal italic mt-2 opacity-95">
                         "{guide.subtitle}"
                       </p>
-                      <div className="mt-4 pt-4 border-t border-white/10 flex items-center gap-4 text-lg text-slate-300 font-bold">
+                      <div className="mt-4 pt-4 border-t border-white/10 flex items-center gap-4 text-base text-white font-normal">
                         <div className="flex items-center gap-1">
                           <CheckCircle className="w-3.5 h-3.5 text-blue-400" />
                           <span>Đã xác minh</span>
@@ -1741,11 +1663,11 @@ export default function VisitorPortal() {
                   <div className="flex-1 p-6 md:p-8 flex flex-col justify-between text-left">
                     <div>
                       <div className="flex items-center border-b border-slate-100 pb-3 mb-4">
-                        <h4 className="text-[21px] md:text-[24px] font-black text-blue-800 uppercase tracking-wider">
-                          GIÁ TRỊ DI SẢN & ĐIỂM NHẤN CHỌN LỌC
+                        <h4 className="text-[21px] md:text-[24px] font-bold text-blue-800 tracking-wider">
+                          Giá trị di sản & điểm nhấn chọn lọc
                         </h4>
                       </div>
-                      <p className="text-lg text-slate-600 font-bold leading-relaxed mb-5 italic bg-slate-50 p-3 rounded-xl border border-slate-100">
+                      <p className="text-lg text-black font-normal leading-relaxed mb-5 italic bg-slate-50 p-3 rounded-xl border border-slate-200">
                         {guide.tagline}
                       </p>
 
@@ -1772,21 +1694,21 @@ export default function VisitorPortal() {
                                   : ""
                               }`}
                             >
-                              <span className="text-lg font-black bg-blue-50 text-blue-700 w-5 h-5 rounded-md flex items-center justify-center shrink-0 mt-0.5 shadow-sm border border-blue-100 group-hover/item:bg-blue-600 group-hover/item:text-white transition-all">
+                              <span className="text-lg font-bold bg-blue-50 text-blue-700 w-5 h-5 rounded-md flex items-center justify-center shrink-0 mt-0.5 shadow-sm border border-blue-100 group-hover/item:bg-blue-600 group-hover/item:text-white transition-all">
                                 {idx + 1}
                               </span>
                               <div className="flex-1 min-w-0">
                                 <div className="flex items-center gap-2 mb-1 flex-wrap">
-                                  <h5 className="text-lg font-black text-slate-805 leading-none group-hover/item:text-blue-700 transition-colors">
+                                  <h5 className="text-lg font-bold text-black leading-none group-hover/item:text-blue-700 transition-colors">
                                     {item.title}
                                   </h5>
                                   {hasDetails && (
-                                    <span className="text-lg bg-red-100 text-red-700 px-2 py-0.5 rounded-full font-black animate-pulse flex items-center gap-1 shadow-xs shrink-0">
-                                      ✨ Nhấp xem chi tiết (Thanh cuộn)
+                                    <span className="text-base bg-red-100 text-red-700 px-2 py-0.5 rounded-full font-bold animate-pulse flex items-center gap-1 shadow-xs shrink-0">
+                                      ✨ Nhấp xem chi tiết
                                     </span>
                                   )}
                                 </div>
-                                <p className="text-lg md:text-lg text-black font-normal leading-relaxed">
+                                <p className="text-lg text-black font-normal leading-relaxed">
                                   {item.desc}
                                 </p>
                               </div>
@@ -1799,11 +1721,11 @@ export default function VisitorPortal() {
                     <div className="mt-6 pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
                       <div className="flex items-center gap-2">
                         <div className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse" />
-                        <span className="text-lg text-slate-400 font-bold">Trực quan hóa dữ liệu du khách</span>
+                        <span className="text-base text-black font-normal">Trực quan hóa dữ liệu du khách</span>
                       </div>
                       <button
                         onClick={() => showToast(`Cảm ơn bạn đã lưu cẩm nang: ${guide.title}!`)}
-                        className="w-full sm:w-auto bg-gradient-to-r from-blue-700 to-blue-800 hover:from-blue-800 hover:to-blue-900 text-white font-black uppercase text-lg tracking-wider py-2.5 px-5 rounded-xl transition-all cursor-pointer border-0 shadow-md"
+                        className="w-full sm:w-auto bg-gradient-to-r from-blue-700 to-blue-800 hover:from-blue-800 hover:to-blue-900 text-white font-bold text-base tracking-wider py-2.5 px-5 rounded-xl transition-all cursor-pointer border-0 shadow-md"
                       >
                         Tải trọn bộ PDF cẩm nang du lịch
                       </button>
@@ -1817,11 +1739,11 @@ export default function VisitorPortal() {
                 <div className="bg-slate-50 border-t border-slate-200/80 p-8 md:p-10 text-left">
                   <div className="flex items-center justify-between mb-4 pb-2 border-b border-slate-200/60">
                     <div className="flex items-center gap-2">
-                      <h4 className="text-[21px] md:text-[24px] font-black text-blue-900 uppercase tracking-wider">
-                        HÀNH TRÌNH THỰC TẾ & KHÔNG GIAN TƯƠNG TÁC
+                      <h4 className="text-[21px] md:text-[24px] font-bold text-blue-900 tracking-wider">
+                        Hành trình thực tế & không gian tương tác
                       </h4>
                     </div>
-                    <span className="text-lg text-red-600 font-black flex items-center gap-1 selection:bg-red-100">
+                    <span className="text-base text-red-600 font-bold flex items-center gap-1 selection:bg-red-100">
                       <Sparkles className="w-3.5 h-3.5" /> Gợi mở du lịch của bạn
                     </span>
                   </div>
@@ -1829,7 +1751,7 @@ export default function VisitorPortal() {
                   {/* 1. INTERACTIVE WIDGET FOR DAC-SAC (Khánh Hòa Style Planner) */}
                   {activeGuideId === "dac-sac" && (
                     <div className="space-y-4 text-left">
-                      <p className="text-lg text-slate-500 font-extrabold uppercase tracking-wider mb-2 flex items-center gap-1">
+                      <p className="text-base text-black font-normal tracking-wide mb-2 flex items-center gap-1">
                         Chọn phong cách để khám phá biển đảo Nha Trang theo cách riêng của bạn:
                       </p>
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -1853,15 +1775,15 @@ export default function VisitorPortal() {
                               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 duration-700 pointer-events-none"
                               referrerPolicy="no-referrer"
                             />
-                            {/* Gradient Overlay: Soft slate tones instead of black */}
+                            {/* Gradient Overlay */}
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-800/35 to-slate-900/10" />
                             
                             {/* Content */}
                             <div className="absolute inset-0 p-3 flex flex-col justify-end text-left">
-                              <h5 className="text-lg font-bold leading-none mb-1 flex items-center gap-1.5 drop-shadow-sm text-yellow-400 uppercase">
-                                {style.name.toUpperCase()}
+                              <h5 className="text-lg font-bold leading-none mb-1 flex items-center gap-1.5 drop-shadow-sm text-yellow-300">
+                                {style.name}
                               </h5>
-                              <p className="text-base text-slate-100 font-bold leading-normal line-clamp-2 opacity-90">
+                              <p className="text-base text-slate-100 font-normal leading-normal line-clamp-2 opacity-90">
                                 {style.desc}
                               </p>
                             </div>
@@ -1881,29 +1803,29 @@ export default function VisitorPortal() {
                           <motion.div
                             initial={{ opacity: 0, scale: 0.98 }}
                             animate={{ opacity: 1, scale: 1 }}
-                            className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm mt-3"
+                            className="mt-6"
                           >
                             <div className="flex flex-col gap-4">
                               <div className="space-y-3 flex flex-col justify-between">
                                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                                   <div className="space-y-1.5">
-                                    <span className="text-lg font-black text-blue-600 uppercase bg-blue-50 px-2 py-0.5 rounded inline-block border border-blue-100">
-                                      Hành trình đề xuất chuẩn chỉnh từ dân bản xứ
+                                    <span className="text-base font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded inline-block border border-blue-100">
+                                      Hành trình đề xuất từ dân bản xứ
                                     </span>
-                                    <h5 className="text-lg font-bold text-slate-800 uppercase flex items-center gap-1.5">
+                                    <h5 className="text-lg font-bold text-black flex items-center gap-1.5">
                                       Lịch trình khuyên đọc: {styleNode.name}
                                     </h5>
                                   </div>
                                 </div>
                                 
                                 <div className="space-y-1">
-                                  <p className="text-base text-slate-700 font-extrabold flex items-center gap-1">
+                                  <p className="text-base text-black font-normal flex items-center gap-1">
                                     📍 Địa danh lưu trú & trải nghiệm điểm nhấn hình ảnh sống động:
                                   </p>
                                   {/* Grid of Places with Photos */}
                                   <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 pt-1">
                                     {(styleNode as any).placesDetail?.map((place: any, pi: number) => (
-                                      <div key={pi} className="bg-slate-50/70 border border-slate-200/80 rounded-lg overflow-hidden group/place flex flex-row sm:flex-col items-center sm:items-stretch text-left shadow-2xs">
+                                      <div key={pi} className="bg-white border border-slate-200/80 rounded-lg overflow-hidden group/place flex flex-row sm:flex-col items-center sm:items-stretch text-left shadow-2xs">
                                         <div className="w-14 h-14 sm:w-full sm:h-40 overflow-hidden bg-slate-200 shrink-0">
                                           <img 
                                             src={place.img} 
@@ -1913,7 +1835,7 @@ export default function VisitorPortal() {
                                           />
                                         </div>
                                         <div className="p-2 min-w-0">
-                                          <h6 className="text-base font-black text-slate-800 leading-tight mb-0.5 truncate">
+                                          <h6 className="text-base font-bold text-black leading-tight mb-0.5 truncate">
                                             {place.name}
                                           </h6>
                                           <p className="text-base text-black font-normal leading-normal line-clamp-2">
@@ -1926,29 +1848,9 @@ export default function VisitorPortal() {
                                 </div>
                               </div>
                               <div className="flex items-start w-full">
-                                <div className="text-base text-slate-600 font-medium bg-slate-50 px-4 py-2.5 rounded-xl border border-slate-100 leading-relaxed italic w-full shadow-sm">
+                                <div className="text-base text-black font-normal leading-relaxed italic w-full">
                                   💡 <strong>Bản xứ bật mí:</strong> {styleNode.tips}
                                 </div>
-                              </div>
-                            </div>
-                            
-                            {/* Subscription form */}
-                            <div className="mt-6 pt-5 border-t border-slate-100 flex flex-col gap-4 bg-slate-50/60 p-5 rounded-2xl">
-                              <p className="text-lg text-slate-700 font-bold leading-relaxed text-left">
-                                📞 Đã tìm thấy lịch trình mơ ước? Gọi ngay chuyên viên hỗ trợ 24/7 của vương quốc để setup:
-                              </p>
-                              <div className="flex flex-col sm:flex-row gap-3 w-full">
-                                <input
-                                  type="text"
-                                  placeholder="Nhập số điện thoại nhận lộ trình miễn phí..."
-                                  className="flex-1 bg-white border border-slate-200 px-4 py-2.5 rounded-xl text-lg font-bold focus:outline-none focus:border-blue-500 text-slate-800 placeholder-slate-400 shadow-xs"
-                                />
-                                <button
-                                  onClick={() => showToast("Đăng ký thành công! Tư vấn viên Khánh Hòa sẽ liên hệ bạn ngay trong 5 phút.")}
-                                  className="bg-blue-600 hover:bg-blue-700 text-white font-black text-lg py-2.5 px-6 rounded-xl cursor-pointer border-0 shrink-0 shadow-xs transition-all flex items-center justify-center gap-2"
-                                >
-                                  📨 Đăng Ký Tư Vấn Free
-                                </button>
                               </div>
                             </div>
                           </motion.div>
@@ -1960,7 +1862,7 @@ export default function VisitorPortal() {
                   {/* 2. INTERACTIVE WIDGET FOR DIEM-DEN (Landmark Spotlight Viewer) */}
                   {activeGuideId === "diem-den" && (
                     <div className="space-y-4 text-left">
-                      <p className="text-lg text-slate-500 font-bold uppercase tracking-wider">
+                      <p className="text-base text-black font-normal tracking-wide">
                         Danh sách thắng cảnh - Hãy chọn một tọa độ để xem chi tiết ảnh góc rộng:
                       </p>
                       <div className="flex flex-wrap gap-2">
@@ -1973,10 +1875,10 @@ export default function VisitorPortal() {
                               setSpotlightImageIndex(prev => ({ ...prev, [land.id]: 0 }));
                               showToast(`Tiêu điểm: ${land.name}`);
                             }}
-                            className={`px-3 py-2 rounded-xl text-base font-black border cursor-pointer transition-all ${
+                            className={`px-3 py-2 rounded-xl text-base font-bold border cursor-pointer transition-all ${
                               spotlightId === land.id
                                 ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white border-transparent shadow shadow-blue-500/20"
-                                : "bg-white text-slate-700 border-slate-200 hover:border-slate-300"
+                                : "bg-white text-black border-slate-200 hover:border-slate-300"
                             }`}
                           >
                             {land.name.split(" - ")[0]}
@@ -2006,7 +1908,7 @@ export default function VisitorPortal() {
                                   className="w-full h-full object-cover group-hover/gallery:scale-[1.03] duration-500"
                                   referrerPolicy="no-referrer"
                                 />
-                                <span className="absolute bottom-2.5 left-2.5 bg-slate-800/70 text-white text-base font-extrabold uppercase px-2 py-0.5 rounded tracking-wider backdrop-blur-xs">
+                                <span className="absolute bottom-2.5 left-2.5 bg-slate-800/70 text-white text-base font-bold px-2 py-0.5 rounded backdrop-blur-xs">
                                   Góc độ {activeImageIdx + 1} / {allPhotosList.length}
                                 </span>
                               </div>
@@ -2039,55 +1941,55 @@ export default function VisitorPortal() {
                             <div className="md:col-span-4 space-y-2.5 flex flex-col justify-between text-left">
                               <div className="space-y-1.5">
                                 <div className="flex flex-wrap items-center gap-2">
-                                  <span className="bg-blue-50 text-blue-700 text-lg font-black px-2 py-0.5 rounded border border-blue-100">
-                                    CẨM NANG TOÀN KHÁM PHÁ TIỀM NĂNG
+                                  <span className="bg-blue-50 text-blue-700 text-base font-bold px-2 py-0.5 rounded border border-blue-100">
+                                    Cẩm nang khám phá tiềm năng
                                   </span>
-                                  <span className="text-base text-slate-400 font-extrabold flex items-center gap-1">
-                                    <MapPin className="w-3 h-3 text-blue-600" /> {landNode.distance}
+                                  <span className="text-base text-black font-normal flex items-center gap-1">
+                                    <MapPin className="w-3.5 h-3.5 text-blue-600" /> {landNode.distance}
                                   </span>
                                 </div>
-                                <h5 className="text-lg font-black text-slate-800 uppercase leading-none">
+                                <h5 className="text-lg font-bold text-black leading-none">
                                   {landNode.name}
                                 </h5>
-                                <p className="text-base text-slate-600 font-semibold leading-relaxed">
+                                <p className="text-base text-black font-normal leading-relaxed">
                                   {landNode.desc}
                                 </p>
                               </div>
 
-                              <div className="bg-blue-50/40 p-2.5 rounded-lg border border-blue-50 text-left">
-                                <span className="text-lg text-[#0F172A] font-black block uppercase tracking-wide">
+                              <div className="bg-blue-50/40 p-2.5 rounded-lg border border-blue-100 text-left">
+                                <span className="text-base text-black font-bold block">
                                   ⏰ Giờ hoạt động & Lý tưởng nhất:
                                 </span>
-                                <p className="text-lg text-[#1E3A8A] font-bold mt-0.5">{landNode.hours}</p>
+                                <p className="text-base text-blue-900 font-normal mt-0.5">{landNode.hours}</p>
                               </div>
 
-                              <div className="bg-red-50/40 p-2.5 rounded-lg border border-red-50 text-left">
-                                <span className="text-lg text-red-800 font-black block uppercase tracking-wide">
+                              <div className="bg-red-50/40 p-2.5 rounded-lg border border-red-100 text-left">
+                                <span className="text-base text-red-800 font-bold block">
                                   📸 Góc chụp “Sống ảo” lý tưởng nhất:
                                 </span>
-                                <p className="text-lg text-red-700 font-bold mt-0.5">{landNode.photoSpot}</p>
+                                <p className="text-base text-red-700 font-normal mt-0.5">{landNode.photoSpot}</p>
                               </div>
                             </div>
 
                             {/* Local advice and navigation map Column */}
                             <div className="md:col-span-3 bg-slate-900/5 p-4 rounded-xl border border-slate-200/60 flex flex-col justify-between text-left">
                               <div className="space-y-1.5">
-                                <span className="text-lg font-black text-slate-400 uppercase tracking-widest block">
-                                  DÂN ĐỊA PHƯƠNG KHUYÊN
+                                <span className="text-base font-bold text-black block">
+                                  Dân địa phương khuyên
                                 </span>
-                                <h6 className="text-base font-black text-red-700 uppercase">
-                                  💡 MÁCH BẠN TỐI ƯU:
+                                <h6 className="text-base font-bold text-red-700">
+                                  💡 Mách bạn tối ưu:
                                 </h6>
-                                <p className="text-lg text-slate-650 font-semibold leading-relaxed">
+                                <p className="text-base text-black font-normal leading-relaxed">
                                   "{landNode.tip}"
                                 </p>
                               </div>
 
                               <button
                                 onClick={() => showToast("Đang kết nối hệ thống GPS... Định vị Thắng cảnh chuẩn 100% trên google map di động.")}
-                                className="w-full bg-white hover:bg-slate-50 text-slate-800 text-lg font-black py-2 rounded-lg cursor-pointer border border-slate-200 mt-3 flex items-center justify-center gap-1.5"
+                                className="w-full bg-white hover:bg-slate-50 text-black text-base font-bold py-2 rounded-lg cursor-pointer border border-slate-200 mt-3 flex items-center justify-center gap-1.5"
                               >
-                                🗺️ Xem Bản Đồ Đường Đi Chi Tiết
+                                🗺️ Xem bản đồ đường đi chi tiết
                               </button>
                             </div>
                           </motion.div>
@@ -2099,7 +2001,7 @@ export default function VisitorPortal() {
                   {/* 3. INTERACTIVE WIDGET FOR AM-THUC (Gourmet Addresses & Souvenir Luggage Weight Counter) */}
                   {activeGuideId === "am-thuc" && (
                     <div className="space-y-4 text-left">
-                      <p className="text-lg text-slate-500 font-bold uppercase tracking-wider mb-2">
+                      <p className="text-base text-black font-normal mb-2">
                         Hãy chọn đặc sản Nha Trang để tra cứu địa chỉ gia truyền & chọn hộp quà lưu niệm:
                       </p>
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -2110,10 +2012,10 @@ export default function VisitorPortal() {
                               setSelectedDishId(key);
                               showToast(`Tìm hiểu đặc sản: ${DHI_ADDRESSES[key].name}`);
                             }}
-                            className={`p-2.5 rounded-xl text-base font-black border cursor-pointer transition-all ${
+                            className={`p-2.5 rounded-xl text-base font-bold border cursor-pointer transition-all ${
                               selectedDishId === key
                                 ? "bg-red-500 text-white border-transparent shadow shadow-red-500/20"
-                                : "bg-white text-slate-700 border-slate-200 hover:border-slate-300"
+                                : "bg-white text-black border-slate-200 hover:border-slate-300"
                             }`}
                           >
                             🍲 {DHI_ADDRESSES[key].name}
@@ -2143,17 +2045,17 @@ export default function VisitorPortal() {
                                 </div>
 
                                 <div className="space-y-1.5">
-                                  <span className="bg-red-50 text-red-700 text-lg font-black px-2 py-0.5 rounded border border-red-100 uppercase">
+                                  <span className="bg-red-50 text-red-700 text-base font-bold px-2 py-0.5 rounded border border-red-100">
                                     📍 Quán ăn gia truyền bản xứ tiến cử:
                                   </span>
-                                  <h5 className="text-lg font-black text-slate-800 uppercase leading-none">
+                                  <h5 className="text-lg font-bold text-black leading-none">
                                     😋 {dishNode.name}
                                   </h5>
-                                  <p className="text-lg text-blue-900 font-extrabold leading-normal bg-blue-50/50 p-2 rounded-lg border border-blue-200">
+                                  <p className="text-base text-blue-900 font-normal leading-normal bg-blue-50/50 p-2 rounded-lg border border-blue-200">
                                     👉 {dishNode.bestShop}
                                   </p>
-                                  <p className="text-lg text-slate-500 font-bold block">
-                                    💵 Nhận định giá bình quân: <span className="text-red-600 font-black">{dishNode.averagePrice}</span>
+                                  <p className="text-base text-black font-normal block">
+                                    💵 Nhận định giá bình quân: <span className="text-red-600 font-bold">{dishNode.averagePrice}</span>
                                   </p>
                                 </div>
                               </div>
@@ -2162,10 +2064,10 @@ export default function VisitorPortal() {
                               <div className="bg-red-50/30 p-3.5 rounded-xl border border-red-200/60 text-left flex flex-col justify-between space-y-2.5">
                                 <div className="space-y-2.5">
                                   <div className="flex justify-between items-center">
-                                    <span className="text-base text-[#0F172A] font-black uppercase">
-                                      🎁 ƯỚC TÍNH CHI PHÍ QUYẾT MUA QUÀ MANG VỀ:
+                                    <span className="text-base text-black font-bold">
+                                      🎁 Ước tính chi phí quà mang về:
                                     </span>
-                                    <span className="text-base text-red-800 font-black bg-red-100 px-1.5 py-0.5 rounded">
+                                    <span className="text-base text-red-800 font-bold bg-red-100 px-1.5 py-0.5 rounded">
                                       Bỏ ký gửi bay
                                     </span>
                                   </div>
@@ -2181,42 +2083,42 @@ export default function VisitorPortal() {
                                       />
                                     </div>
                                     <div className="min-w-0">
-                                      <h6 className="text-base font-black text-slate-800 leading-tight">
+                                      <h6 className="text-base font-bold text-black leading-tight">
                                         {dishNode.souvenirName}
                                       </h6>
-                                      <p className="text-base text-slate-400 font-bold leading-normal truncate mt-0.5">
+                                      <p className="text-base text-black font-normal leading-normal truncate mt-0.5">
                                         Đại lý đóng gói: {dishNode.unitCost.toLocaleString()}đ / {dishNode.unitLabel}
                                       </p>
                                     </div>
                                   </div>
 
                                   <div className="flex items-center justify-between gap-3 bg-white p-2 rounded-lg border border-slate-200">
-                                    <span className="text-lg text-slate-500 font-bold">Số lượng đặt sẵn:</span>
+                                    <span className="text-base text-black font-normal">Số lượng đặt sẵn:</span>
                                     <div className="flex items-center gap-2">
                                       <button
                                         onClick={() => souvenirQty > 1 && setSouvenirQty(souvenirQty - 1)}
-                                        className="w-5 h-5 bg-slate-100 rounded flex items-center justify-center font-bold text-slate-600 hover:bg-slate-205 cursor-pointer border-0"
+                                        className="w-6 h-6 bg-slate-100 rounded flex items-center justify-center font-bold text-black hover:bg-slate-200 cursor-pointer border-0"
                                       >
                                         -
                                       </button>
-                                      <span className="text-lg font-black text-slate-800 w-6 text-center">{souvenirQty}</span>
+                                      <span className="text-base font-bold text-black w-6 text-center">{souvenirQty}</span>
                                       <button
                                         onClick={() => setSouvenirQty(souvenirQty + 1)}
-                                        className="w-5 h-5 bg-slate-100 rounded flex items-center justify-center font-bold text-slate-600 hover:bg-slate-205 cursor-pointer border-0"
+                                        className="w-6 h-6 bg-slate-100 rounded flex items-center justify-center font-bold text-black hover:bg-slate-200 cursor-pointer border-0"
                                       >
                                         +
                                       </button>
                                     </div>
                                   </div>
 
-                                  <div className="flex items-center justify-between pt-1 text-lg font-black text-slate-800">
-                                    <span>TỔNG GIA QUÀ TẶNG ƯỚC TÍNH:</span>
-                                    <span className="text-red-600 text-lg font-black">{totalSouCost.toLocaleString()}đ</span>
+                                  <div className="flex items-center justify-between pt-1 text-base font-bold text-black">
+                                    <span>Tổng giá quà tặng ước tính:</span>
+                                    <span className="text-red-600 text-lg font-bold">{totalSouCost.toLocaleString()}đ</span>
                                   </div>
                                 </div>
 
                                 {/* Air traveling security tip */}
-                                <div className="text-lg text-slate-500 font-semibold leading-relaxed border-t border-slate-200/60 pt-2 bg-slate-100 p-2 rounded">
+                                <div className="text-base text-black font-normal leading-relaxed border-t border-slate-200/60 pt-2 bg-slate-100 p-2 rounded">
                                   ✈️ {selectedDishId === "yensao" || selectedDishId === "bunsua" 
                                     ? "Quy định An ninh Hàng không: Đối với các hũ nước yến thủy tinh hoặc nước mắm truyền thống Khánh Hòa, quý du khách nhớ đóng kỹ bọc chống sốc đóng thùng xốp ký gửi gầm bay."
                                     : "Mặt hàng này đóng hút chân không đặc sản thoải mái mang xách tay bay cabin nội địa rất khô ráo không sợ bay hương."}
@@ -2235,8 +2137,8 @@ export default function VisitorPortal() {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {/* Column Left: Festival Calendar with images */}
                         <div className="space-y-2.5">
-                          <p className="text-lg text-slate-500 font-extrabold uppercase tracking-wider">
-                            📆 LỊCH TRÌNH 3 ĐẠI LỄ HỘI LỚN NHẤT TRONG NĂM (ẢNH MINH HỌA):
+                          <p className="text-base text-black font-normal tracking-wide">
+                            📆 Lịch trình 3 đại lễ hội lớn nhất trong năm (Ảnh minh họa):
                           </p>
                           <div className="space-y-2">
                             {FESTIVAL_CALENDAR.map((fest, ki) => (
@@ -2252,13 +2154,13 @@ export default function VisitorPortal() {
                                 </div>
                                 
                                 <div className="flex-1 min-w-0 space-y-0.5">
-                                  <h6 className="text-lg font-black text-[#1E3A8A] leading-tight flex items-center gap-1">
+                                  <h6 className="text-base font-bold text-[#1E3A8A] leading-tight flex items-center gap-1">
                                     {fest.name}
                                   </h6>
-                                  <p className="text-base text-slate-500 font-extrabold">
-                                    📅 Thời gian: <span className="text-red-650">{fest.time}</span>
+                                  <p className="text-base text-black font-normal">
+                                    📅 Thời gian: <span className="text-red-650 font-bold">{fest.time}</span>
                                   </p>
-                                  <p className="text-lg md:text-base text-black font-normal leading-normal">
+                                  <p className="text-base text-black font-normal leading-normal">
                                     {fest.meaning}
                                   </p>
                                 </div>
@@ -2269,12 +2171,12 @@ export default function VisitorPortal() {
 
                         {/* Column Right: Cultural Trivia Quiz */}
                         <div className="bg-white p-4 rounded-xl border border-slate-200 space-y-3 text-left">
-                          <p className="text-lg text-[#1E3A8A] font-black uppercase tracking-wider pb-1.5 border-b border-slate-200 flex items-center gap-1.5">
-                            🧠 TRÒ CHƠI Ô CHỮ: THỬ TÀI HIỂU BIẾT XỨ SỞ TRẦM HƯƠNG
+                          <p className="text-base text-[#1E3A8A] font-normal pb-1.5 border-b border-slate-200 flex items-center gap-1.5">
+                            🧠 Trò chơi ô chữ: Thử tài hiểu biết xứ sở trầm hương
                           </p>
                           {TRIVIA_QUESTIONS.map((questionNode, qIdx) => (
                             <div key={questionNode.id} className="space-y-1.5 text-left border-b border-dashed border-slate-200 pb-2.5 last:border-0 last:pb-0">
-                              <p className="text-base font-black text-slate-705 leading-normal">
+                              <p className="text-base font-normal text-black leading-normal">
                                 {qIdx + 1}. {questionNode.question}
                               </p>
                               <div className="grid grid-cols-1 gap-1">
@@ -2282,7 +2184,7 @@ export default function VisitorPortal() {
                                   const selectedAnswer = triviaAnswers[questionNode.id];
                                   const isCorrectValue = opt === questionNode.correctAnswer;
                                   const isSelected = selectedAnswer === opt;
-                                  let btnClass = "bg-slate-50 text-slate-700 hover:bg-slate-100 border-slate-200";
+                                  let btnClass = "bg-slate-50 text-black hover:bg-slate-100 border-slate-200";
                                   if (isSelected) {
                                     if (isCorrectValue) {
                                       btnClass = "bg-blue-500 text-white border-transparent scale-[1.01]";
@@ -2302,7 +2204,7 @@ export default function VisitorPortal() {
                                           showToast(`Gần đúng thôi! Bạn hãy thử sự lựa chọn khác xem sao nhé.`);
                                         }
                                       }}
-                                      className={`text-left text-lg font-bold px-3 py-1.5 rounded-lg border transition-all cursor-pointer ${btnClass}`}
+                                      className={`text-left text-base font-normal px-3 py-1.5 rounded-lg border transition-all cursor-pointer ${btnClass}`}
                                     >
                                       {opt}
                                     </button>
@@ -2312,8 +2214,8 @@ export default function VisitorPortal() {
 
                               {/* Show insight when selected correctly */}
                               {triviaAnswers[questionNode.id] === questionNode.correctAnswer && (
-                                <p className="text-base bg-blue-50 text-blue-800 p-2 rounded-lg border border-blue-100 font-semibold leading-relaxed mt-1">
-                                  🎉 <span className="font-extrabold">Thông tin bổ ích:</span> {questionNode.insight}
+                                <p className="text-base bg-blue-50 text-blue-900 p-2 rounded-lg border border-blue-100 font-normal leading-relaxed mt-1">
+                                  🎉 <span className="font-bold">Thông tin bổ ích:</span> {questionNode.insight}
                                 </p>
                               )}
                             </div>
@@ -2326,8 +2228,8 @@ export default function VisitorPortal() {
                   {/* 5. INTERACTIVE WIDGET FOR HINH-ANH (Polaroid Photo Wall & Wallpaper Downloader) */}
                   {activeGuideId === "hinh-anh" && (
                     <div className="space-y-4">
-                      <p className="text-lg text-slate-500 font-bold uppercase tracking-wider mb-2">
-                        Nhấp chọn tấm kỉ niệm Polaroid để ngắm nhìn rộng lớn & tải hình nền tuyệt tác:
+                      <p className="text-base text-black font-normal mb-2">
+                        Nhấp chọn tấm kỷ niệm Polaroid để ngắm nhìn rộng lớn & tải hình nền tuyệt tác:
                       </p>
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                         {POLAROID_PHOTOS.map((photo) => (
@@ -2340,16 +2242,16 @@ export default function VisitorPortal() {
                             className={`p-2 bg-white rounded-xl shadow-sm border transition-all cursor-pointer text-center group ${
                               selectedPolaroidId === photo.id
                                 ? "border-sky-500 ring-2 ring-sky-300/30 scale-[1.01]"
-                                : "border-slate-200/80 hover:border-slate-300"
+                                : "border-slate-200 hover:border-slate-300"
                             }`}
                           >
                             <div className="h-28 w-full rounded-lg bg-slate-50 overflow-hidden relative mb-2">
                               <img src={photo.img} alt={photo.title} className="w-full h-full object-cover group-hover:scale-105 duration-300" />
                             </div>
-                            <span className="text-base font-black text-slate-700 block truncate group-hover:text-sky-600">
+                            <span className="text-base font-bold text-black block truncate group-hover:text-sky-600">
                               📷 {photo.title.split(" - ")[0]}
                             </span>
-                            <span className="text-base text-slate-400 font-extrabold tracking-wider uppercase block mt-0.5">
+                            <span className="text-base text-black font-normal block mt-0.5">
                               {photo.tag}
                             </span>
                           </div>
@@ -2385,7 +2287,7 @@ export default function VisitorPortal() {
                                   <div className="absolute bottom-3 left-3 bg-slate-900/70 backdrop-blur-md px-3 py-1.5 rounded-lg text-base font-bold text-white flex items-center gap-1.5">
                                     <span>📸 {activeImgObj.title}</span>
                                   </div>
-                                  <span className="absolute bottom-3 right-3 bg-slate-800/75 text-white text-base font-black uppercase px-2.5 py-1.5 rounded-lg">
+                                  <span className="absolute bottom-3 right-3 bg-slate-800/75 text-white text-base font-bold px-2.5 py-1.5 rounded-lg">
                                     {photNode.lens}
                                   </span>
                                 </div>
@@ -2395,17 +2297,17 @@ export default function VisitorPortal() {
                               <div className="lg:col-span-5 flex flex-col justify-between space-y-4">
                                 <div className="space-y-4">
                                   <div>
-                                    <span className="text-lg font-black text-red-600 bg-red-50 px-2.5 py-1 rounded-full uppercase tracking-wider border border-red-100">
+                                    <span className="text-base font-bold text-red-600 bg-red-50 px-2.5 py-1 rounded-full border border-red-100">
                                       Bộ sưu tập ảnh ({photNode.gallery?.length || 1} góc máy)
                                     </span>
-                                    <h4 className="text-lg md:text-[16px] font-bold text-slate-800 tracking-tight mt-1.5 leading-snug">
+                                    <h4 className="text-lg font-bold text-black tracking-tight mt-1.5 leading-snug">
                                       "{photNode.title}"
                                     </h4>
                                   </div>
 
                                   {/* Sub Images Multi-Grid - "Khung hình to bên dưới có nhiều hình ảnh hơn nằm trong 1 khung" */}
                                   <div className="space-y-2">
-                                    <p className="text-lg text-slate-400 font-bold uppercase tracking-wider">
+                                    <p className="text-base text-black font-normal">
                                       Nhấp góc ảnh khác trong khung này để xem lớn:
                                     </p>
                                     <div className="grid grid-cols-4 gap-2">
@@ -2436,14 +2338,14 @@ export default function VisitorPortal() {
 
                                   <div className="space-y-2 pt-2 border-t border-slate-100">
                                     <div className="flex flex-wrap items-center gap-2">
-                                      <span className="text-base text-slate-500 font-bold bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md flex items-center gap-1">
-                                        🌅 Giờ đẹp: <span className="text-red-600 font-extrabold">{photNode.bestHour}</span>
+                                      <span className="text-base text-black font-normal bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md flex items-center gap-1">
+                                        🌅 Giờ đẹp: <span className="text-red-600 font-bold">{photNode.bestHour}</span>
                                       </span>
-                                      <span className="text-base text-slate-500 font-bold bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">
+                                      <span className="text-base text-black font-normal bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">
                                         📍 {photNode.tag}
                                       </span>
                                     </div>
-                                    <p className="text-lg text-slate-600 font-medium italic leading-relaxed pt-1 select-none">
+                                    <p className="text-base text-black font-normal italic leading-relaxed pt-1 select-none">
                                       💬 {photNode.vibes}
                                     </p>
                                   </div>
@@ -2453,11 +2355,11 @@ export default function VisitorPortal() {
                                 <div className="pt-3 border-t border-slate-100 mt-2">
                                   <button
                                     onClick={() => showToast(`Bắt đầu tải ảnh "${activeImgObj.title}" chất lượng gốc HD 4K...`)}
-                                    className="w-full bg-gradient-to-r from-sky-600 to-[#1E3A8A] hover:bg-sky-700 text-white font-black text-base uppercase py-2.5 px-4 rounded-xl border-0 cursor-pointer shadow-md flex items-center justify-center gap-2 transition-all active:scale-[0.99]"
+                                    className="w-full bg-gradient-to-r from-sky-600 to-[#1E3A8A] hover:bg-sky-700 text-white font-bold text-base py-2.5 px-4 rounded-xl border-0 cursor-pointer shadow-md flex items-center justify-center gap-2 transition-all active:scale-[0.99]"
                                   >
                                     📥 Tải hình nền di động cực nét (HD)
                                   </button>
-                                  <p className="text-lg text-slate-400 text-center mt-1.5 font-bold">
+                                  <p className="text-base text-black text-center mt-1.5 font-normal">
                                     * Ảnh phân giải cao, tối ưu dung lượng và sắc nét trên mọi dòng máy iOS / Android.
                                   </p>
                                 </div>
@@ -2477,21 +2379,21 @@ export default function VisitorPortal() {
         {/* =========================================================================
            EXCLUSIVE PHOTO GALLERY: PANORAMA GALLERY - KHÁNH HÒA KỲ VỸ
            ========================================================================= */}
-        <div className="mt-24 pt-14 border-t border-slate-200">
+        <div className="mt-20 mb-6">
           <div className="flex flex-col mb-6 gap-5">
             <div className="w-full">
-              <span className="text-lg font-black tracking-widest text-[#059669] uppercase bg-blue-50 px-2.5 py-1 rounded-md mb-2 inline-block border border-blue-100">
-                PHỔ BIẾN HÌNH ẢNH DANH THẮNG
+              <span className="text-base font-bold tracking-widest text-[#059669] bg-blue-50 px-2.5 py-1 rounded-md mb-2 inline-block border border-blue-100">
+                Phổ biến hình ảnh danh thắng
               </span>
               <div className="flex items-start gap-3.5 mt-1">
                 <div className="w-12 h-12 rounded-full bg-[#1E3A8A] text-white flex items-center justify-center shadow-sm shrink-0">
                   <Camera size={22} className="text-white" />
                 </div>
                 <div className="flex flex-col gap-1 w-full">
-                  <h4 className="text-2xl md:text-3xl font-black text-[#1E3A8A] uppercase tracking-tight leading-tight text-left">
-                    PHÒNG TRƯNG BÀY PANORAMA KHÁNH HÒA KỲ VỸ
+                  <h4 className="text-2xl md:text-3xl font-bold text-[#1E3A8A] tracking-tight leading-tight text-left">
+                    Phòng trưng bày Panorama Khánh Hòa kỳ vĩ
                   </h4>
-                  <p className="text-lg text-slate-500 font-bold w-full max-w-none mt-1">
+                  <p className="text-base text-black font-normal w-full max-w-none mt-1">
                     Khám phá các kiệt tác hình ảnh nghệ thuật sắc nét về vịnh biển, di sản văn hóa truyền thống và món ăn ngon đặc sản xứ Trầm.
                   </p>
                 </div>
@@ -2503,7 +2405,7 @@ export default function VisitorPortal() {
               {[
                 { filter: "all", label: "Tất cả", icon: LayoutGrid, color: "text-blue-600" },
                 { filter: "bay", label: "Vịnh biển & Đảo", icon: Palmtree, color: "text-indigo-500" },
-                { filter: "ditich", label: "Di tích cổ", icon: Landmark, color: "text-slate-500" },
+                { filter: "ditich", label: "Di tích cổ", icon: Landmark, color: "text-black" },
                 { filter: "cuisine", label: "Ẩm thực", icon: Utensils, color: "text-orange-500" },
                 { filter: "wellness", label: "Resort & Wellness", icon: BedDouble, color: "text-emerald-500" }
               ].map((pill) => {
@@ -2516,10 +2418,10 @@ export default function VisitorPortal() {
                     setGalleryFilter(pill.filter);
                     showToast(`Đang hiển thị danh mục ảnh: ${pill.label}`);
                   }}
-                  className={`flex items-center justify-center gap-2 px-4 py-2 rounded-xl text-lg font-black transition-all duration-300 whitespace-nowrap cursor-pointer select-none border-0 shrink-0 flex-1 ${
+                  className={`flex items-center justify-center gap-2 px-4 py-2 rounded-xl text-base font-normal transition-all duration-300 whitespace-nowrap cursor-pointer select-none border-0 shrink-0 flex-1 ${
                     isActive
-                      ? "bg-white text-[#1e3a8a] shadow-sm font-extrabold"
-                      : "bg-transparent text-slate-500 hover:text-[#1e3a8a] hover:bg-white/40"
+                      ? "bg-white text-[#1e3a8a] shadow-sm font-bold"
+                      : "bg-transparent text-black hover:text-[#1e3a8a] hover:bg-white/40"
                   }`}
                 >
                   <Icon size={14} className={isActive ? "text-[#1e3a8a]" : pill.color} />
@@ -2533,7 +2435,6 @@ export default function VisitorPortal() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {PANORAMA_GALLERY.filter((item) => galleryFilter === "all" || item.category === galleryFilter).map((imgNode) => {
               const isLiked = likedGalleryIds.includes(imgNode.id);
-              const totalLikesCount = imgNode.baseLikes + (isLiked ? 1 : 0);
               
               return (
                 <motion.div
@@ -2551,13 +2452,13 @@ export default function VisitorPortal() {
                       referrerPolicy="no-referrer"
                     />
                     <div className="absolute inset-0 bg-black/10 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <span className="bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-lg text-base font-black text-slate-800 shadow-sm uppercase tracking-wider flex items-center gap-1">
+                      <span className="bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-lg text-base font-bold text-black shadow-sm flex items-center gap-1">
                         🔍 Phóng to chi tiết
                       </span>
                     </div>
 
                     {/* Left corner tag overlay */}
-                    <span className="absolute top-2.5 left-2.5 z-10 bg-slate-900/70 text-white text-base font-black uppercase px-2 py-0.5 rounded tracking-widest backdrop-blur-xs shadow-sm">
+                    <span className="absolute top-2.5 left-2.5 z-10 bg-slate-900/70 text-white text-base font-bold px-2 py-0.5 rounded backdrop-blur-xs shadow-sm">
                       {imgNode.categoryLabel}
                     </span>
 
@@ -2576,20 +2477,20 @@ export default function VisitorPortal() {
                       className={`absolute top-2.5 right-2.5 z-10 w-8 h-8 rounded-full flex items-center justify-center cursor-pointer border-0 shadow backdrop-blur-md transition-all ${
                         isLiked 
                           ? "bg-red-500 text-white" 
-                          : "bg-white/80 hover:bg-white text-slate-650 hover:scale-105"
+                          : "bg-white/80 hover:bg-white text-black hover:scale-105"
                       }`}
                     >
-                      <Heart size={14} className={isLiked ? "fill-white text-white" : "text-slate-650"} />
+                      <Heart size={14} className={isLiked ? "fill-white text-white" : "text-black"} />
                     </button>
                   </div>
 
                   {/* Body textual information */}
                   <div className="p-4 text-left space-y-2 flex-1 flex flex-col justify-between bg-slate-50/50">
                     <div>
-                      <h5 className="text-[20px] font-black text-slate-800 leading-tight group-hover/card:text-blue-750 transition-colors">
+                      <h5 className="text-lg font-bold text-black leading-tight group-hover/card:text-blue-750 transition-colors">
                         {imgNode.title}
                       </h5>
-                      <p className="text-[18px] text-slate-505 font-normal leading-relaxed mt-2.5 line-clamp-3">
+                      <p className="text-base text-black font-normal leading-relaxed mt-2.5 line-clamp-3">
                         {imgNode.desc}
                       </p>
                     </div>
@@ -2641,16 +2542,16 @@ export default function VisitorPortal() {
                         return (
                           <>
                             <div className="space-y-3">
-                              <span className="bg-blue-50 text-blue-700 text-base sm:text-lg font-black px-2.5 py-1 rounded-md border border-blue-100 inline-block uppercase tracking-wider">
-                                🌟 TOÀN CẢNH MÃN NHÃN HD
+                              <span className="bg-blue-50 text-blue-700 text-base font-bold px-2.5 py-1 rounded-md border border-blue-100 inline-block">
+                                🌟 Toàn cảnh mãn nhãn HD
                               </span>
-                              <h4 className="text-lg sm:text-base font-black text-slate-805 uppercase leading-snug">
-                                {originalNode ? originalNode.title : "Kiệt Tác Phong Cảnh Khánh Hòa"}
+                              <h4 className="text-lg font-bold text-black leading-snug">
+                                {originalNode ? originalNode.title : "Kiệt tác phong cảnh Khánh Hòa"}
                               </h4>
-                              <p className="text-lg text-slate-500 font-bold">
+                              <p className="text-base text-black font-normal">
                                 {originalNode && (originalNode as any).author ? `Ảnh chụp từ: ${(originalNode as any).author}` : "Cổng thông tin du lịch"} • Phân giải chuẩn quốc tế
                               </p>
-                              <p className="text-lg text-slate-650 font-semibold leading-relaxed border-t border-slate-100 pt-3">
+                              <p className="text-base text-black font-normal leading-relaxed border-t border-slate-100 pt-3">
                                 {originalNode ? (originalNode as any).desc || (originalNode as any).subtitle : "Chúc mừng bạn đã chiêm ngưỡng những góc chụp sắc nét đỉnh cao chuẩn chất lượng cao của thắng cảnh miền đất Nha Trang, Khánh Hòa."}
                               </p>
                             </div>
@@ -2661,11 +2562,11 @@ export default function VisitorPortal() {
                                   showToast("Đang tải xuống ảnh gốc chất lượng cao...");
                                   setTimeout(() => showToast("Tải xuống hoàn toàn thành công! Lưu thành công ảnh nền Nha Trang."), 800);
                                 }}
-                                className="w-full bg-slate-900 hover:bg-slate-800 text-white font-black text-lg sm:text-lg uppercase tracking-wider py-3 px-4 rounded-xl shadow border-0 cursor-pointer flex items-center justify-center gap-2 transition-colors"
+                                className="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-base py-3 px-4 rounded-xl shadow border-0 cursor-pointer flex items-center justify-center gap-2 transition-colors"
                               >
                                 📥 Tải xuống ảnh gốc HD
                               </button>
-                              <p className="text-lg text-slate-400 text-center font-bold">
+                              <p className="text-base text-black text-center font-normal">
                                 * Được phân phối bởi Thư viện danh thắng Cổng thông tin du lịch.
                               </p>
                             </div>
@@ -2713,13 +2614,13 @@ export default function VisitorPortal() {
                       referrerPolicy="no-referrer"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/40 to-transparent flex flex-col justify-end p-5 sm:p-7 text-left">
-                      <span className="bg-red-500 text-white text-base sm:text-base font-black px-2.5 py-1 rounded-full uppercase tracking-wider inline-block self-start mb-2 shadow-sm animate-pulse">
+                      <span className="bg-red-500 text-white text-base sm:text-base font-bold px-2.5 py-1 rounded-full  tracking-wider inline-block self-start mb-2 shadow-sm animate-pulse">
                         {selectedDetailHighlight.category}
                       </span>
-                      <h3 className="text-xl sm:text-2xl font-black text-white uppercase tracking-tight mb-1">
+                      <h3 className="text-xl sm:text-2xl font-bold text-white  tracking-tight mb-1">
                         {selectedDetailHighlight.title}
                       </h3>
-                      <p className="text-base sm:text-base text-slate-200 font-bold italic">
+                      <p className="text-base text-white font-normal italic">
                         {selectedDetailHighlight.subtitle}
                       </p>
                     </div>
@@ -2729,11 +2630,11 @@ export default function VisitorPortal() {
                   <div className="flex-1 overflow-y-auto p-6 sm:p-8 space-y-6 text-left [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-slate-50 [&::-webkit-scrollbar-thumb]:bg-slate-300 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-slate-400 scroll-smooth">
                     {selectedDetailHighlight.sections.map((sec: any, sIdx: number) => (
                       <div key={sIdx} className="space-y-2 border-b border-slate-100 pb-5 last:border-0 last:pb-0">
-                        <h4 className="text-lg font-black text-blue-900 uppercase tracking-tight flex items-center gap-2">
+                        <h4 className="text-lg font-bold text-blue-900  tracking-tight flex items-center gap-2">
                           <span className="w-1.5 h-4 bg-blue-600 rounded-sm inline-block" />
                           {sec.title}
                         </h4>
-                        <p className="text-lg text-slate-700 font-medium leading-relaxed whitespace-pre-line text-justify">
+                        <p className="text-lg text-black font-normal leading-relaxed whitespace-pre-line text-justify">
                           {sec.content}
                         </p>
                       </div>
@@ -2741,12 +2642,12 @@ export default function VisitorPortal() {
 
                     {/* Practical Tips Panel */}
                     <div className="bg-amber-50/70 border border-amber-100 rounded-2xl p-5 space-y-3">
-                      <h4 className="text-lg font-black text-amber-900 uppercase tracking-tight flex items-center gap-1.5">
+                      <h4 className="text-lg font-bold text-amber-900  tracking-tight flex items-center gap-1.5">
                         💡 Bí kíp bỏ túi & Kinh nghiệm thực tế
                       </h4>
                       <ul className="space-y-2.5">
                         {selectedDetailHighlight.tips.map((tip: string, tIdx: number) => (
-                          <li key={tIdx} className="flex gap-2.5 text-lg text-amber-950 font-semibold items-start leading-relaxed">
+                          <li key={tIdx} className="flex gap-2.5 text-lg text-amber-950 font-normal items-start leading-relaxed">
                             <span className="text-amber-500 shrink-0 mt-1">📌</span>
                             <span>{tip}</span>
                           </li>
@@ -2757,13 +2658,13 @@ export default function VisitorPortal() {
 
                   {/* Sticky Footer */}
                   <div className="border-t border-slate-100 p-4 bg-slate-50 flex items-center justify-between shrink-0">
-                    <span className="text-lg text-slate-400 font-bold">Cổng thông tin Du lịch Khánh Hòa</span>
+                    <span className="text-lg text-black font-bold">Cổng thông tin Du lịch Khánh Hòa</span>
                     <button
                       onClick={() => {
                         setSelectedDetailHighlight(null);
                         showToast("Đã lưu điểm nhấn thành công vào lộ trình yêu thích!");
                       }}
-                      className="bg-blue-600 hover:bg-blue-700 text-white font-black uppercase text-lg px-5 py-2 rounded-xl transition-all border-0 shadow-md cursor-pointer hover:scale-102"
+                      className="bg-blue-600 hover:bg-blue-700 text-white font-bold  text-lg px-5 py-2 rounded-xl transition-all border-0 shadow-md cursor-pointer hover:scale-102"
                     >
                       Lưu vào Cẩm nang cá nhân
                     </button>
@@ -2807,13 +2708,13 @@ export default function VisitorPortal() {
                       referrerPolicy="no-referrer"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent flex flex-col justify-end p-5 sm:p-6 text-left">
-                      <span className="bg-emerald-600 text-white text-base sm:text-base font-black px-2.5 py-1 rounded-full uppercase tracking-wider inline-block self-start mb-1.5 shadow-sm">
+                      <span className="bg-emerald-600 text-white text-base sm:text-base font-bold px-2.5 py-1 rounded-full  tracking-wider inline-block self-start mb-1.5 shadow-sm">
                         🌿 {selectedBusinessPromo.category}
                       </span>
-                      <h3 className="text-xl sm:text-2xl font-black text-white uppercase tracking-tight">
+                      <h3 className="text-xl sm:text-2xl font-bold text-white  tracking-tight">
                         {selectedBusinessPromo.name}
                       </h3>
-                      <p className="text-base text-slate-300 font-bold flex items-center gap-1.5 mt-1">
+                      <p className="text-base text-white font-normal flex items-center gap-1.5 mt-1">
                         <MapPin size={12} className="text-red-400 shrink-0" /> {selectedBusinessPromo.address}
                       </p>
                     </div>
@@ -2823,20 +2724,20 @@ export default function VisitorPortal() {
                   <div className="flex-1 overflow-y-auto p-6 sm:p-8 space-y-6 text-left [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-slate-50 [&::-webkit-scrollbar-thumb]:bg-slate-300 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-slate-400 scroll-smooth">
                     {/* Hot Promotion Banner */}
                     <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-5 border-l-4 border-l-emerald-600">
-                      <h4 className="text-lg font-black text-emerald-950 uppercase tracking-tight mb-2 flex items-center gap-1.5">
+                      <h4 className="text-lg font-bold text-emerald-950  tracking-tight mb-2 flex items-center gap-1.5">
                         🔥 CHƯƠNG TRÌNH KHUYẾN MÃI ĐANG DIỄN RA
                       </h4>
-                      <p className="text-lg text-emerald-900 font-bold leading-relaxed whitespace-pre-line">
+                      <p className="text-base text-emerald-900 font-normal leading-relaxed whitespace-pre-line">
                         {selectedBusinessPromo.promotion}
                       </p>
                     </div>
 
                     {/* About Business */}
                     <div className="space-y-2">
-                      <h4 className="text-lg font-black text-slate-800 uppercase tracking-tight flex items-center gap-1.5">
+                      <h4 className="text-lg font-bold text-black  tracking-tight flex items-center gap-1.5">
                         🏢 Giới thiệu thương hiệu & Triết lý xanh
                       </h4>
-                      <p className="text-lg text-slate-600 font-medium leading-relaxed text-justify">
+                      <p className="text-lg text-black font-normal leading-relaxed text-justify">
                         {selectedBusinessPromo.description}
                       </p>
                     </div>
@@ -2845,12 +2746,12 @@ export default function VisitorPortal() {
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-6 pt-2">
                       {/* Highlights */}
                       <div className="md:col-span-8 space-y-3">
-                        <h4 className="text-base font-black text-slate-800 uppercase tracking-tight flex items-center gap-1.5">
+                        <h4 className="text-base font-bold text-black  tracking-tight flex items-center gap-1.5">
                           ⭐ Đặc sắc nổi bật
                         </h4>
                         <ul className="space-y-2">
                           {selectedBusinessPromo.highlights.map((item: string, idx: number) => (
-                            <li key={idx} className="flex gap-2 text-lg text-slate-600 font-semibold items-start leading-relaxed">
+                            <li key={idx} className="flex gap-2 text-lg text-black font-normal items-start leading-relaxed">
                               <span className="text-emerald-500 shrink-0 mt-1">✔</span>
                               <span>{item}</span>
                             </li>
@@ -2860,11 +2761,11 @@ export default function VisitorPortal() {
 
                       {/* QR Code and Actions */}
                       <div className="md:col-span-4 bg-slate-50 rounded-2xl p-4 flex flex-col items-center justify-center border border-slate-100 text-center gap-2">
-                        <span className="text-base font-black text-slate-500 uppercase tracking-wider">MÃ QR ƯU ĐÃI CHÍNH CHỦ</span>
+                        <span className="text-base font-bold text-black  tracking-wider">MÃ QR ƯU ĐÃI CHÍNH CHỦ</span>
                         
                         {/* Simulation of QR code */}
                         <div className="w-32 h-32 bg-white rounded-xl border border-slate-200 p-2 shadow-xs relative flex items-center justify-center group/qr">
-                          <svg className="w-full h-full text-slate-800" viewBox="0 0 100 100" fill="currentColor">
+                          <svg className="w-full h-full text-black" viewBox="0 0 100 100" fill="currentColor">
                             <rect x="0" y="0" width="25" height="25" />
                             <rect x="5" y="5" width="15" height="15" fill="white" />
                             <rect x="10" y="10" width="5" height="5" />
@@ -2885,23 +2786,23 @@ export default function VisitorPortal() {
                             <rect x="80" y="80" width="10" height="10" />
                           </svg>
                           <div className="absolute inset-0 bg-slate-900/10 rounded-xl opacity-0 group-hover/qr:opacity-100 transition-opacity flex items-center justify-center cursor-pointer">
-                            <span className="text-base text-white font-black bg-slate-950/80 px-2 py-1 rounded-md">Phóng to</span>
+                            <span className="text-base text-white font-bold bg-slate-950/80 px-2 py-1 rounded-md">Phóng to</span>
                           </div>
                         </div>
 
-                        <span className="text-base font-bold text-slate-400">Được mã hóa bởi Smart-Portal</span>
+                        <span className="text-base font-bold text-black">Được mã hóa bởi Smart-Portal</span>
                       </div>
                     </div>
 
                     {/* Terms & Conditions */}
                     <div className="border-t border-slate-100 pt-5 space-y-2.5">
-                      <h4 className="text-base font-black text-slate-805 uppercase tracking-tight flex items-center gap-1.5">
+                      <h4 className="text-base font-bold text-black  tracking-tight flex items-center gap-1.5">
                         📋 Điều khoản & Điều kiện sử dụng
                       </h4>
                       <ul className="space-y-1.5">
                         {selectedBusinessPromo.terms.map((term: string, idx: number) => (
-                          <li key={idx} className="flex gap-2 text-lg text-slate-500 font-semibold items-start leading-normal">
-                            <span className="text-slate-400 shrink-0 mt-1">•</span>
+                          <li key={idx} className="flex gap-2 text-lg text-black font-normal items-start leading-normal">
+                            <span className="text-black shrink-0 mt-1">•</span>
                             <span>{term}</span>
                           </li>
                         ))}
@@ -2911,13 +2812,13 @@ export default function VisitorPortal() {
 
                   {/* Sticky Footer */}
                   <div className="border-t border-slate-100 p-4 bg-slate-50 flex items-center justify-between shrink-0">
-                    <span className="text-lg text-slate-500 font-bold">Hotline: <strong className="text-blue-700">{selectedBusinessPromo.phone}</strong></span>
+                    <span className="text-lg text-black font-bold">Hotline: <strong className="text-blue-700">{selectedBusinessPromo.phone}</strong></span>
                     <div className="flex gap-2">
                       <button
                         onClick={() => {
                           showToast(`Đang liên hệ Hotline bảo lãnh của ${selectedBusinessPromo.name}...`);
                         }}
-                        className="bg-blue-600 hover:bg-blue-700 text-white font-black uppercase text-lg px-4 py-2 rounded-xl transition-all border-0 shadow-md cursor-pointer flex items-center gap-1"
+                        className="bg-blue-600 hover:bg-blue-700 text-white font-bold  text-lg px-4 py-2 rounded-xl transition-all border-0 shadow-md cursor-pointer flex items-center gap-1"
                       >
                         <PhoneCall size={13} /> Gọi ngay
                       </button>
@@ -2926,7 +2827,7 @@ export default function VisitorPortal() {
                           window.open(selectedBusinessPromo.url, "_blank");
                           showToast(`Đang chuyển hướng tới trang chủ của ${selectedBusinessPromo.name}`);
                         }}
-                        className="bg-slate-900 hover:bg-slate-800 text-white font-black uppercase text-lg px-4 py-2 rounded-xl transition-all border-0 shadow-md cursor-pointer flex items-center gap-1"
+                        className="bg-slate-900 hover:bg-slate-800 text-white font-bold  text-lg px-4 py-2 rounded-xl transition-all border-0 shadow-md cursor-pointer flex items-center gap-1"
                       >
                         <Globe size={13} /> Website
                       </button>
@@ -2944,17 +2845,17 @@ export default function VisitorPortal() {
       {/* =========================================================================
          NEW COMPONENT: 2. HỖ TRỢ QUẢNG BÁ DOANH NGHIỆP ĐỊA PHƯƠNG (OCOP & DỊCH VỤ)
          ========================================================================= */}
-      <div className="mt-24 text-left border-t border-slate-200 pt-14 mb-10">
+      <div className="mt-2 text-left bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-sm mb-10">
         <div className="flex items-center gap-3.5 mb-6">
           <div className="w-12 h-12 rounded-full bg-[#1E3A8A] text-white flex items-center justify-center shadow-sm shrink-0">
             <Briefcase size={22} className="text-white" />
           </div>
-          <h3 className="text-2xl md:text-3xl font-black text-[#1E3A8A] uppercase tracking-tight leading-none text-left">
+          <h3 className="text-2xl md:text-3xl font-bold text-[#1E3A8A] tracking-tight leading-none text-left">
             2. Hỗ trợ quảng bá doanh nghiệp
           </h3>
         </div>
 
-        <p className="text-lg text-slate-500 font-semibold mb-6 leading-relaxed w-full">
+        <p className="text-base text-black font-normal mb-6 leading-relaxed w-full">
           Nhằm thúc đẩy kinh tế số địa phương, Cổng thông tin hỗ trợ các cơ sở sản xuất, thương hiệu OCOP hữu cơ và doanh nghiệp du lịch Khánh Hòa quảng bá hình ảnh sản phẩm, dịch vụ ẩm thực, nghỉ dưỡng, vui chơi giải trí hữu ích hoàn toàn miễn phí, mang lại cơ hội kết nối tin cậy trực tiếp tới hàng triệu du khách.
         </p>
 
@@ -2963,24 +2864,24 @@ export default function VisitorPortal() {
           <div className="lg:col-span-8 flex flex-col space-y-4 text-left order-1 h-full">
             <div className="flex flex-col gap-3 pb-3 border-b border-slate-100">
               <div className="flex items-center justify-between gap-2">
-                <h4 className="text-lg font-black text-slate-800 uppercase tracking-wider flex items-center gap-1.5 truncate">
+                <h4 className="text-lg font-bold text-black flex items-center gap-1.5 truncate">
                   <Building2 size={19} className="text-blue-600 shrink-0" /> <span className="truncate">Bản đồ doanh nghiệp du lịch & đặc sản xanh</span>
                 </h4>
-                <span className="text-lg font-black uppercase text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md border border-blue-100 shrink-0">
-                  {promotedBusinesses.length} Cơ sở liên thông
+                <span className="text-base font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md border border-blue-100 shrink-0">
+                  {promotedBusinesses.length} cơ sở liên thông
                 </span>
               </div>
 
               {/* Dynamic Filters and Search with Premium Design */}
               <div className="flex flex-col md:flex-row gap-4 items-stretch md:items-center justify-between pt-1">
                 <div className="relative w-full md:max-w-[210px] shrink-0">
-                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={13} />
+                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-black" size={13} />
                   <input
                     type="text"
                     placeholder="Tìm đối tác, đặc sản..."
                     value={promoSearchQuery}
                     onChange={(e) => setPromoSearchQuery(e.target.value)}
-                    className="w-full bg-slate-50 border border-slate-200 pl-8.5 pr-3 py-2 rounded-xl text-lg font-bold text-slate-700 placeholder-slate-400 focus:outline-none focus:border-blue-500 hover:border-slate-300 transition-all text-left"
+                    className="w-full bg-slate-50 border border-slate-200 pl-8.5 pr-3 py-2 rounded-xl text-base font-normal text-black placeholder-slate-500 focus:outline-none focus:border-blue-500 hover:border-slate-300 transition-all text-left"
                   />
                 </div>
 
@@ -3003,10 +2904,10 @@ export default function VisitorPortal() {
                           setSelectedPromoCategory(tab.value);
                           showToast(`Đang hiển thị danh mục: ${tab.label}`);
                         }}
-                        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-lg font-black transition-all duration-300 whitespace-nowrap cursor-pointer select-none border-0 shrink-0 ${
+                        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-base font-normal transition-all duration-300 whitespace-nowrap cursor-pointer select-none border-0 shrink-0 ${
                           isActive
-                            ? "bg-white text-[#1e3a8a] shadow-sm font-extrabold"
-                            : "bg-transparent text-slate-500 hover:text-[#1e3a8a] hover:bg-white/40"
+                            ? "bg-white text-[#1e3a8a] shadow-sm font-bold"
+                            : "bg-transparent text-black hover:text-[#1e3a8a] hover:bg-white/40"
                         }`}
                       >
                         <Icon size={11} className={isActive ? "text-[#1e3a8a]" : tab.color} />
@@ -3034,10 +2935,10 @@ export default function VisitorPortal() {
                   <div
                     key={b.id}
                     onClick={() => handleOpenPromo(b)}
-                    className={`bg-white rounded-2xl border transition-all overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-md group cursor-pointer ${
+                    className={`bg-white rounded-2xl transition-all overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-md group cursor-pointer ${
                       b.status === "Chờ phê duyệt"
-                        ? "border-red-200 bg-red-50/20"
-                        : "border-slate-100 hover:border-blue-400"
+                        ? "bg-red-50/20"
+                        : ""
                     }`}
                   >
                     <div>
@@ -3049,41 +2950,19 @@ export default function VisitorPortal() {
                           referrerPolicy="no-referrer"
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
-                        <span className="absolute bottom-2 right-2 text-base font-black uppercase px-1.5 py-0.5 rounded shadow-xs bg-black/75 backdrop-blur-xs text-white">
+                        <span className="absolute bottom-2 right-2 text-base font-bold px-1.5 py-0.5 rounded shadow-xs bg-black/75 backdrop-blur-xs text-white">
                           {b.status === "Chờ phê duyệt" ? "Đăng ký mới" : "✓ Đã duyệt"}
                         </span>
                       </div>
 
                       <div className="p-3.5 text-left">
-                        <h5 className="text-lg font-black text-slate-850 tracking-tight leading-snug line-clamp-1 group-hover:text-blue-600 transition-colors">
+                        <h5 className="text-lg font-bold text-black tracking-tight leading-snug line-clamp-1 group-hover:text-blue-600 transition-colors">
                           {b.name}
                         </h5>
 
-                        <p className="text-lg text-black font-normal leading-relaxed mt-1.5 line-clamp-3 select-none">
+                        <p className="text-base text-black font-normal leading-relaxed mt-1.5 line-clamp-3 select-none">
                           {b.desc}
                         </p>
-                      </div>
-                    </div>
-
-                    <div className="p-3.5 pt-0">
-                      {/* Clean Contact Row with Truncated Link */}
-                      <div className="border-t border-slate-100 pt-3 space-y-1">
-                        <div className="flex items-center justify-between gap-1.5 text-lg font-black text-slate-500">
-                          <span 
-                            className="text-sky-600 hover:underline cursor-pointer flex items-center gap-1 font-bold truncate max-w-[60%]" 
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              showToast(`Chuẩn bị chuyển hướng tới website: ${b.url}`);
-                            }}
-                            title={b.url}
-                          >
-                            <Globe size={11} className="shrink-0 text-sky-500" /> 
-                            <span className="truncate">{b.url.replace("https://", "").replace("www.", "")}</span>
-                          </span>
-                          <span className="text-slate-500 font-bold shrink-0 flex items-center gap-0.5">
-                            <span className="text-slate-400 font-semibold">Hotline:</span> {b.phone}
-                          </span>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -3095,14 +2974,14 @@ export default function VisitorPortal() {
 
           {/* Right Column: Register Form (lg:col-span-4) */}
           <div className="lg:col-span-4 bg-white p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm order-2">
-            <h4 className="text-lg font-black text-slate-800 uppercase tracking-wider mb-6 pb-2 border-b border-slate-100 flex items-center gap-1.5">
+            <h4 className="text-lg font-bold text-black mb-6 pb-2 border-b border-slate-100 flex items-center gap-1.5">
               <Plus size={19} className="text-blue-600" /> Đăng ký giới thiệu sản phẩm / dịch vụ
             </h4>
             
             <form onSubmit={handleAddPromotion} className="space-y-6">
               <div>
-                <label className="block text-lg md:text-lg font-black text-slate-500 uppercase tracking-tight mb-2">
-                  Tên Doanh nghiệp / HTX / Cơ sở <span className="text-red-500">*</span>
+                <label className="block text-base font-bold text-black mb-2">
+                  Tên doanh nghiệp / HTX / cơ sở <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -3110,18 +2989,18 @@ export default function VisitorPortal() {
                   placeholder="Ví dụ: HTX Trầm Hương Vạn Giã..."
                   value={promoName}
                   onChange={(e) => setPromoName(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-lg font-bold text-slate-700 placeholder-slate-400 focus:outline-none focus:border-blue-500 hover:border-slate-305 transition-all text-left"
+                  className="w-full bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-base font-normal text-black placeholder-slate-500 focus:outline-none focus:border-blue-500 hover:border-slate-300 transition-all text-left"
                 />
               </div>
 
               <div>
-                <label className="block text-lg md:text-lg font-black text-slate-500 uppercase tracking-tight mb-2">
+                <label className="block text-base font-bold text-black mb-2">
                   Lĩnh vực hoạt động <span className="text-red-500">*</span>
                 </label>
                 <select
                   value={promoCategory}
                   onChange={(e) => setPromoCategory(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-lg font-bold text-slate-700 focus:outline-none focus:border-blue-500 transition-all cursor-pointer"
+                  className="w-full bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-base font-normal text-black focus:outline-none focus:border-blue-500 transition-all cursor-pointer"
                 >
                   <option value="Quà tặng & Đặc sản">Quà tặng & Đặc sản</option>
                   <option value="Ẩm thực & Nhà hàng">Ẩm thực & Nhà hàng</option>
@@ -3132,7 +3011,7 @@ export default function VisitorPortal() {
               </div>
 
               <div>
-                <label className="block text-lg md:text-lg font-black text-slate-500 uppercase tracking-tight mb-2">
+                <label className="block text-base font-bold text-black mb-2">
                   Số điện thoại liên hệ <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -3141,45 +3020,45 @@ export default function VisitorPortal() {
                   placeholder="Ví dụ: 0905xxxxx"
                   value={promoPhone}
                   onChange={(e) => setPromoPhone(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-lg font-bold text-slate-700 placeholder-slate-400 focus:outline-none focus:border-blue-500 hover:border-slate-305 transition-all text-left"
+                  className="w-full bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-base font-normal text-black placeholder-slate-500 focus:outline-none focus:border-blue-500 hover:border-slate-300 transition-all text-left"
                 />
               </div>
 
               <div>
-                <label className="block text-lg md:text-lg font-black text-slate-500 uppercase tracking-tight mb-2">
-                  Đường dẫn ảnh Banner (Tùy chọn)
+                <label className="block text-base font-bold text-black mb-2">
+                  Đường dẫn ảnh banner (Tùy chọn)
                 </label>
                 <input
                   type="url"
                   placeholder="Ví dụ: https://images.unsplash.com/..."
                   value={promoImgUrl}
                   onChange={(e) => setPromoImgUrl(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-lg font-bold text-slate-700 placeholder-slate-400 focus:outline-none focus:border-blue-500 hover:border-slate-305 transition-all text-left"
+                  className="w-full bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-base font-normal text-black placeholder-slate-500 focus:outline-none focus:border-blue-500 hover:border-slate-300 transition-all text-left"
                 />
-                <p className="text-base text-slate-400 mt-1.5 font-normal leading-normal">
+                <p className="text-base text-black mt-1.5 font-normal leading-normal">
                   * Hệ thống sẽ tự động thêm ảnh phong cảnh tuyệt đẹp nếu để trống.
                 </p>
               </div>
 
               <div>
-                <label className="block text-lg md:text-lg font-black text-slate-500 uppercase tracking-tight mb-2">
-                  Trang Web / Facebook (Tùy chọn)
+                <label className="block text-base font-bold text-black mb-2">
+                  Trang web / Facebook (Tùy chọn)
                 </label>
                 <div className="relative">
-                  <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-lg font-bold"><Globe size={12} /></span>
+                  <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-black text-base font-bold"><Globe size={12} /></span>
                   <input
                     type="url"
                     placeholder="https://example.com"
                     value={promoUrl}
                     onChange={(e) => setPromoUrl(e.target.value)}
-                    className="w-full bg-slate-50 border border-slate-200 py-3 pl-10 pr-4 rounded-xl text-lg font-bold text-slate-700 placeholder-slate-400 focus:outline-none focus:border-blue-500 hover:border-slate-305 transition-all text-left"
+                    className="w-full bg-slate-50 border border-slate-200 py-3 pl-10 pr-4 rounded-xl text-base font-normal text-black placeholder-slate-500 focus:outline-none focus:border-blue-500 hover:border-slate-300 transition-all text-left"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-lg md:text-lg font-black text-slate-500 uppercase tracking-tight mb-2">
-                  Mô tả sản phẩm & Giá trị xanh <span className="text-red-500">*</span>
+                <label className="block text-base font-bold text-black mb-2">
+                  Mô tả sản phẩm & giá trị xanh <span className="text-red-500">*</span>
                 </label>
                 <textarea
                   required
@@ -3187,17 +3066,17 @@ export default function VisitorPortal() {
                   placeholder="Nhập thông tin giới thiệu ngắn, ưu đãi giảm giá nổi bật..."
                   value={promoDesc}
                   onChange={(e) => setPromoDesc(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-lg font-bold text-slate-700 placeholder-slate-400 focus:outline-none focus:border-blue-500 hover:border-slate-305 transition-all text-left resize-none text-lg"
+                  className="w-full bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-base font-normal text-black placeholder-slate-500 focus:outline-none focus:border-blue-500 hover:border-slate-300 transition-all text-left resize-none"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-slate-900 hover:bg-blue-600 text-white font-black text-lg uppercase py-3.5 px-4 rounded-xl border-0 cursor-pointer shadow-md transition-colors flex items-center justify-center gap-2"
+                className="w-full bg-slate-900 hover:bg-blue-600 text-white font-bold text-base py-3.5 px-4 rounded-xl border-0 cursor-pointer shadow-md transition-colors flex items-center justify-center gap-2"
               >
                 🚀 Gửi thông tin quảng bá
               </button>
-              <p className="text-lg text-slate-400 text-center font-normal leading-normal px-2">
+              <p className="text-base text-black text-center font-normal leading-normal px-2">
                 * Nhấn nút gửi để lập tức đẩy thông tin lên lưới hiển thị du lịch. Ban kiểm duyệt sẽ rà soát và cấp nhãn OCOP/Premium chính chủ{'\u00A0'}sau!
               </p>
             </form>
@@ -3206,10 +3085,10 @@ export default function VisitorPortal() {
           {/* Full-width Banner at the bottom */}
           <div className="lg:col-span-12 order-3 w-full mt-2">
             <div className="bg-sky-50 border border-sky-100 rounded-2xl p-4 text-left flex items-start gap-3 shadow-sm">
-              <span className="text-sky-600 bg-white shadow-xs p-2 rounded-xl text-lg shrink-0">🤝</span>
+              <span className="text-sky-600 bg-white shadow-xs p-2 rounded-xl text-base shrink-0">🤝</span>
               <div>
-                <h5 className="text-lg font-black text-sky-900 leading-snug mb-1">Cơ chế bảo trợ du lịch xanh & Cam kết phát triển cộng đồng</h5>
-                <p className="text-lg text-sky-850 leading-normal font-semibold">
+                <h5 className="text-lg font-bold text-black leading-snug mb-1">Cơ chế bảo trợ du lịch xanh & Cam kết phát triển cộng đồng</h5>
+                <p className="text-base text-black leading-normal font-normal">
                   Mọi cơ sở quảng bá trên nền tảng cam kết sử dụng nguyên liệu địa phương bền vững và trích 1% lợi nhuận để gây quỹ trồng rừng bảo vệ nguồn nước ngầm Khánh Hòa. Hãy ưu tiên ủng hộ các thương hiệu gắn nhãn xanh này nhé!
                 </p>
               </div>

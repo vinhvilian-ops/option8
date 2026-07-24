@@ -35,7 +35,8 @@ import {
   User,
   ArrowLeft,
   ChevronLeft,
-  MessageSquare, Briefcase, BarChart3, Facebook, Youtube, Twitter
+  MessageSquare, Briefcase, BarChart3, Facebook, Youtube, Twitter,
+  GraduationCap, Activity, Rocket
 } from "lucide-react";
 
 import SharedBottomSections from "./SharedBottomSections";
@@ -71,7 +72,7 @@ export default function CategoryPortal({ cat, onMapClick, onLeaderClick }: Categ
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -15 }}
           transition={{ duration: 0.4 }}
-          className="w-full text-slate-800"
+          className="w-full text-black"
         >
           <IntroPortal />
           <SharedBottomSections onMapClick={onMapClick} hideMap={true} />
@@ -89,7 +90,7 @@ export default function CategoryPortal({ cat, onMapClick, onLeaderClick }: Categ
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -15 }}
           transition={{ duration: 0.4 }}
-          className="w-full text-slate-800"
+          className="w-full text-black"
         >
           <GovPortalImported onLeaderClick={onLeaderClick} />
           <SharedBottomSections onMapClick={onMapClick} hideMap={true} />
@@ -107,7 +108,7 @@ export default function CategoryPortal({ cat, onMapClick, onLeaderClick }: Categ
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -15 }}
           transition={{ duration: 0.4 }}
-          className="w-full text-slate-800"
+          className="w-full text-black"
         >
           <CitizenPortal onMapClick={onMapClick} />
         </motion.div>
@@ -124,7 +125,7 @@ export default function CategoryPortal({ cat, onMapClick, onLeaderClick }: Categ
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -15 }}
           transition={{ duration: 0.4 }}
-          className="w-full text-slate-800 business-portal-root"
+          className="w-full text-black business-portal-root"
         >
           <BusinessPortal onMapClick={onMapClick} />
         </motion.div>
@@ -141,7 +142,7 @@ export default function CategoryPortal({ cat, onMapClick, onLeaderClick }: Categ
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -15 }}
           transition={{ duration: 0.4 }}
-          className="w-full text-slate-800"
+          className="w-full text-black"
         >
           <VisitorPortal />
           <div className="mx-auto max-w-7xl px-4 md:px-8">
@@ -153,7 +154,7 @@ export default function CategoryPortal({ cat, onMapClick, onLeaderClick }: Categ
   }
 
   return (
-    <div className="mx-auto max-w-7xl px-4 mt-8 text-slate-800">
+    <div className="mx-auto max-w-7xl px-4 mt-8 text-black">
       {/* Category Hero Banner */}
       {cat.id !== "cong-dan" && cat.id !== "du-khach" && (
         <div className="relative rounded-3xl overflow-hidden h-[180px] md:h-[280px] shadow-xl mb-12">
@@ -168,7 +169,7 @@ export default function CategoryPortal({ cat, onMapClick, onLeaderClick }: Categ
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <span className="bg-red-600 text-white text-lg font-black uppercase px-3.5 py-1.5 rounded-lg tracking-wider mb-2 md:mb-3.5 inline-block shadow-md">
+              <span className="bg-blue-600 text-white text-lg font-black uppercase px-3.5 py-1.5 rounded-lg tracking-wider mb-2 md:mb-3.5 inline-block shadow-md">
                 Chuyên mục • {cat.name}
               </span>
               <h2 className="text-xl md:text-3.5xl font-black text-white leading-tight drop-shadow-md tracking-tight">
@@ -328,6 +329,38 @@ const INTRO_TABS = [
     desc: "Thực hiện Nghị quyết số 55/2022/QH15 của Quốc hội về thí điểm cơ chế, chính sách đặc thù phát triển. Tập trung Khu Kinh tế biển Vân Phong, thu hút công nghệ số, du lịch cao cấp, cực tăng trưởng cốt lõi cho Nam Trung Bộ.",
     date: "17/05/2026",
   },
+  {
+    id: "van-hoa",
+    title: "Văn hóa - Xã hội",
+    icon: <Users size={18} />,
+    image: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=2000&auto=format&fit=crop",
+    desc: "Khánh Hòa là vùng đất giao thoa văn hóa đa dạng, đặc trưng với văn hóa biển đảo, các lễ hội truyền thống như Lễ hội Tháp Bà Ponagar, Lễ hội cầu ngư... Con người Khánh Hòa hiền hòa, mến khách.",
+    date: "20/05/2026",
+  },
+  {
+    id: "giao-duc",
+    title: "Giáo dục & Đào tạo",
+    icon: <GraduationCap size={18} />,
+    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2000&auto=format&fit=crop",
+    desc: "Hệ thống giáo dục phát triển toàn diện với nhiều trường Đại học, Cao đẳng chất lượng cao. Định hướng trở thành trung tâm đào tạo nguồn nhân lực chất lượng cao của khu vực Nam Trung Bộ.",
+    date: "21/05/2026",
+  },
+  {
+    id: "y-te",
+    title: "Y tế & Sức khỏe",
+    icon: <Activity size={18} />,
+    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2000&auto=format&fit=crop",
+    desc: "Mạng lưới y tế được đầu tư đồng bộ, nhiều bệnh viện tuyến tỉnh và khu vực đạt tiêu chuẩn cao. Chú trọng phát triển du lịch kết hợp chăm sóc sức khỏe, nghỉ dưỡng.",
+    date: "22/05/2026",
+  },
+  {
+    id: "dinh-huong",
+    title: "Định hướng 2030",
+    icon: <Rocket size={18} />,
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop",
+    desc: "Phấn đấu đến năm 2030, Khánh Hòa là thành phố trực thuộc Trung ương; trung tâm dịch vụ, du lịch biển quốc tế; trung tâm kinh tế biển, công nghiệp công nghệ cao của cả nước.",
+    date: "23/05/2026",
+  },
 ];
 
 const SPECIAL_POLICIES = [
@@ -414,19 +447,37 @@ function IntroPortal() {
   return (
     <div className="w-full mb-16 text-left">
       {/* SPOTLIGHT TOP BANNER */}
-      <section className="w-full bg-[#0f172a] border-b border-slate-800 pt-12 pb-16">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 text-left">
+      <section className="w-full relative overflow-hidden bg-slate-900 shadow-xl border-b border-slate-800 mb-10">
+        {/* Active spotlight background image */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={activeTabIdx}
+              src={activeTabContent.image}
+              referrerPolicy="no-referrer"
+              initial={{ opacity: 0, scale: 1.05 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.98 }}
+              transition={{ duration: 0.7, ease: "easeInOut" }}
+              className="w-full h-full object-cover object-center"
+              alt="Spotlight Background"
+            />
+          </AnimatePresence>
+          {/* Glass overlays */}
+          <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-md" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 md:px-8 pt-12 pb-16 relative z-10 text-left">
           <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-8">
             <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight uppercase flex items-center gap-2.5">
-              <Globe size={24} className="text-red-500 animate-pulse" /> GIỚI THIỆU VỀ KHÁNH HÒA
+              <Globe size={24} className="text-white animate-pulse" /> GIỚI THIỆU VỀ KHÁNH HÒA
             </h3>
-            <span className="text-lg font-semibold text-white/60 flex items-center gap-1.5 select-none hidden md:flex">
+            <span className="text-lg font-normal text-white/60 flex items-center gap-1.5 select-none hidden md:flex">
               Cổng thông tin điện tử hành chính
             </span>
           </div>
 
-          <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 md:gap-12 items-stretch xl:h-[460px]">
-            <div className="xl:col-span-7 pr-0 xl:pr-8 h-[400px] xl:h-full">
+          <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 md:gap-12 items-stretch">
+            <div className="xl:col-span-7 pr-0 xl:pr-8">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeTabIdx}
@@ -434,30 +485,31 @@ function IntroPortal() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -15 }}
                   transition={{ duration: 0.4 }}
-                  className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl border border-white/10 group cursor-pointer"
+                  className="flex flex-col w-full rounded-3xl overflow-hidden shadow-2xl border border-white/10 group cursor-pointer bg-[#1e3a8a]"
                 >
-                  <img
-                    src={activeTabContent.image}
-                    referrerPolicy="no-referrer"
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
-                    alt={activeTabContent.title}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10" />
+                  <div className="w-full aspect-[4/3] overflow-hidden relative shrink-0">
+                    <img
+                      src={activeTabContent.image}
+                      referrerPolicy="no-referrer"
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                      alt={activeTabContent.title}
+                    />
+                  </div>
                   
-                  <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end z-20 text-left">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-gradient-to-r from-red-600 to-yellow-500 text-white text-base font-black rounded-md tracking-wider uppercase shadow-md pointer-events-none self-start mb-4">
+                  <div className="p-6 md:p-8 flex flex-col justify-end z-20 text-left bg-[#1e3a8a] shrink-0 border-t border-white/5">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-500 text-white text-base font-black rounded-md tracking-wider uppercase shadow-md pointer-events-none self-start mb-4">
                       TIÊU ĐIỂM
                     </span>
-                    <h4 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl text-left line-clamp-3 mb-6 group-hover:text-yellow-400 transition-colors">
+                    <h4 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl text-left line-clamp-2 mb-6 transition-colors">
                       {activeTabContent.title}
                     </h4>
                     
                     <div className="flex items-center gap-4 text-base text-white/90 font-medium tracking-wider">
-                      <span className="flex items-center gap-1.5 bg-black/30 px-3.5 py-1.5 rounded-full backdrop-blur-md border border-white/10 shadow-sm">
+                      <span className="flex items-center gap-1.5 bg-black/40 px-3.5 py-1.5 rounded-full border border-white/10 shadow-sm">
                         <Calendar size={14} className="text-yellow-400" /> {activeTabContent.date}
                       </span>
-                      <span className="flex items-center gap-1.5 bg-black/30 px-3.5 py-1.5 rounded-full backdrop-blur-md border border-white/10 shadow-sm">
-                        <User size={14} className="text-red-400" /> Ban biên tập
+                      <span className="flex items-center gap-1.5 bg-black/40 px-3.5 py-1.5 rounded-full border border-white/10 shadow-sm">
+                        <User size={14} className="text-blue-400" /> Ban biên tập
                       </span>
                     </div>
                   </div>
@@ -465,22 +517,24 @@ function IntroPortal() {
               </AnimatePresence>
             </div>
 
-            <div className="xl:col-span-5 flex flex-col gap-3 max-h-[460px] overflow-y-auto pr-1 bg-[#0f172a]/50 backdrop-blur-xl border border-white/10 p-4 rounded-3xl backdrop-saturate-150 custom-scrollbar">
+            <div className="xl:col-span-5 relative min-h-[380px] lg:min-h-0">
+              <div className="lg:absolute lg:inset-0 w-full h-full flex flex-col bg-[#0f172a]/50 backdrop-blur-xl rounded-3xl shadow-xl border border-white/10 p-2 sm:p-3 overflow-hidden">
+                <div className="w-full flex-1 overflow-y-auto pr-2 flex flex-col custom-scrollbar">
               {INTRO_TABS.map((item, idx) => {
                 const isActive = activeTabIdx === idx;
                 return (
                   <motion.div
                     key={idx}
                     onClick={() => setActiveTabIdx(idx)}
-                    className={`flex gap-4 p-3 rounded-2xl border transition-all duration-300 cursor-pointer text-left ${
+                    className={`flex shrink-0 gap-4 py-4 px-3 border-b border-white/30 transition-all duration-300 cursor-pointer text-left group/item relative overflow-hidden last:border-b-0 ${
                       isActive
-                        ? "bg-white/10 border-white/20 shadow-md backdrop-blur-md"
-                        : "bg-white/5 border-white/5 hover:bg-white/10 hover:border-white/10"
+                        ? "bg-transparent"
+                        : "bg-transparent hover:bg-white/10"
                     }`}
                     whileHover={{ scale: 1.01 }}
                     whileTap={{ scale: 0.99 }}
                   >
-                    <div className="w-28 h-20 md:w-32 md:h-24 shrink-0 rounded-xl overflow-hidden relative shadow-sm bg-slate-900 border border-white/10 group-hover:border-red-500/50 transition-colors">
+                    <div className="w-24 h-16 md:w-28 md:h-20 shrink-0 rounded-xl overflow-hidden relative shadow-sm bg-white/20">
                       <img
                         src={item.image}
                         referrerPolicy="no-referrer"
@@ -488,24 +542,33 @@ function IntroPortal() {
                         alt={item.title}
                       />
                       {isActive && (
-                        <div className="absolute inset-0 bg-red-600/20 flex items-center justify-center animate-pulse">
-                          <div className="w-1.5 h-1.5 bg-red-400 rounded-full" />
-                        </div>
+                        <div className="absolute inset-0 bg-blue-500/20 flex items-center justify-center">
+                              <div className="w-2 h-2 bg-blue-500 rounded-full animate-ping shadow-[0_0_8px_rgba(59,130,246,0.8)]" />
+                            </div>
                       )}
                     </div>
                     <div className="flex-1 min-w-0 flex flex-col justify-center space-y-1">
-                      <h5 className={`text-lg md:text-base font-bold truncate ${isActive ? "text-yellow-400" : "text-white"}`}>
+                      <h5 className={`text-base md:text-lg font-bold leading-snug line-clamp-2 transition-colors duration-200 ${isActive ? "text-white drop-shadow-sm" : "text-white/80 group-hover/item:text-white"}`}>
                         {item.title}
                       </h5>
-                      <p className="text-lg uppercase font-bold text-slate-400 tracking-wider flex items-center gap-1">
-                        <Info size={12} className="text-red-400" /> {isActive ? "Đang xem" : "Cập nhật " + item.date.split('/')[2]}
-                      </p>
+                      <div className="flex items-center justify-between text-base text-white/60 font-medium mt-1">
+                        <span className="flex items-center gap-1.5">
+                          <Calendar size={14} /> {item.date}
+                        </span>
+                        {isActive && (
+                          <span className="text-blue-400 font-black tracking-wide drop-shadow-sm">
+                            Đang xem •
+                          </span>
+                        )}
+                      </div>
                     </div>
                   </motion.div>
                 );
               })}
             </div>
           </div>
+          </div>
+        </div>
         </div>
       </section>
 
@@ -525,15 +588,15 @@ function IntroPortal() {
             
             {/* PHẦN 1: TỔNG QUAN ĐỊA DƯ VÀ ĐƠN VỊ HÀNH CHÍNH */}
             <div className="space-y-8">
-              <div className="flex items-center gap-3.5 border-b border-slate-100 pb-4 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-red-50 border border-red-150 text-red-800 flex items-center justify-center shrink-0">
+              <div className="flex items-start gap-3.5 border-b border-slate-100 pb-4 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-150 text-blue-800 flex items-center justify-center shrink-0">
                   <Globe size={18} />
                 </div>
-                <div className="text-left py-1">
-                  <h4 className="text-2xl md:text-3.5xl font-black tracking-tight text-red-800 uppercase leading-tight">
+                <div className="text-left">
+                  <h4 className="text-2xl md:text-3.5xl font-black tracking-tight text-blue-800 uppercase leading-tight">
                     I. Tổng quan & Bản đồ hành chính
                   </h4>
-                  <p className="text-lg sm:text-lg font-bold text-slate-400 uppercase tracking-wider mt-1.5">
+                  <p className="text-lg sm:text-lg font-bold text-black uppercase tracking-wider mt-1.5">
                     Diện tích tự nhiên & 9 đơn vị cấp huyện trực thuộc
                   </p>
                 </div>
@@ -545,11 +608,11 @@ function IntroPortal() {
                 <div className="lg:col-span-8 space-y-8">
                   
                   {/* Narrative intro section */}
-                  <div className="border-l-4 border-red-600 pl-5 py-2 space-y-4">
-                    <p className="text-lg md:text-base text-slate-700 leading-relaxed font-semibold text-justify">
+                  <div className="border-l-4 border-blue-600 pl-5 py-2 space-y-4">
+                    <p className="text-lg md:text-base text-black leading-relaxed font-normal text-justify">
                       <strong>Khánh Hòa</strong> là địa bàn trọng yếu nằm ở vùng duyên hải cực Đông của Tổ quốc Việt Nam Nam Trung Bộ. Tỉnh đóng vai trò là cửa ngõ quốc gia ra Biển Đông và là hành lang kinh tế chiến lược kết nối vững chắc vùng Tây Nguyên với thị trường quốc tế rộng mở.
                     </p>
-                    <p className="text-lg md:text-base text-slate-700 leading-relaxed font-semibold text-justify">
+                    <p className="text-lg md:text-base text-black leading-relaxed font-normal text-justify">
                       Nhờ thềm lục địa vạm vỡ kiến tạo hoàn hảo, địa bàn tỉnh sở hữu 3 vịnh lớn nổi tiếng gồm <strong>Vịnh Nha Trang</strong> (vịnh biển ngọc xinh đẹp hàng đầu thế giới), <strong>Vịnh Cam Ranh</strong> (trọng điểm quân cảng nước sâu mang giá trị phòng hải thiêng liêng) và <strong>Vịnh Vân Phong</strong> (đầu mối công nghiệp - dịch vụ hàng hải tương lai). Khí hậu ôn hòa hải dương, ít thiên tai bão lụt từ lâu đã mang lại thế mạnh kinh tế sinh thái vĩnh cửu cho vùng đất này.
                     </p>
                   </div>
@@ -557,19 +620,19 @@ function IntroPortal() {
                   {/* Subdivisions segment */}
                   <div className="space-y-4 pt-4 text-left">
                     <h4 className="text-lg font-black text-[#1E3A8A] uppercase tracking-wider flex items-center gap-2">
-                      <span className="w-1.5 h-6 bg-red-600 rounded-full inline-block" />
+                      <span className="w-1.5 h-6 bg-blue-600 rounded-full inline-block" />
                       9 Đơn vị Hành chính cấp Huyện trực thuộc:
                     </h4>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                       {DIVISIONS.map((div) => (
-                        <div key={div.id} className="p-4 bg-slate-50/60 hover:bg-red-50/20 border border-slate-200/80 hover:border-red-500 rounded-2xl transition-all duration-300 group text-left">
-                          <h5 className="text-lg font-black text-red-800 group-hover:text-red-600 transition-colors mb-1.5 font-sans">
+                        <div key={div.id} className="p-4 bg-slate-50/60 hover:bg-blue-50/20 border border-slate-200/80 hover:border-blue-500 rounded-2xl transition-all duration-300 group text-left">
+                          <h5 className="text-lg font-black text-blue-800 group-hover:text-blue-600 transition-colors mb-1.5 font-sans">
                             {div.name}
                           </h5>
-                          <span className="text-lg bg-white border border-slate-200 py-0.5 px-2 rounded-md font-extrabold text-red-800 uppercase inline-block">
+                          <span className="text-lg bg-white border border-slate-200 py-0.5 px-2 rounded-md font-extrabold text-blue-800 uppercase inline-block">
                             {div.type} • {div.area}
                           </span>
-                          <p className="text-lg text-slate-500 font-bold mt-2.5 line-clamp-3 leading-relaxed">
+                          <p className="text-lg text-black font-normal mt-2.5 line-clamp-3 leading-relaxed">
                             {div.desc}
                           </p>
                         </div>
@@ -582,7 +645,7 @@ function IntroPortal() {
                 <div className="lg:col-span-4 space-y-6">
                   
                   {/* Reports Indicators Box */}
-                  <div className="bg-gradient-to-br from-red-900 to-red-950 text-white rounded-[24px] p-6 relative overflow-hidden shadow-lg border border-white/5">
+                  <div className="bg-gradient-to-br from-blue-900 to-blue-950 text-white rounded-[24px] p-6 relative overflow-hidden shadow-lg border border-white/5">
                     <div className="absolute top-0 right-0 w-36 h-36 bg-white/5 rounded-full -mr-12 -mt-12 pointer-events-none" />
                     <h4 className="text-yellow-400 font-black text-lg mb-5 tracking-tight uppercase border-b border-white/10 pb-3 flex items-center gap-2">
                       <Info size={16} /> Chỉ số địa dư chính yếu
@@ -600,7 +663,7 @@ function IntroPortal() {
                         <div key={i} className="flex flex-col gap-1.5 border-b border-white/10 pb-4 last:border-0 last:pb-0">
                           <div className="flex items-start justify-between gap-3">
                             <p className="text-base text-white/90 font-bold leading-snug">{stat.label}</p>
-                            <span className="text-base font-black text-yellow-300 bg-yellow-900/40 px-2.5 py-1 rounded-md border border-yellow-700/50 shrink-0 text-right shadow-sm">
+                            <span className="text-base font-black text-yellow-300 bg-blue-500/30 px-2.5 py-1 rounded-md border border-blue-400/50 shrink-0 text-right shadow-sm">
                               {stat.val}
                             </span>
                           </div>
@@ -638,15 +701,15 @@ function IntroPortal() {
 
             {/* PHẦN 2: ĐIỀU KIỆN TỰ NHIÊN, TÀI NGUYÊN, LỊCH SỬ & HẠ TẦNG KẾT HỢP (4 CỘT 2x2 ĐẸP MẮT) */}
             <div className="space-y-8">
-              <div className="flex items-center gap-3.5 border-b border-slate-100 pb-4 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-red-50 border border-red-150 text-red-700 flex items-center justify-center shrink-0">
+              <div className="flex items-start gap-3.5 border-b border-slate-100 pb-4 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-150 text-blue-700 flex items-center justify-center shrink-0">
                   <LibraryBig size={18} />
                 </div>
-                <div className="text-left py-1">
-                  <h4 className="text-2xl md:text-3.5xl font-black tracking-tight text-red-700 uppercase leading-tight">
+                <div className="text-left">
+                  <h4 className="text-2xl md:text-3.5xl font-black tracking-tight text-blue-700 uppercase leading-tight">
                     II. Địa chí Tự nhiên, Sử ký, Hải sản, cơ sở Hạ tầng
                   </h4>
-                  <p className="text-lg sm:text-lg font-bold text-slate-400 uppercase tracking-wider mt-1.5">
+                  <p className="text-lg sm:text-lg font-bold text-black uppercase tracking-wider mt-1.5">
                     Sơn văn thạch học, Yến sào, di sản sử sách ngàn năm, đặc chủng khánh hải & quy hoạch đồng bộ
                   </p>
                 </div>
@@ -655,7 +718,7 @@ function IntroPortal() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
                 
                 {/* Cột 1: Điều kiện Tự nhiên */}
-                <div className="rounded-2xl p-6 md:p-8 flex flex-col justify-between hover:bg-red-800/5 transition-colors duration-300 text-left group bg-slate-50/40">
+                <div className="rounded-2xl p-6 md:p-8 flex flex-col justify-between hover:bg-blue-800/5 transition-colors duration-300 text-left group bg-slate-50/40">
                   <div className="space-y-6">
                     
                     {/* Image chính xác về nội dung tự nhiên biển đảo địa hình */}
@@ -667,30 +730,30 @@ function IntroPortal() {
                         className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-750"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
-                      <span className="absolute bottom-2.5 left-2.5 bg-red-800 text-white text-lg uppercase font-black px-2 py-0.5 rounded shadow-md">
+                      <span className="absolute bottom-2.5 left-2.5 bg-blue-800 text-white text-lg uppercase font-black px-2 py-0.5 rounded shadow-md">
                         Hải dương & Đồi núi
                       </span>
                     </div>
 
-                    <h4 className="text-base font-black text-red-800 uppercase tracking-tight border-l-4 border-red-800 pl-3">
+                    <h4 className="text-base font-black text-blue-800 uppercase tracking-tight border-l-4 border-blue-800 pl-3">
                       Điều kiện tự nhiên
                     </h4>
 
-                    <p className="text-lg md:text-lg text-slate-600 leading-relaxed font-semibold text-justify">
+                    <p className="text-lg md:text-lg text-black leading-relaxed font-normal text-justify">
                       Sở hữu hệ địa thế sườn núi lượn sóng chuyển tiếp mềm dốc ra đại dương: thềm lục địa vây quanh bởi dải Trường Sơn che chắn vững chãi án ngự phía Tây, phía Đông mở toang các miền duyên hải bằng phẳng ngập nắng gió.
                     </p>
 
-                    <ul className="space-y-2 text-lg text-slate-500 font-bold border-t border-slate-100 pt-4">
-                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-slate-700">
-                        <span className="w-1.5 h-1.5 rounded-full bg-red-600 mt-2 shrink-0 transition-all duration-300 group-hover/item:scale-125 group-hover/item:bg-red-800" />
+                    <ul className="space-y-2 text-lg text-black font-normal border-t border-slate-100 pt-4">
+                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-black">
+                        <span className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2 shrink-0 transition-all duration-300 group-hover/item:scale-125 group-hover/item:bg-blue-800" />
                         <span><strong>Khí hậu ôn hòa diệu mát:</strong> Chênh lệch nhiệt độ năm cực thấp dưới ảnh hưởng đại dương điều hòa không khí.</span>
                       </li>
-                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-slate-700 text-justify">
-                        <span className="w-1.5 h-1.5 rounded-full bg-red-600 mt-2 shrink-0 transition-all duration-300 group-hover/item:scale-125 group-hover/item:bg-red-800" />
+                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-black text-justify">
+                        <span className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2 shrink-0 transition-all duration-300 group-hover/item:scale-125 group-hover/item:bg-blue-800" />
                         <span><strong>Ánh mặt trời dồi dào:</strong> Sở hữu hơn 2.600 giờ nắng rực rỡ hàng năm, rất có thế mạnh cho quang năng nhiệt điện và sinh dưỡng sinh thái.</span>
                       </li>
-                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-slate-700">
-                        <span className="w-1.5 h-1.5 rounded-full bg-red-600 mt-2 shrink-0 transition-all duration-300 group-hover/item:scale-125 group-hover/item:bg-red-800" />
+                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-black">
+                        <span className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2 shrink-0 transition-all duration-300 group-hover/item:scale-125 group-hover/item:bg-blue-800" />
                         <span><strong>Thạch lưu nguồn phong phú:</strong> Sông Cái Nha Trang cấp nguồn thạch thủy dồi dào, bồi tích đất phù sa màu mỡ.</span>
                       </li>
                     </ul>
@@ -698,7 +761,7 @@ function IntroPortal() {
                 </div>
 
                 {/* Cột 2: Tài nguyên Thiên nhiên */}
-                <div className="rounded-2xl p-6 md:p-8 flex flex-col justify-between hover:bg-red-500/5 transition-colors duration-300 text-left group bg-slate-50/40">
+                <div className="rounded-2xl p-6 md:p-8 flex flex-col justify-between hover:bg-blue-500/5 transition-colors duration-300 text-left group bg-slate-50/40">
                   <div className="space-y-6">
                     
                     {/* Image đại chủng sinh thái thủy sản biển thềm san hô */}
@@ -710,30 +773,30 @@ function IntroPortal() {
                         className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-750"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
-                      <span className="absolute bottom-2.5 left-2.5 bg-red-600/90 text-white text-lg uppercase font-black px-2 py-0.5 rounded shadow-md">
+                      <span className="absolute bottom-2.5 left-2.5 bg-blue-600/90 text-white text-lg uppercase font-black px-2 py-0.5 rounded shadow-md">
                         Khánh hải & Lâm học
                       </span>
                     </div>
 
-                    <h4 className="text-base font-black text-red-700 uppercase tracking-tight border-l-4 border-red-600 pl-3">
+                    <h4 className="text-base font-black text-blue-700 uppercase tracking-tight border-l-4 border-blue-600 pl-3">
                       Tài nguyên thiên nhiên
                     </h4>
 
-                    <p className="text-lg md:text-lg text-slate-600 leading-relaxed font-semibold text-justify">
+                    <p className="text-lg md:text-lg text-black leading-relaxed font-normal text-justify">
                       Thừa hưởng vùng tài chủng đa sinh học dạt dào hải vị bậc nhất Đông Nam Á. Môi trường hải lưu thích ứng bảo tồn những rạn san hô nguyên sinh quý báu cùng quần thể hải chủng quý hiểm có giá trị cao.
                     </p>
 
-                    <ul className="space-y-2 text-lg text-slate-500 font-bold border-t border-slate-100 pt-4">
-                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-slate-700 text-justify">
-                        <span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 shrink-0 transition-all duration-300 group-hover/item:scale-125 group-hover/item:bg-red-600" />
+                    <ul className="space-y-2 text-lg text-black font-normal border-t border-slate-100 pt-4">
+                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-black text-justify">
+                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0 transition-all duration-300 group-hover/item:scale-125 group-hover/item:bg-blue-600" />
                         <span><strong>Đại vương quốc Yến sào:</strong> Sở hữu kỷ lục quốc gia về sản lượng dồi dào yến tổ hoang đảo thiên nhiên, bồi dưỡng sức sống đỉnh cao.</span>
                       </li>
-                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-slate-700">
-                        <span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 shrink-0 transition-all duration-300 group-hover/item:scale-125 group-hover/item:bg-red-600" />
+                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-black">
+                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0 transition-all duration-300 group-hover/item:scale-125 group-hover/item:bg-blue-600" />
                         <span><strong>Cát trắng mịn silica:</strong> Mỏ cát trắng thạch anh vô ngần tinh tinh thiết dùng chế phẩm xuất khẩu pha lê cao cấp.</span>
                       </li>
-                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-slate-700">
-                        <span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 shrink-0 transition-all duration-300 group-hover/item:scale-125 group-hover/item:bg-red-600" />
+                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-black">
+                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0 transition-all duration-300 group-hover/item:scale-125 group-hover/item:bg-blue-600" />
                         <span><strong>Suối khoáng Đảnh Thạnh:</strong> Dòng thạch lưu axit silic dồi dào giàu kẽm, sắt, mang giá trị y học phục hồi vượt trội.</span>
                       </li>
                     </ul>
@@ -741,7 +804,7 @@ function IntroPortal() {
                 </div>
 
                 {/* Cột 3: Lịch sử Hình thành */}
-                <div className="rounded-2xl p-6 md:p-8 flex flex-col justify-between hover:bg-red-500/5 transition-colors duration-300 text-left group bg-slate-50/40">
+                <div className="rounded-2xl p-6 md:p-8 flex flex-col justify-between hover:bg-blue-500/5 transition-colors duration-300 text-left group bg-slate-50/40">
                   <div className="space-y-6">
                     
                     {/* Image cổ kính, di sản văn hóa truyền thống */}
@@ -753,30 +816,30 @@ function IntroPortal() {
                         className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-750"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
-                      <span className="absolute bottom-2.5 left-2.5 bg-red-600/90 text-white text-lg uppercase font-black px-2 py-0.5 rounded shadow-md">
+                      <span className="absolute bottom-2.5 left-2.5 bg-blue-600/90 text-white text-lg uppercase font-black px-2 py-0.5 rounded shadow-md">
                         Di sản Sử sách 370 năm
                       </span>
                     </div>
 
-                    <h4 className="text-base font-black text-red-700 uppercase tracking-tight border-l-4 border-red-600 pl-3">
+                    <h4 className="text-base font-black text-blue-700 uppercase tracking-tight border-l-4 border-blue-600 pl-3">
                       Lịch sử hình thành
                     </h4>
 
-                    <p className="text-lg md:text-lg text-slate-600 leading-relaxed font-semibold text-justify">
+                    <p className="text-lg md:text-lg text-black leading-relaxed font-normal text-justify">
                       Di sản khai hoang oai hùng bắt đầu từ buổi phân định Dinh Bình Khang từ năm 1653 khởi tiến hành mở cõi dưới triều Chúa Nguyễn Phúc Tần, tạo thế đứng vững bền phồn cực ngàn thu.
                     </p>
 
-                    <ul className="space-y-2 text-lg text-slate-500 font-bold border-t border-slate-100 pt-4">
-                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-slate-700 text-justify">
-                        <span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 shrink-0 transition-all duration-300 group-hover/item:scale-125 group-hover/item:bg-red-600" />
+                    <ul className="space-y-2 text-lg text-black font-normal border-t border-slate-100 pt-4">
+                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-black text-justify">
+                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0 transition-all duration-300 group-hover/item:scale-125 group-hover/item:bg-blue-600" />
                         <span><strong>Tháp Bà Ponagar uy nghi:</strong> Quần thể gạch nung ngàn năm độc đáo tôn vinh Mẫu Thiên Y A Na tối cao trong tâm linh Việt - Chăm.</span>
                       </li>
-                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-slate-700">
-                        <span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 shrink-0 transition-all duration-300 group-hover/item:scale-125 group-hover/item:bg-red-600" />
+                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-black">
+                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0 transition-all duration-300 group-hover/item:scale-125 group-hover/item:bg-blue-600" />
                         <span><strong>Thành cổ Diên Khánh:</strong> Thành lũy lũy quân sự kiên cố thời Tây Sơn - Nguyễn sơ lưu luyến nguyên mẫu lũy đất pháo đài Vauban kiểu Pháp.</span>
                       </li>
-                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-slate-700">
-                        <span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 shrink-0 transition-all duration-300 group-hover/item:scale-125 group-hover/item:bg-red-600" />
+                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-black">
+                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0 transition-all duration-300 group-hover/item:scale-125 group-hover/item:bg-blue-600" />
                         <span><strong>Trường Sa trung chinh kiên trinh:</strong> Quá trình bảo vệ pháo đài lấn biển hải phòng dũng oai oanh liệt của quân sĩ biên cương.</span>
                       </li>
                     </ul>
@@ -805,20 +868,20 @@ function IntroPortal() {
                       Cơ sở hạ tầng
                     </h4>
 
-                    <p className="text-lg md:text-lg text-slate-600 leading-relaxed font-semibold text-justify">
+                    <p className="text-lg md:text-lg text-black leading-relaxed font-normal text-justify">
                       Khánh Hòa tập trung nguồn ngân sách dồi dào kiến tạo bức tranh giao vận siêu hạng, kết nối liên kết hành thông đa phương thức giữa miền núi vàng và hải phận giao thương quốc tế.
                     </p>
 
-                    <ul className="space-y-2 text-lg text-slate-500 font-bold border-t border-slate-100 pt-4">
-                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-slate-700 text-justify">
+                    <ul className="space-y-2 text-lg text-black font-normal border-t border-slate-100 pt-4">
+                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-black text-justify">
                         <span className="w-1.5 h-1.5 rounded-full bg-yellow-500 mt-2 shrink-0 transition-all duration-300 group-hover/item:scale-125 group-hover/item:bg-yellow-600" />
                         <span><strong>Song lộ cao tốc miền Trung:</strong> Hành thông liên hoàn tuyến Vân Phong - Nha Trang và Nha Trang - Cam Lâm, xúc tiến nhánh lên Lâm Đồng.</span>
                       </li>
-                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-slate-700">
+                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-black">
                         <span className="w-1.5 h-1.5 rounded-full bg-yellow-500 mt-2 shrink-0 transition-all duration-300 group-hover/item:scale-125 group-hover/item:bg-yellow-600" />
                         <span><strong>Cánh chim Cam Ranh 4 sao:</strong> Sân bay quốc tế hiện đại đón hành khách thương mại từ hàng chục đô thị lớn Á - Âu.</span>
                       </li>
-                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-slate-700">
+                      <li className="flex items-start gap-2.5 p-2 -mx-2 rounded-xl hover:bg-white hover:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100/80 transition-all duration-300 cursor-pointer group/item hover:text-black">
                         <span className="w-1.5 h-1.5 rounded-full bg-yellow-500 mt-2 shrink-0 transition-all duration-300 group-hover/item:scale-125 group-hover/item:bg-yellow-600" />
                         <span><strong>Cảng trung chuyển Vân Phong:</strong> Phát huy tiềm năng vịnh nước sâu đón các siêu hạm container trọng tải khổng lồ toàn cầu.</span>
                       </li>
@@ -844,15 +907,15 @@ function IntroPortal() {
                     transition={{ duration: 0.3 }}
                     className="space-y-8"
                   >
-                    <div className="flex items-center gap-3.5 border-b border-slate-100 pb-4 mb-6">
-                      <div className="w-10 h-10 rounded-xl bg-red-50 border border-red-150 text-red-800 flex items-center justify-center shrink-0">
+                    <div className="flex items-start gap-3.5 border-b border-slate-100 pb-4 mb-6">
+                      <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-150 text-blue-800 flex items-center justify-center shrink-0">
                         <Award size={18} />
                       </div>
-                      <div className="text-left py-1">
-                        <h4 className="text-2xl md:text-3.5xl font-black tracking-tight text-red-800 uppercase leading-tight">
+                      <div className="text-left">
+                        <h4 className="text-2xl md:text-3.5xl font-black tracking-tight text-blue-800 uppercase leading-tight">
                           III. Chính sách đặc thù đang được áp dụng
                         </h4>
-                        <p className="text-lg sm:text-lg font-bold text-slate-900 uppercase tracking-wider mt-1.5">
+                        <p className="text-lg sm:text-lg font-bold text-black uppercase tracking-wider mt-1.5">
                           Nghị quyết số 55/2022/QH15 của Quốc hội về thí điểm một số cơ chế, chính sách đặc thù phát triển tỉnh Khánh Hòa
                         </p>
                       </div>
@@ -861,8 +924,8 @@ function IntroPortal() {
                     <div className="w-full">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
                         {SPECIAL_POLICIES.slice(0, 6).map((item, id) => (
-                          <div key={id} id={`policy-item-${id}`} className="py-4 flex gap-4 items-center group border border-transparent border-b-slate-100/70 last:border-b-transparent hover:border-red-100 hover:bg-red-50/20 hover:shadow-[0_4px_16px_-2px_rgba(220,38,38,0.06)] px-3.5 rounded-2xl transition-all duration-300 cursor-pointer">
-                            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden shrink-0 bg-slate-50 border border-slate-100 shadow-sm relative transition-all duration-300 group-hover:border-red-200 group-hover:shadow-md">
+                          <div key={id} id={`policy-item-${id}`} className="py-4 flex gap-4 items-center group border border-transparent border-b-slate-100/70 last:border-b-transparent hover:border-blue-100 hover:bg-blue-50/20 hover:shadow-[0_4px_16px_-2px_rgba(220,38,38,0.06)] px-3.5 rounded-2xl transition-all duration-300 cursor-pointer">
+                            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden shrink-0 bg-slate-50 border border-slate-100 shadow-sm relative transition-all duration-300 group-hover:border-blue-200 group-hover:shadow-md">
                               <img 
                                 src={item.img} 
                                 referrerPolicy="no-referrer"
@@ -871,11 +934,11 @@ function IntroPortal() {
                               />
                             </div>
                             <div className="flex-1 min-w-0 flex flex-col justify-center space-y-1 text-left">
-                              <h6 className="text-lg sm:text-lg font-black text-red-800 flex items-center gap-1.5 font-sans leading-snug uppercase tracking-tight transition-all duration-300 group-hover:text-red-900 group-hover:translate-x-1">
-                                <span className="w-1.5 h-3 bg-red-600 rounded-full inline-block shrink-0 transition-all duration-300 group-hover:scale-y-150 group-hover:bg-red-700" />
+                              <h6 className="text-lg sm:text-lg font-black text-blue-800 flex items-center gap-1.5 font-sans leading-snug uppercase tracking-tight transition-all duration-300 group-hover:text-blue-900 group-hover:translate-x-1">
+                                <span className="w-1.5 h-3 bg-blue-600 rounded-full inline-block shrink-0 transition-all duration-300 group-hover:scale-y-150 group-hover:bg-blue-700" />
                                 {item.title}
                               </h6>
-                              <p className="text-base sm:text-lg text-slate-900 font-semibold leading-relaxed text-justify transition-colors duration-300 group-hover:text-slate-950">
+                              <p className="text-base sm:text-lg text-black font-normal leading-relaxed text-justify transition-colors duration-300 group-hover:text-slate-950">
                                 {item.txt}
                               </p>
                             </div>
@@ -892,7 +955,7 @@ function IntroPortal() {
                               policiesSectionRef.current?.scrollIntoView({ behavior: "smooth" });
                             }, 100);
                           }}
-                          className="inline-flex items-center gap-2.5 px-7 py-3 bg-gradient-to-r from-red-800 to-red-900 hover:from-red-900 hover:to-black text-white font-black text-lg uppercase tracking-wider rounded-full shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer select-none active:scale-95"
+                          className="inline-flex items-center gap-2.5 px-7 py-3 bg-gradient-to-r from-blue-800 to-blue-900 hover:from-blue-900 hover:to-black text-white font-black text-lg uppercase tracking-wider rounded-full shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer select-none active:scale-95"
                         >
                           <span>Xem trang liệt kê toàn bộ chính sách khác</span>
                           <ChevronRight size={14} className="animate-pulse" />
@@ -920,24 +983,24 @@ function IntroPortal() {
                             policiesSectionRef.current?.scrollIntoView({ behavior: "smooth" });
                           }, 100);
                         }}
-                        className="inline-flex items-center gap-2 text-lg font-black text-slate-600 hover:text-red-600 transition-colors uppercase tracking-wider cursor-pointer select-none self-start bg-white px-4 py-2 rounded-xl border border-slate-200/60 shadow-sm hover:shadow active:scale-95"
+                        className="inline-flex items-center gap-2 text-lg font-black text-black hover:text-blue-600 transition-colors uppercase tracking-wider cursor-pointer select-none self-start bg-white px-4 py-2 rounded-xl border border-slate-200/60 shadow-sm hover:shadow active:scale-95"
                       >
                         <ArrowLeft size={14} />
                         <span>Quay lại trang giới thiệu</span>
                       </button>
 
                       <div className="text-left sm:text-right">
-                        <span className="inline-block bg-red-100 text-red-800 text-lg font-black uppercase px-2.5 py-1 rounded-md tracking-wider">
+                        <span className="inline-block bg-blue-100 text-blue-800 text-lg font-black uppercase px-2.5 py-1 rounded-md tracking-wider">
                           Nghị quyết 55/2022/QH15
                         </span>
                       </div>
                     </div>
 
                     <div className="text-left space-y-2">
-                      <h3 className="text-2xl md:text-3xl font-black text-red-800 uppercase tracking-tight">
+                      <h3 className="text-2xl md:text-3xl font-black text-blue-800 uppercase tracking-tight">
                         Cổng tra cứu Cơ chế & Chính sách Đặc thù Khánh Hòa
                       </h3>
-                      <p className="text-lg md:text-lg text-slate-900 font-semibold leading-relaxed">
+                      <p className="text-lg md:text-lg text-black font-normal leading-relaxed">
                         Toàn bộ danh mục các cơ chế đặc thù, ưu đãi đặc quyền tối thượng nhằm thúc đẩy vương ngọc kinh tế vịnh Vân Phong và toàn tỉnh phát triển cất cánh vượt bậc.
                       </p>
                     </div>
@@ -952,8 +1015,8 @@ function IntroPortal() {
                             onClick={() => setSelectedPolicyCat(cat)}
                             className={`px-3.5 py-1.5 rounded-lg text-lg font-black transition-all cursor-pointer select-none ${
                               selectedPolicyCat === cat
-                                ? "bg-red-700 text-white shadow-sm"
-                                : "bg-slate-50 text-slate-600 hover:bg-slate-100 hover:text-red-700"
+                                ? "bg-blue-700 text-white shadow-sm"
+                                : "bg-slate-50 text-black hover:bg-slate-100 hover:text-blue-700"
                             }`}
                           >
                             {cat}
@@ -963,18 +1026,18 @@ function IntroPortal() {
 
                       {/* SEARCH BOX */}
                       <div className="relative flex-1 max-w-md">
-                        <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
+                        <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-black" />
                         <input
                           type="text"
                           value={policySearch}
                           onChange={(e) => setPolicySearch(e.target.value)}
                           placeholder="Tìm kiếm chính sách, cơ chế ưu đãi..."
-                          className="w-full bg-slate-50 text-slate-900 text-lg font-bold pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 transition-all placeholder:text-slate-400"
+                          className="w-full bg-slate-50 text-black text-lg font-bold pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder:text-black"
                         />
                         {policySearch && (
                           <button
                             onClick={() => setPolicySearch("")}
-                            className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 text-lg font-bold"
+                            className="absolute right-3 top-1/2 -translate-y-1/2 text-black hover:text-black text-lg font-bold"
                           >
                             Xóa
                           </button>
@@ -1003,9 +1066,9 @@ function IntroPortal() {
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: id * 0.05 }}
-                            className="bg-white rounded-2xl border border-slate-100 p-5 md:p-6 flex flex-col lg:flex-row gap-6 hover:shadow-[0_12px_32px_-4px_rgba(220,38,38,0.08)] hover:border-red-200 transition-all duration-300 text-left group cursor-pointer"
+                            className="bg-white rounded-2xl border border-slate-100 p-5 md:p-6 flex flex-col lg:flex-row gap-6 hover:shadow-[0_12px_32px_-4px_rgba(220,38,38,0.08)] hover:border-blue-200 transition-all duration-300 text-left group cursor-pointer"
                           >
-                            <div className="w-full lg:w-48 h-32 lg:h-auto rounded-xl overflow-hidden shrink-0 bg-slate-50 border border-slate-100 shadow-sm relative transition-all duration-300 group-hover:border-red-200 group-hover:shadow-md">
+                            <div className="w-full lg:w-48 h-32 lg:h-auto rounded-xl overflow-hidden shrink-0 bg-slate-50 border border-slate-100 shadow-sm relative transition-all duration-300 group-hover:border-blue-200 group-hover:shadow-md">
                               <img 
                                 src={item.img} 
                                 referrerPolicy="no-referrer"
@@ -1015,21 +1078,21 @@ function IntroPortal() {
                             </div>
                             <div className="flex-1 space-y-3">
                               <div className="flex flex-wrap items-center gap-2">
-                                <span className="text-lg font-black uppercase tracking-wider bg-red-50 text-red-700 px-2.5 py-1 rounded transition-all duration-300 group-hover:bg-red-600 group-hover:text-white">
+                                <span className="text-lg font-black uppercase tracking-wider bg-blue-50 text-blue-700 px-2.5 py-1 rounded transition-all duration-300 group-hover:bg-blue-600 group-hover:text-white">
                                   {item.category}
                                 </span>
-                                <span className="text-lg font-bold text-slate-500">
+                                <span className="text-lg font-bold text-black">
                                   Cơ chế số {id + 1}
                                 </span>
                               </div>
-                              <h4 className="text-base sm:text-lg font-black text-slate-900 transition-all duration-300 group-hover:text-red-700 group-hover:translate-x-1">
+                              <h4 className="text-base sm:text-lg font-black text-black transition-all duration-300 group-hover:text-blue-700 group-hover:translate-x-1">
                                 {item.title}
                               </h4>
-                              <p className="text-lg sm:text-lg text-slate-900 leading-relaxed font-semibold transition-colors duration-300 group-hover:text-slate-950">
+                              <p className="text-lg sm:text-lg text-black leading-relaxed font-normal transition-colors duration-300 group-hover:text-slate-950">
                                 {item.txt}
                               </p>
-                              <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-100/80 transition-all duration-300 group-hover:bg-red-50/10 group-hover:border-red-100/40">
-                                <p className="text-lg sm:text-lg text-slate-900 leading-relaxed font-semibold italic text-justify transition-colors duration-300 group-hover:text-slate-950">
+                              <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-100/80 transition-all duration-300 group-hover:bg-blue-50/10 group-hover:border-blue-100/40">
+                                <p className="text-lg sm:text-lg text-black leading-relaxed font-normal italic text-justify transition-colors duration-300 group-hover:text-slate-950">
                                   <strong>Chi tiết thực hiện:</strong> {item.details}
                                 </p>
                               </div>
@@ -1038,7 +1101,7 @@ function IntroPortal() {
                         ))
                       ) : (
                         <div className="text-center py-12 bg-white rounded-2xl border border-slate-100 space-y-2">
-                          <p className="text-slate-400 text-lg font-bold">Không tìm thấy chính sách đặc thù phù hợp</p>
+                          <p className="text-black text-lg font-bold">Không tìm thấy chính sách đặc thù phù hợp</p>
                           <p className="text-slate-300 text-lg">Vui lòng thử từ khóa khác hoặc thay đổi bộ lọc</p>
                         </div>
                       )}
@@ -1120,7 +1183,7 @@ function GovPortal() {
             initial={{ opacity: 0, y: 50, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            className="fixed bottom-8 right-8 z-[10000] bg-gradient-to-r from-red-600 to-red-700 text-white font-extrabold text-lg py-4 px-6 rounded-2xl shadow-2xl flex items-center gap-3 border border-red-500/20 max-w-sm"
+            className="fixed bottom-8 right-8 z-[10000] bg-gradient-to-r from-blue-600 to-blue-700 text-white font-extrabold text-lg py-4 px-6 rounded-2xl shadow-2xl flex items-center gap-3 border border-blue-500/20 max-w-sm"
           >
             <CheckCircle2 size={18} className="text-yellow-300 shrink-0" />
             <span>{toastMessage}</span>
@@ -1130,8 +1193,8 @@ function GovPortal() {
 
       {/* Leadership Profile Row */}
       <div className="bg-white p-8 border border-slate-100 rounded-3xl shadow-sm">
-        <h3 className="text-xl font-black text-red-800 mb-6 flex items-center gap-3">
-          <Users className="text-red-600" /> Hệ thống cơ cấu Thường trực lãnh đạo tỉnh
+        <h3 className="text-xl font-black text-blue-800 mb-6 flex items-center gap-3">
+          <Users className="text-blue-600" /> Hệ thống cơ cấu Thường trực lãnh đạo tỉnh
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {[
@@ -1161,17 +1224,17 @@ function GovPortal() {
               className="bg-slate-50 p-5 rounded-2xl border border-slate-100 flex flex-col justify-between"
             >
               <div>
-                <span className="text-lg font-black text-red-600 uppercase tracking-widest block mb-2 bg-red-50 py-1 px-2.5 rounded-md w-max">
+                <span className="text-lg font-black text-blue-600 uppercase tracking-widest block mb-2 bg-blue-50 py-1 px-2.5 rounded-md w-max">
                   {lead.role}
                 </span>
-                <h4 className="text-base font-extrabold text-red-800 mb-2">
+                <h4 className="text-base font-extrabold text-blue-800 mb-2">
                   {lead.name}
                 </h4>
-                <p className="text-lg text-slate-900 leading-relaxed font-semibold">
+                <p className="text-lg text-black leading-relaxed font-normal">
                   {lead.desc}
                 </p>
               </div>
-              <span className="text-lg text-red-700 hover:underline cursor-pointer font-bold mt-4 block">
+              <span className="text-lg text-blue-700 hover:underline cursor-pointer font-bold mt-4 block">
                 Xem quá trình công tác →
               </span>
             </div>
@@ -1181,7 +1244,7 @@ function GovPortal() {
 
       {/* Docs search engine */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-        <div className="lg:col-span-1 bg-red-800 text-white p-8 rounded-3xl flex flex-col justify-between relative overflow-hidden shadow-lg">
+        <div className="lg:col-span-1 bg-blue-800 text-white p-8 rounded-3xl flex flex-col justify-between relative overflow-hidden shadow-lg">
           <div className="absolute -bottom-10 -right-10 opacity-5">
             <Building size={200} />
           </div>
@@ -1189,7 +1252,7 @@ function GovPortal() {
             <h4 className="text-yellow-400 font-extrabold text-lg mb-4">
               Cổng tra cứu văn bản Pháp quy
             </h4>
-            <p className="text-lg text-red-50 leading-relaxed font-semibold mb-6">
+            <p className="text-lg text-blue-50 leading-relaxed font-normal mb-6">
               Hệ thống tìm kiếm phục vụ công vụ của người dân và công chức toàn
               tỉnh. Phân cấp dữ liệu đầy đủ từ Tỉnh ủy, HĐND đến UBND tỉnh các
               thời kỳ.
@@ -1205,14 +1268,14 @@ function GovPortal() {
               </div>
             </div>
           </div>
-          <p className="text-lg text-red-200 font-bold mt-8 border-t border-white/10 pt-4">
+          <p className="text-lg text-blue-200 font-bold mt-8 border-t border-white/10 pt-4">
             Cơ quan chủ quản: Văn phòng Ủy ban Nhân dân Tỉnh Khánh Hòa
           </p>
         </div>
 
         <div className="lg:col-span-2 bg-white p-8 border border-slate-100 rounded-3xl shadow-sm flex flex-col">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-4 border-b border-slate-100">
-            <h4 className="text-lg font-black text-red-800">
+            <h4 className="text-lg font-black text-blue-800">
               Danh sách văn bản mới ban hành
             </h4>
             {/* Search inputs */}
@@ -1222,11 +1285,11 @@ function GovPortal() {
                 placeholder="Số ký hiệu, từ khóa..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full md:w-64 bg-slate-50 border border-slate-200 py-2.5 pl-9 pr-4 rounded-xl text-lg font-bold text-slate-700 placeholder-slate-400 focus:outline-none focus:border-red-500 transition-colors"
+                className="w-full md:w-64 bg-slate-50 border border-slate-200 py-2.5 pl-9 pr-4 rounded-xl text-lg font-bold text-black placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors"
               />
               <Search
                 size={14}
-                className="absolute left-3 top-3.5 text-slate-400"
+                className="absolute left-3 top-3.5 text-black"
               />
             </div>
           </div>
@@ -1237,14 +1300,14 @@ function GovPortal() {
                 <div
                   key={idx}
                   onClick={() => setSelectedDoc(doc)}
-                  className="p-4 bg-slate-50 rounded-2xl border border-slate-200/50 hover:border-red-500 hover:bg-red-50/10 cursor-pointer transition-all flex flex-col md:flex-row items-start justify-between gap-4"
+                  className="p-4 bg-slate-50 rounded-2xl border border-slate-200/50 hover:border-blue-500 hover:bg-blue-50/10 cursor-pointer transition-all flex flex-col md:flex-row items-start justify-between gap-4"
                 >
                   <div className="space-y-1">
                     <div className="flex items-center gap-2">
-                      <span className="text-lg font-black text-white bg-red-800 px-2 py-0.5 rounded">
+                      <span className="text-lg font-black text-white bg-blue-800 px-2 py-0.5 rounded">
                         {doc.type}
                       </span>
-                      <span className="text-lg font-extrabold text-red-600">
+                      <span className="text-lg font-extrabold text-blue-600">
                         {doc.num}
                       </span>
                     </div>
@@ -1261,7 +1324,7 @@ function GovPortal() {
                 </div>
               ))
             ) : (
-              <div className="py-12 text-center text-slate-400 text-lg font-bold">
+              <div className="py-12 text-center text-black text-lg font-bold">
                 Không tìm thấy văn bản phù hợp.
               </div>
             )}
@@ -1277,7 +1340,7 @@ function GovPortal() {
             animate={{ scale: 1, opacity: 1 }}
             className="bg-white rounded-3xl shadow-2xl overflow-hidden w-full max-w-2xl text-left flex flex-col"
           >
-            <div className="bg-red-800 text-white py-4 px-6 flex items-center justify-between">
+            <div className="bg-blue-800 text-white py-4 px-6 flex items-center justify-between">
               <span className="text-lg font-black flex items-center gap-2">
                 <FileText size={18} className="text-yellow-400" /> Bản xem văn
                 bản PDF hành chính
@@ -1291,13 +1354,13 @@ function GovPortal() {
             </div>
             <div className="p-8 md:p-12 space-y-6 overflow-y-auto max-h-[500px]">
               {/* National Emblem design */}
-              <div className="text-center font-bold text-lg uppercase tracking-tight text-slate-500">
+              <div className="text-center font-bold text-lg uppercase tracking-tight text-black">
                 CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
                 <br />
                 Độc lập - Tự do - Hạnh phúc
                 <div className="w-24 h-[1px] bg-slate-300 mx-auto mt-2" />
               </div>
-              <div className="flex justify-between text-lg font-extrabold text-slate-400 uppercase">
+              <div className="flex justify-between text-lg font-extrabold text-black uppercase">
                 <span>UBND TỈNH KHÁNH HÒA</span>
                 <span>Số: {selectedDoc.num}</span>
               </div>
@@ -1305,14 +1368,14 @@ function GovPortal() {
                 <h4 className="text-lg font-black text-[#961C1C] text-center leading-snug">
                   {selectedDoc.type.toUpperCase()}
                 </h4>
-                <p className="text-lg font-black text-slate-800 text-center uppercase leading-snug max-w-md mx-auto">
+                <p className="text-lg font-black text-black text-center uppercase leading-snug max-w-md mx-auto">
                   {selectedDoc.title}
                 </p>
                 <div className="border-t border-dashed border-slate-200 pt-4" />
-                <h5 className="text-lg font-black uppercase text-slate-400 tracking-wider">
+                <h5 className="text-lg font-black uppercase text-black tracking-wider">
                   Nội dung điều hành:
                 </h5>
-                <p className="text-slate-700 text-lg leading-relaxed text-justify font-medium indent-8">
+                <p className="text-black text-lg leading-relaxed text-justify font-medium indent-8">
                   {selectedDoc.content}
                 </p>
               </div>
@@ -1321,10 +1384,10 @@ function GovPortal() {
                   Nơi nhận: Văn phòng tỉnh, Sở ngành can thiệp.
                 </div>
                 <div className="text-center">
-                  <span className="text-lg font-extrabold text-red-800 block">
+                  <span className="text-lg font-extrabold text-blue-800 block">
                     TM. ỦY BAN NHÂN DÂN
                   </span>
-                  <span className="text-lg font-black text-red-900 block mt-8">
+                  <span className="text-lg font-black text-blue-900 block mt-8">
                     {selectedDoc.signer.split(" - ")[0]}
                   </span>
                 </div>
@@ -1342,7 +1405,7 @@ function GovPortal() {
                   showToast("Hành động: Tải về tệp PDF của Khánh Hòa đã được xử lý và mô phỏng thành công!");
                   setSelectedDoc(null);
                 }}
-                className="bg-red-800 text-white px-5 py-2 rounded-xl text-lg font-bold hover:bg-red-700 shadow-lg"
+                className="bg-blue-800 text-white px-5 py-2 rounded-xl text-lg font-bold hover:bg-blue-700 shadow-lg"
               >
                 Tải xuống tệp gốc PDF
               </button>
@@ -1520,14 +1583,14 @@ function CitizenPortal({ onMapClick }: { onMapClick?: () => void }) {
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
             className={`fixed bottom-8 right-8 z-[10000] text-white font-extrabold text-lg py-4 px-6 rounded-2xl shadow-2xl flex items-center gap-3 border max-w-sm ${
               toast.type === "success" 
-                ? "bg-gradient-to-r from-red-600 to-red-700 border-red-500/20" 
+                ? "bg-gradient-to-r from-blue-600 to-blue-700 border-blue-500/20" 
                 : "bg-gradient-to-r from-black to-slate-900 border-white/10"
             }`}
           >
             {toast.type === "success" ? (
               <CheckCircle2 size={18} className="text-yellow-300 shrink-0" />
             ) : (
-              <X size={18} className="text-red-300 shrink-0" />
+              <X size={18} className="text-blue-300 shrink-0" />
             )}
             <span>{toast.msg}</span>
           </motion.div>
@@ -1569,15 +1632,14 @@ function CitizenPortal({ onMapClick }: { onMapClick?: () => void }) {
             <a
               href="#"
               onClick={(e) => { e.preventDefault(); showToast("Tính năng liên kết xem tất cả hoạt động lãnh đạo đang được cập nhật.", "success"); }}
-              className="text-lg font-semibold text-white/60 hover:text-yellow-400 flex items-center gap-1 transition-colors"
+              className="text-lg font-normal text-white/60 hover:text-yellow-400 flex items-center gap-1 transition-colors"
             >
               Xem tất cả <ChevronRight size={14} />
             </a>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch pt-2">
             {/* Left Column: Big Spotlight News Info */}
-            <div className="lg:col-span-7 xl:col-span-7 pr-0 lg:pr-8 text-left flex flex-col h-full">
+            <div className="lg:col-span-7 xl:col-span-7 pr-0 lg:pr-8 text-left flex flex-col">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={newsIndex}
@@ -1587,40 +1649,38 @@ function CitizenPortal({ onMapClick }: { onMapClick?: () => void }) {
                   transition={{ duration: 0.4 }}
                   className="w-full h-full flex flex-col"
                 >
-                  <div className="w-full h-full flex flex-col overflow-hidden rounded-3xl shadow-2xl group/spotlight select-none cursor-pointer transition-all duration-500 bg-[#1E3A8A]">
-                    {/* High Quality Foreground Image with 4:3 aspect ratio */}
+                  <div className="flex flex-col w-full rounded-3xl overflow-hidden shadow-2xl border border-white/10 group/spotlight cursor-pointer bg-[#1e3a8a] select-none transition-all duration-500">
                     <div className="w-full aspect-[4/3] overflow-hidden relative shrink-0">
                       <img
                         src={LEADERS_NEWS[newsIndex].image}
                         referrerPolicy="no-referrer"
-                        className="w-full h-full object-cover object-center group-hover/spotlight:scale-105 transition-transform duration-700"
+                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                         alt={LEADERS_NEWS[newsIndex].title}
                       />
                     </div>
-
-                    {/* Content Section below, sitting on a blue background */}
-                    <div className="p-4 sm:p-5 flex flex-col justify-between flex-grow text-left bg-[#1E3A8A]">
-                      <div className="flex justify-between items-center mb-3">
-                        <span className="inline-flex items-center gap-1 px-3 py-1 bg-blue-500 text-white text-base md:text-lg font-black rounded-md tracking-wider uppercase shadow-md pointer-events-none self-start">
-                          Tiêu điểm
-                        </span>
-                        <span className="flex items-center gap-1.5 text-white text-base md:text-lg font-bold bg-black/25 px-3 py-1 rounded-full border border-white/10">
-                          {LEADERS_NEWS[newsIndex].date}
-                        </span>
-                      </div>
-
-                      <h4 className="text-xl md:text-2xl font-black text-white leading-snug tracking-tight group-hover/spotlight:text-yellow-300 transition-colors">
+                    <div className="p-6 md:p-8 flex flex-col justify-end z-20 text-left bg-[#1e3a8a] shrink-0 border-t border-white/5">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-500 text-white text-base font-black rounded-md tracking-wider uppercase shadow-md pointer-events-none self-start mb-4">
+                        TIÊU ĐIỂM
+                      </span>
+                      <h4 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-yellow-400 leading-tight tracking-tight drop-shadow-xl text-left line-clamp-2 mb-6 group-hover:text-yellow-300 transition-colors">
                         {LEADERS_NEWS[newsIndex].title}
                       </h4>
+                      <div className="flex items-center gap-4 text-base text-white/90 font-medium tracking-wider">
+                        <span className="flex items-center gap-1.5 bg-black/40 px-3.5 py-1.5 rounded-full border border-white/10 shadow-sm">
+                          <Calendar size={14} className="text-yellow-400" /> {LEADERS_NEWS[newsIndex].date}
+                        </span>
+                        <span className="flex items-center gap-1.5 bg-black/40 px-3.5 py-1.5 rounded-full border border-white/10 shadow-sm">
+                          <User size={14} className="text-blue-400" /> Ban biên tập
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </motion.div>
               </AnimatePresence>
             </div>
-
             {/* Right Column: Premium Sidebar List overlay matching exact left column height */}
-            <div className="lg:col-span-5 xl:col-span-5 relative min-h-[380px] lg:min-h-0">
-              <div className="lg:absolute lg:inset-0 w-full h-full flex flex-col bg-white/60 backdrop-blur-xl rounded-3xl shadow-xl border border-white/40 p-2 sm:p-3 overflow-hidden">
+            <div className="lg:col-span-5 xl:col-span-5 flex flex-col gap-3 overflow-y-auto pr-1 bg-[#0f172a]/50 backdrop-blur-xl border border-white/10 p-4 rounded-3xl backdrop-saturate-150 custom-scrollbar relative min-h-[380px] lg:min-h-0">
+              <div className="lg:absolute lg:inset-0 w-full h-full flex flex-col p-2 sm:p-3 overflow-hidden">
                 <div className="w-full flex-1 overflow-y-auto pr-2 flex flex-col [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-white/10 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-white/50 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-white/80 transition-colors">
                   {LEADERS_NEWS.map((item, idx) => {
                     const isActive = newsIndex === idx;
@@ -1657,7 +1717,7 @@ function CitizenPortal({ onMapClick }: { onMapClick?: () => void }) {
                           >
                             {item.title}
                           </h5>
-                          <div className="flex items-center justify-between text-sm text-black/80 font-medium mt-1">
+                          <div className="flex items-center justify-between text-base text-black/80 font-medium mt-1">
                             <span className="flex items-center gap-1.5">
                               <Calendar size={14} /> {item.date}
                             </span>
@@ -1679,7 +1739,7 @@ function CitizenPortal({ onMapClick }: { onMapClick?: () => void }) {
       </section>
 
       {/* REST OF CITIZEN PORTAL IN A BOUNDED CONSTRAINED WIDTH */}
-      <div className="mx-auto max-w-7xl px-4 w-full mt-2 md:mt-3 flex flex-col gap-10">
+      <div className="mx-auto max-w-7xl px-4 w-full mt-6 flex flex-col gap-10">
         {/* 2. THÔNG TIN ĐA PHƯƠNG TIỆN */}
         <MultimediaSection />
 
@@ -1691,22 +1751,16 @@ function CitizenPortal({ onMapClick }: { onMapClick?: () => void }) {
 
         {/* HỆ THỐNG VĂN BẢN */}
         <DocumentSystemPortal />
-      </div>
 
-      {/* FULL WIDTH BLOCK FOR PROPAGANDA & UTILITIES PORTAL */}
-      <div className="w-full py-14 my-10">
-        <div className="mx-auto max-w-7xl px-4 w-full">
-          <PropagandaPortal showUtilitiesSidebar={false} />
-        </div>
-      </div>
+        {/* THÔNG TIN TUYÊN TRUYỀN, TIỆN ÍCH DỊCH VỤ, BANNER */}
+        <PropagandaPortal showUtilitiesSidebar={false} />
 
-      <div className="mx-auto max-w-7xl px-4 w-full mt-10 flex flex-col gap-10">
         {/* HỆ THỐNG VĂN BẢN QPPL */}
         <LegalDocumentsPortal />
 
         <SharedBottomSections onMapClick={onMapClick} hideMap={true} />
       </div>
-</div>
+    </div>
   );
 }
 
@@ -1738,6 +1792,12 @@ function BusinessPortal({ onMapClick }: { onMapClick?: () => void }) {
       date: "18/05/2026"
     },
     {
+      title: "Tỉnh Khánh Hòa ban hành chính sách ưu đãi đầu tư đối với doanh nghiệp công nghệ cao",
+      summary: "UBND tỉnh ban hành danh mục các dự án ưu đãi đầu tư trọng điểm, giảm 50% tiền thuê đất trong 5 năm đầu cho doanh nghiệp khởi nghiệp đổi mới sáng tạo.",
+      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=1400&auto=format&fit=crop",
+      date: "17/05/2026"
+    },
+    {
       title: "Khánh Hòa sẵn sàng chuẩn bị cho sự kiện Festival Biển Nha Trang",
       summary: "Hoàn thiện các phương án chi tiết về phân luồng giao thông, chỉnh trang đô thị, đảm bảo mĩ quan phục vụ chuỗi hoạt động nghệ thuật văn hóa đặc sắc.",
       image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1400&auto=format&fit=crop",
@@ -1748,6 +1808,42 @@ function BusinessPortal({ onMapClick }: { onMapClick?: () => void }) {
       summary: "Tập trung thảo luận, cho ý kiến về báo cáo tình hình thực hiện nhiệm vụ phát triển kinh tế - xã hội, đầu tư công và công tác nhân sự, xây dựng Đảng.",
       image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1400&auto=format&fit=crop",
       date: "16/05/2026"
+    },
+    {
+      title: "Đối thoại gỡ khó khăn cho các doanh nghiệp xuất nhập khẩu hàng hóa trên địa bàn",
+      summary: "Lãnh đạo Tỉnh và Hải quan Khánh Hòa giải đáp trực tiếp hơn 40 kiến nghị của doanh nghiệp về thủ tục thông quan và hoàn thuế GTGT.",
+      image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1400&auto=format&fit=crop",
+      date: "16/05/2026"
+    },
+    {
+      title: "Triển khai chương trình chuyển đổi số toàn diện cho hơn 5.000 doanh nghiệp vừa và nhỏ",
+      summary: "Hỗ trợ chữ ký số, hóa đơn điện tử miễn phí và gói tư vấn quản trị số giúp doanh nghiệp cắt giảm chi phí vận hành.",
+      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1400&auto=format&fit=crop",
+      date: "15/05/2026"
+    },
+    {
+      title: "Tỉnh hỗ trợ gói tín dụng ưu đãi 2.000 tỷ đồng cho doanh nghiệp sản xuất xuất khẩu",
+      summary: "Ngân hàng Nhà nước chi nhánh Khánh Hòa phối hợp các tổ chức tín dụng triển khai gói hỗ trợ lãi suất 2%/năm phục vụ sản xuất kinh doanh.",
+      image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1400&auto=format&fit=crop",
+      date: "15/05/2026"
+    },
+    {
+      title: "Xúc tiến thương mại mở rộng thị trường xuất khẩu nông thủy sản sang Châu Âu",
+      summary: "Sở Công Thương kết nối các hiệp hội ngành hàng tham gia hội chợ thương mại quốc tế, thúc đẩy chuỗi cung ứng bền vững.",
+      image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1400&auto=format&fit=crop",
+      date: "13/05/2026"
+    },
+    {
+      title: "Đơn giản hóa 100% thủ tục cấp phép đầu tư trực tuyến cho nhà đầu tư",
+      summary: "Hệ thống thông tin giải quyết thủ tục hành chính tỉnh rút ngắn thời gian xử lý dự án đầu tư xuống còn tối đa 10 ngày làm việc.",
+      image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=1400&auto=format&fit=crop",
+      date: "11/05/2026"
+    },
+    {
+      title: "Khánh Hòa đẩy mạnh hạ tầng kỹ thuật các khu công nghiệp Ninh Thủy và Vân Phong",
+      summary: "Khẩn trương giải phóng mặt bằng, đấu nối điện nước và giao thông nội khu sẵn sàng đón các làn sóng đầu tư mới năm 2026.",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1400&auto=format&fit=crop",
+      date: "10/05/2026"
     }
   ];
 
@@ -1769,14 +1865,14 @@ function BusinessPortal({ onMapClick }: { onMapClick?: () => void }) {
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
             className={`fixed bottom-8 right-8 z-[10000] text-white font-extrabold text-lg py-4 px-6 rounded-2xl shadow-2xl flex items-center gap-3 border max-w-sm ${
               toast.type === "success" 
-                ? "bg-gradient-to-r from-red-600 to-red-700 border-red-500/20" 
+                ? "bg-gradient-to-r from-blue-600 to-blue-700 border-blue-500/20" 
                 : "bg-gradient-to-r from-black to-slate-900 border-white/10"
             }`}
           >
             {toast.type === "success" ? (
               <CheckCircle2 size={18} className="text-yellow-300 shrink-0" />
             ) : (
-              <X size={18} className="text-red-300 shrink-0" />
+              <X size={18} className="text-blue-300 shrink-0" />
             )}
             <span>{toast.msg}</span>
           </motion.div>
@@ -1807,21 +1903,26 @@ function BusinessPortal({ onMapClick }: { onMapClick?: () => void }) {
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-10 md:py-16 relative z-10 text-left">
           {/* Header / Title */}
           <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
-            <h3 className="text-xl md:text-2xl font-black text-white tracking-tight uppercase flex items-center gap-2.5">
-              <Briefcase size={22} className="text-yellow-400 animate-pulse" /> Tin nổi bật đồng hành cùng doanh nghiệp
-            </h3>
+            <div className="flex items-center gap-3.5 text-left">
+              <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center shrink-0 shadow-sm border border-blue-500/20">
+                <Briefcase size={22} className="stroke-[1.8]" />
+              </div>
+              <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight uppercase leading-none text-left">
+                Tin nổi bật đồng hành cùng doanh nghiệp
+              </h3>
+            </div>
             <a
               href="#"
               onClick={(e) => { e.preventDefault(); showToast("Tính năng liên kết xem tất cả hoạt động đồng hành doanh nghiệp đang được cập nhật.", "success"); }}
-              className="text-lg font-semibold text-white/60 hover:text-yellow-400 flex items-center gap-1 transition-colors"
+              className="text-lg font-normal text-white/60 hover:text-yellow-400 flex items-center gap-1 transition-colors"
             >
               Xem tất cả <ChevronRight size={14} />
             </a>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch lg:h-[640px] pt-2">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch pt-2">
             {/* Left Column: Big Spotlight News Info */}
-            <div className="lg:col-span-7 xl:col-span-7 pr-0 lg:pr-8 text-left h-full">
+            <div className="lg:col-span-7 xl:col-span-7 pr-0 lg:pr-8 text-left flex flex-col">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={newsIndex}
@@ -1829,38 +1930,41 @@ function BusinessPortal({ onMapClick }: { onMapClick?: () => void }) {
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.98, y: -10 }}
                   transition={{ duration: 0.4 }}
-                  className="h-full"
+                  className="w-full h-full flex flex-col"
                 >
-                  <div className="relative w-full h-full min-h-[400px] overflow-hidden rounded-3xl shadow-2xl group/spotlight select-none cursor-pointer transition-all duration-500">
-                    <img
-                      src={LEADERS_NEWS[newsIndex].image}
-                      referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover object-center group-hover/spotlight:scale-105 transition-transform duration-700"
-                      alt={LEADERS_NEWS[newsIndex].title}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-transparent z-10" />
-                    <div className="absolute inset-0 p-6 sm:p-8 flex flex-col justify-end z-20 text-left">
-                      <div className="flex justify-between items-center mb-3">
-                        <span className="inline-flex items-center gap-1 px-3 py-1 bg-blue-500 text-white text-lg font-black rounded-md tracking-wider uppercase shadow-md pointer-events-none self-start">
+                  <div className="flex flex-col w-full rounded-3xl overflow-hidden shadow-2xl border border-white/10 group/spotlight cursor-pointer bg-[#1e3a8a] select-none transition-all duration-500">
+                    {/* High Quality Foreground Image with 4:3 aspect ratio */}
+                    <div className="w-full aspect-[4/3] overflow-hidden relative shrink-0">
+                      <img
+                        src={LEADERS_NEWS[newsIndex].image}
+                        referrerPolicy="no-referrer"
+                        className="absolute inset-0 w-full h-full object-cover group-hover/spotlight:scale-[1.02] transition-transform duration-700 ease-out"
+                        alt={LEADERS_NEWS[newsIndex].title}
+                      />
+                    </div>
+
+                    {/* Content Section below, sitting on a blue background */}
+                    <div className="p-6 md:p-8 flex flex-col justify-end z-20 text-left bg-[#1e3a8a] shrink-0 border-t border-white/5">
+                      
+                        <span className="inline-flex items-center gap-1 px-3 py-1 bg-blue-500 text-white text-base md:text-lg font-black rounded-md tracking-wider uppercase shadow-md pointer-events-none self-start mb-4">
                           Tiêu điểm
                         </span>
-                        <span className="flex items-center gap-1.5 text-white text-lg font-bold drop-shadow bg-black/35 px-3 py-1 rounded-full backdrop-blur-sm border border-white/10">
-                          {LEADERS_NEWS[newsIndex].date}
+                        <span className="flex items-center gap-1.5 bg-black/40 px-3.5 py-1.5 rounded-full border border-white/10 shadow-sm text-white/90">
+                          <Calendar size={14} className="text-yellow-400" /> {LEADERS_NEWS[newsIndex].date}</span><span className="flex items-center gap-1.5 bg-black/40 px-3.5 py-1.5 rounded-full border border-white/10 shadow-sm text-white/90"><User size={14} className="text-blue-400" /> Ban biên tập
                         </span>
+                        <h4 className="text-xl md:text-2xl font-black text-yellow-400 leading-snug tracking-tight group-hover/spotlight:text-yellow-300 transition-colors mb-6 line-clamp-2 mt-4">
+                          {LEADERS_NEWS[newsIndex].title}
+                        </h4>
                       </div>
-                      <h4 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl line-clamp-3 group-hover/spotlight:text-sky-400 transition-colors">
-                        {LEADERS_NEWS[newsIndex].title}
-                      </h4>
-                    </div>
                   </div>
                 </motion.div>
               </AnimatePresence>
             </div>
 
             {/* Right Column: Premium Sidebar List overlay */}
-            <div className="lg:col-span-5 xl:col-span-5 relative min-h-[380px] lg:min-h-0">
-              <div className="lg:absolute lg:inset-0 w-full h-full flex flex-col bg-white/60 backdrop-blur-xl rounded-3xl shadow-xl border border-white/40 p-2 sm:p-3 overflow-hidden">
-                <div className="w-full flex-1 overflow-y-auto pr-2 flex flex-col [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-white/10 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-white/50 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-white/80 transition-colors">
+            <div className="lg:col-span-5 xl:col-span-5 relative h-[500px] lg:h-auto">
+              <div className="lg:absolute lg:inset-0 w-full h-full flex flex-col bg-white/70 backdrop-blur-xl rounded-3xl shadow-xl border border-white/50 p-2 sm:p-3 overflow-hidden">
+                <div className="w-full flex-1 overflow-y-auto pr-2 flex flex-col [&::-webkit-scrollbar]:w-2.5 [&::-webkit-scrollbar-track]:bg-slate-300/60 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-white [&::-webkit-scrollbar-thumb]:border [&::-webkit-scrollbar-thumb]:border-slate-300/50 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-slate-100 transition-colors">
                   {LEADERS_NEWS.map((item, idx) => {
                     const isActive = newsIndex === idx;
                     return (
@@ -1896,7 +2000,7 @@ function BusinessPortal({ onMapClick }: { onMapClick?: () => void }) {
                           >
                             {item.title}
                           </h5>
-                          <div className="flex items-center justify-between text-sm text-black/80 font-medium mt-1">
+                          <div className="flex items-center justify-between text-base text-black/80 font-medium mt-1">
                             <span className="flex items-center gap-1.5">
                               <Calendar size={14} /> {item.date}
                             </span>
@@ -1917,8 +2021,8 @@ function BusinessPortal({ onMapClick }: { onMapClick?: () => void }) {
         </div>
       </section>
 
-      {/* REST OF PORTAL IN A BOUNDED CONSTRAINED WIDTH */}
-      <div className="mx-auto max-w-7xl px-4 w-full mt-2 md:mt-3 flex flex-col gap-12 text-left">
+      {/* REST OF BUSINESS PORTAL IN A BOUNDED CONSTRAINED WIDTH */}
+      <div className="mx-auto max-w-7xl px-4 w-full mt-6 flex flex-col gap-8 text-left">
         {/* 2. THÔNG TIN ĐA PHƯƠNG TIỆN */}
         <MultimediaSection />
 
@@ -1927,16 +2031,10 @@ function BusinessPortal({ onMapClick }: { onMapClick?: () => void }) {
 
         {/* HỆ THỐNG VĂN BẢN */}
         <DocumentSystemPortal />
-      </div>
 
-      {/* FULL WIDTH BLOCK FOR PROPAGANDA & UTILITIES PORTAL */}
-      <div className="w-full py-14 my-12">
-        <div className="mx-auto max-w-7xl px-4 w-full">
-          <PropagandaPortal showUtilitiesSidebar={false} />
-        </div>
-      </div>
+        {/* THÔNG TIN TUYÊN TRUYỀN, TIỆN ÍCH DỊCH VỤ */}
+        <PropagandaPortal showUtilitiesSidebar={false} />
 
-      <div className="mx-auto max-w-7xl px-4 w-full mt-12 flex flex-col gap-12 text-left">
         {/* 3. CƠ SỞ DỮ LIỆU VĂN BẢN PHÁP LUẬT */}
         <LegalDocumentsPortal />
 
